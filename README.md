@@ -3,10 +3,13 @@
 ※ ぼちぼち更新しています。追加して欲しい単語あれば連絡ください。
 
 ## 【A - F】
+### [DRC](https://en.wikipedia.org/wiki/Design_rule_checking)
+
+**Design rule checking** の略。半導体プロセスに依存した、加工工程における物理的な寸法や公差から決められた設計制約の検証作業。PCBのパターン設計でのDRCと基本は同じ。最先端プロセスになるほどに設計制約は増加するので、DRCに必要なルールファイルは複雑化し実行時間も増加している。80年代、1umルールの頃は手書したレイアウト図面をミニコンでDRCを実行し、数十センチにもなるラインプリンター紙に出力されたエラーを一つ一つ人手で修正していた時代もあった。
 
 ## 【G - L】
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
-半導体Layout用のファイルフォーマット(**Graphic Design System II**).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。中身はTEXTなので編集も可能。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールがある。
+半導体Layout用のファイルフォーマット(**Graphic Design System II**).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールがある。
 
 ## 【M - R】
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)
