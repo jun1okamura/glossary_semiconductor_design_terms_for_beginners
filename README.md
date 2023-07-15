@@ -10,6 +10,9 @@
 ### [Decap Cell](https://ivlsi.com/decap-cells-vlsi-physical-design/)
 **Decap Cell** とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
 
+### [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
+**Filler Cell** とは、回路的には意味のない素子(Filler Cell）をレイアウト上の空き地に埋めることで、半導体プロセスの加工工程における平坦度を一定に保ち、微細加工の加工公差を改善するための作業を指す。**Decap Cell**を**Filler**として兼ねることが多い。
+
 ## 【G - L】
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
 半導体Layout用のファイルフォーマット(**Graphic Design System II**の略).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールもある。
