@@ -3,12 +3,14 @@
 ※ ぼちぼち更新しています。追加して欲しい単語あれば連絡ください。
 
 ## 【A - F】
-### [DRC](https://en.wikipedia.org/wiki/Design_rule_checking)
 
+### [DRC](https://en.wikipedia.org/wiki/Design_rule_checking)
 **Design Rule Checking** の略。半導体プロセスの加工工程における物理的な寸法や公差から決められた設計制約の検証作業。PCBのパターン設計でのDRCと基本は同じ。最先端プロセスになるほどに設計制約は増加するので、DRCに必要なルールファイルは複雑化し実行時間も増加している。80年代、1umルールの頃は手書したレイアウト図面をミニコンでDRCを実行し、数十センチにもなるラインプリンター紙に出力されたエラーを一つ一つ人手で修正していた時代もあった。
 
-### [LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)
+### [LPE](https://en.wikipedia.org/wiki/Parasitic_extraction)
+**Layout Parasitic Extraction** の略。レイアウト情報から回路図には明示的に記述されていない寄生素子（RLC）を抽出して[SPICE](https://en.wikipedia.org/wiki/SPICE)等のネット情報として出力するツール。膨大な数の寄生素子が出力されることで回路シミュレーションが実行できないという課題に対応するために、寄生素子を電気的に等価な記述に圧縮記述する機能がある。ロジック設計ではネットの遅延情報としてフィードバックされる。
 
+### [LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)
 **Layout Versus Schematic** の略。回路図とレイアウトの比較検証作業。回路図から抽出したネット情報とレイアウトから抽出したネット情報の等価性チェック。[SPICE](https://en.wikipedia.org/wiki/SPICE)や[CDL](https://en.wikipedia.org/wiki/Circuit_design_language)記述のネットを使って等価検証を行う。手書きの回路図しか無かった80年代では、人手でレイアウトの逆読みと手書き回路図との比較をダブル・トリプルに検証していた時代もあった。
 
 ## 【G - L】
