@@ -14,7 +14,7 @@ title: 半導体初学者むけ単語集
 
 ## 【M - R】
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)
-**Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。Technology file 群（Spice model や DRC/LVS の runset 、Layer ファイル等）と、基本Library (IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに、概念だけでPDKを使う人が多い風潮には注意を喚起します。
+**Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
 
 ## 【S - W】
 
