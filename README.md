@@ -40,6 +40,9 @@
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
 
+### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
+**Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。言語仕様として[**Verilog**](https://en.wikipedia.org/wiki/Verilog)や[**VHDL**](https://en.wikipedia.org/wiki/VHDL)が標準化されている。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
+
 ## 【S - W】
 
 ### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)
