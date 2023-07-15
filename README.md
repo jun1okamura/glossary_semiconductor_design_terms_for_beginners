@@ -1,3 +1,7 @@
+---
+layout: default
+title: 半導体初学者むけ単語集
+---
 # glossary_semiconductor_design_terms_for_beginners
 # 半導体初学者むけ単語集
 ※ ぼちぼち更新しています。追加して欲しい単語あれば連絡ください。
