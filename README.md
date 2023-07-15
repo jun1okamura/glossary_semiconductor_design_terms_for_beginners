@@ -11,7 +11,7 @@
 **Decap Cell** とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
 
 ### [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
-**Filler Cell** とは、回路的には意味のない素子(Filler Cell）をレイアウト上の空き地に埋めることで、半導体プロセスの加工工程における平坦度を一定に保ち、微細加工の加工公差を改善するための作業を指す。**Decap Cell**を**Filler**として兼ねることが多い。
+**Filler Cell** とは、回路的には意味のないスタンダードセル(Filler Cell）をレイアウト上の空き地に埋めることで、半導体プロセスの加工工程における平坦度を一定に保ち、微細加工の加工公差を改善するための作業を指す。**Decap Cell**を**Filler**として兼ねることが多い。
 
 ## 【G - L】
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
