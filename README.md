@@ -13,7 +13,7 @@
 
 ## 【G - L】
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
-半導体Layout用のファイルフォーマット(**Graphic Design System II**).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールがある。
+半導体Layout用のファイルフォーマット(**Graphic Design System II**の略).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールがある。
 
 ## 【M - R】
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)
