@@ -22,7 +22,7 @@
 **Metal Fill**や**Poly Fill**とも言われる。[**CMP**](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)による平坦化プロセス工程において、デッシング現象（広いメタル間スペースが過度のエッチングで皿状に凹んでしまう事）を防ぐ為に、電気的には意味のないメタルやポリ層を配置する作業。通常はレイアウト設計が完全に終わった最終工程で実行される。
 
 ### [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
-**Filler Cell** とは、回路的には意味のないスタンダードセル(Filler Cell）をレイアウト上の空き地を埋めることで、DRCエラー等の物理的な不都合を解消する為のセル。
+**Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、DRCエラー等の物理的な不都合を解消する為のセル。
 
 ## 【G - L】
 
