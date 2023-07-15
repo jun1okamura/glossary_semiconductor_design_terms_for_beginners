@@ -29,6 +29,9 @@
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
 半導体Layout用のファイルフォーマット(**Graphic Design System II**の略).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールもある。
 
+### [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
+**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。　C++と同様の言語仕様をベースに拡張した[**System-C**](https://en.wikipedia.org/wiki/SystemC)や、Verilogを拡張した[**SystemVerilog**](https://en.wikipedia.org/wiki/SystemVerilog)、Googleが開発しているOSSの[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
+
 ### [LPE](https://en.wikipedia.org/wiki/Parasitic_extraction)
 **Layout Parasitic Extraction** の略。レイアウト情報から回路図には明示的に記述されていない寄生素子（RLC）を抽出して[SPICE](https://en.wikipedia.org/wiki/SPICE)等のネット情報として出力するツール。膨大な数の寄生素子が出力されることで回路シミュレーションが実行できないという課題に対応するために、寄生素子を電気的に等価な記述に圧縮記述する機能がある。ロジック設計ではネットの遅延情報としてフィードバックされる。
 
