@@ -39,8 +39,7 @@
 **High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。　C++と同様の言語仕様をベースに拡張した[**System-C**](https://en.wikipedia.org/wiki/SystemC)や、Verilogを拡張した[**SystemVerilog**](https://en.wikipedia.org/wiki/SystemVerilog)、Googleが開発しているOSSの[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
 
 ### [LIB](https://en.wikipedia.org/wiki/Standard_cell)
-**Liberty Timing Format** 記述のファイル(.lib)を指す。**Standard Cell**ライブラリの遅延/消費電力などの特性を記述したファイル。微細化に伴い、ばらつきに対応した拡張フォーマットには CCS(Composite Current Source)やECSM(effective current source model)などがある。遅延情報はSDF(Standard Delay Format: IEEE std 1497-2001)を用
-いてネットリストの各ネットにバックアノテートされる。
+**Liberty Timing Format** 記述のファイル(.lib)を指す。**Standard Cell**ライブラリの遅延/消費電力などの特性を記述したファイル。微細化に伴い、ばらつきに対応した拡張フォーマットには CCS(Composite Current Source)やECSM(effective current source model)などがある。遅延情報はSDF(Standard Delay Format: IEEE std 1497-2001)を用いてネットリストの各ネットにバックアノテートされる。
 
 ### [LPE](https://en.wikipedia.org/wiki/Parasitic_extraction)
 **Layout Parasitic Extraction** の略。レイアウト情報から回路図には明示的に記述されていない寄生素子（RLC）を抽出して[SPICE](https://en.wikipedia.org/wiki/SPICE)等のネット情報として出力するツール。膨大な数の寄生素子が出力されることで回路シミュレーションが実行できないという課題に対応するために、寄生素子を電気的に等価な記述に圧縮記述する機能がある。ロジック設計ではネットの遅延情報としてフィードバックされる。
