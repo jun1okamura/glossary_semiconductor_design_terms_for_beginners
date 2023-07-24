@@ -97,7 +97,7 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
 **Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。言語仕様として[**Verilog**](https://en.wikipedia.org/wiki/Verilog)や[**VHDL**](https://en.wikipedia.org/wiki/VHDL)が標準化されている。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
 
-## 【S - W】
+## 【S - V】
 
 ### [SCAN]()
 
@@ -129,8 +129,6 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)
 チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
 
-## 【X - Z】
-
 ### [Verilog]()
 
 ### [VHDL]()
@@ -138,3 +136,5 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [WCSP]()
 
 ### [WIP]()
+
+## 【X - Z】
