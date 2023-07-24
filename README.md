@@ -12,9 +12,11 @@
 ### [AFE](https://en.wikipedia.org/wiki/Analog_front-end)
 **Analog Front-End** の略。センサー等のアナログ出力信号をデジタル信号へ変換するアナログ回路を指す。一般には、アンプやA/Dコンバータ、フィルタなどのアナログ回路を指すことが多いが、高速シリアル通信向けのクロックが重畳された小振幅信号やPAM(Pulse Amplitude Modulation)信号に変調された信号をデジタル信号に復調するミックスドシグナル回路もAFEと呼ぶことがある。SoC内部にAFEを搭載する場合と、SoCとは別チップでAFEを構成する場合がある。
 
-### [AXI]()
+### [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)
+**Advanced eXtensible Interface**の略。AMBA(Advanced Microcontroller Bus Architecture)規格の一部として ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)チップ内部のIP間のバスインターフェース規格。バスにはホストとクライアントが接続されます。ホストがVALID信号を出力、クライアントがREADY信号を出力してハンドシェイク動作をして有効データを判断する。
 
-### [BIST]()
+### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)
+**Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
 
 ### [CDR](https://en.wikipedia.org/wiki/Clock_recovery)
 **Clock and Data Recovery** の略。データとクロックを重畳させたシリアル信号から、受信側でクロック成分とデータ成分を切り分ける回路を指す。送信側では、データに含まれるエッジの場所や数を保証して変調し、受信側で信号に含まれるクロック成分をPLL同期させることでクロックを抽出し、抽出したクロックでデータを復調する。
@@ -77,6 +79,8 @@
 **Layout Versus Schematic** の略。回路図とレイアウトの比較検証作業。回路図から抽出したネット情報とレイアウトから抽出したネット情報の等価性チェック。[SPICE](https://en.wikipedia.org/wiki/SPICE)や[CDL](https://en.wikipedia.org/wiki/Circuit_design_language)記述のネットを使って等価検証を行う。手書きの回路図しか無かった80年代では、人手でレイアウトの逆読みと手書き回路図との比較をダブル・トリプルに検証していた時代もあった。
 
 ## 【M - R】
+
+### [Master-Slave]()
 
 ### [NOC]()
 
