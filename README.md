@@ -11,6 +11,8 @@
 
 ### [AXI]()
 
+### [BIST]()
+
 ### [Compiler](https://ja.wikipedia.org/wiki/Design_Compiler)
 半導体設計におけるコンパイラーとは**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Encounter/Genus(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系ではの[**Yosys**](https://yosyshq.net/)が有名→[GitHub](https://github.com/YosysHQ/yosys)
 
@@ -42,10 +44,10 @@
 
 ## 【G - L】
 
-### [GPIO]()
-
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
 半導体Layout用のファイルフォーマット(**Graphic Design System II**の略).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールもある。
+
+### [GPIO]()
 
 ### [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
 **High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。　C++と同様の言語仕様をベースに拡張した[**System-C**](https://en.wikipedia.org/wiki/SystemC)や、Verilogを拡張した[**SystemVerilog**](https://en.wikipedia.org/wiki/SystemVerilog)、Googleが開発しているOSSの[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
@@ -84,18 +86,26 @@
 
 ### [PLL]()
 
+### [QFN]()
+
 ### [QFP]()
 
 ### [RAM generator](https://soclabs.org/design-flow/memory-generators)
 LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static_random-access_memory)が一般的で、商用では各種の[**Memory Compiler**](https://www.synopsys.com/dw/ipdir.php?ds=dwc_sram_memory_compilers)が用意されている。メモリコンパイラは、動作周波数、ポート数、アドレス幅、データ幅等をパラメータとして入力すると最適なメモリのライブラリ情報を自動生成するツールである。商用メモリコンパイラでは、メモリセル(BitCell)に特別なデザインルールを採用することで必要なシリコン面積を圧縮するものもある。オープン系では[**OpenRAM**](https://openram.org/)が有名で、2ポート(同時に読み書き可能）メモリにも対応している。
+
+### [RDL]()
 
 ### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
 **Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。言語仕様として[**Verilog**](https://en.wikipedia.org/wiki/Verilog)や[**VHDL**](https://en.wikipedia.org/wiki/VHDL)が標準化されている。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
 
 ## 【S - W】
 
+### [SCAN]()
+
 ### [SDC](https://www.macnica.co.jp/business/semiconductor/articles/intel/133417)
 **Synopsys Design Constraint**の略。Synopsys社によって開発された設計制約のフォーマット、現在では業界標準になっている。回路が満たすべきタイミング情報（クロックの周期等）を記載する。
+
+### [SERDES]()
 
 ### [SDF](https://en.wikipedia.org/wiki/Standard_Delay_Format)
 **Standard Delay Format**の略。遅延情報を記述する[IEEE標準フォーマット](https://ieeexplore.ieee.org/document/972829)。パスの遅延時間や遅延時間の制約条件、配線遅延時間なども扱うことができる。
@@ -122,5 +132,7 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [Verilog]()
 
 ### [VHDL]()
+
+### [WCSP]()
 
 ### [WIP]()
