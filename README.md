@@ -15,9 +15,6 @@
 
 ### [BIST]()
 
-### [Compiler](https://ja.wikipedia.org/wiki/Design_Compiler)
-半導体設計におけるコンパイラーとは**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Encounter/Genus(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系ではの[**Yosys**](https://yosyshq.net/)が有名→[GitHub](https://github.com/YosysHQ/yosys)
-
 ### [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
 
@@ -125,6 +122,9 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 ### [STA](https://en.wikipedia.org/wiki/Static_timing_analysis)
 **Static Timing Analysis**の略。タイミング検証方法の一つ。入力から出力（同期回路の場合はFFからFF）までの経路に関して遅延の合計を計算し、**SDC**ファイルに記載された設計タイミング条件を満たされているかどうかを検証する。各経路の最大遅延を合計してセットアップ条件を満たしているか、各部の最小遅延を合計してホールド条件を満たしているか、両者のチェックを行う。[**Prime Time(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html)がデファクト。オープン系には[**OpenSTA**](https://github.com/The-OpenROAD-Project/OpenSTA)がある。
+
+### [Synthesis](https://en.wikipedia.org/wiki/Logic_synthesis)
+**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Encounter/Genus(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系ではの[**Yosys**](https://yosyshq.net/)が有名→[GitHub](https://github.com/YosysHQ/yosys)
 
 ### [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)
 チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
