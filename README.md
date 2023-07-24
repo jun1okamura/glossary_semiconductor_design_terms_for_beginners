@@ -62,7 +62,7 @@
 
 ### [KGD]()
 
-### [LDO]
+### [LDO]()
 
 ### [LIB](https://en.wikipedia.org/wiki/Standard_cell)
 **Liberty Timing Format** 記述のファイル(.lib)を指す。**Standard Cell**ライブラリの遅延/消費電力などの特性を記述したファイル。微細化に伴い、ばらつきに対応した拡張フォーマットには CCS(Composite Current Source)やECSM(effective current source model)などがある。遅延情報はSDF(Standard Delay Format: IEEE std 1497-2001)を用いてネットリストの各ネットにバックアノテートされる。
