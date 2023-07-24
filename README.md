@@ -9,7 +9,8 @@
 
 ## 【A - F】
 
-### [AFE]()
+### [AFE](https://en.wikipedia.org/wiki/Analog_front-end)
+**Analog Front-End** の略。センサー等のアナログ出力信号をデジタル信号へ変換するアナログ回路を指す。一般には、アンプやA/Dコンバータ、フィルタなどのアナログ回路を指すことが多いが、クロックが重畳された高速シリアル通信信号やPAM(Pulse Amplitude Modulation)信号に変調されたデジタル信号を復調するミックスドシグナル回路もAFEと呼ぶことがある。SoC内部にAFEを搭載する場合と、SoCとは別チップでAFEを構成する場合がある。
 
 ### [AXI]()
 
