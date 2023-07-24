@@ -1,5 +1,5 @@
 # glossary_semiconductor_design_terms_for_beginners
-# 半導体初学者むけ設計用語集
+# 半導体初学者むけ半導体設計の用語集
 ※ ぼちぼち更新しています。追加して欲しい単語あれば連絡ください。
 
 ## 【おすすめ動画】
