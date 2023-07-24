@@ -27,6 +27,9 @@
 ### [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
 **Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
 
+### [Formal Verifier](https://en.wikipedia.org/wiki/Formal_verification)
+半導体設計における **Formal Verifier** とは、回路記述間を数学的に解析することで，記述間(例えばRTL記述とゲート記述)の正当性を検証する手法である。シミュレータのように回路を動作させて検証するのではないので、シミュレーション・パターンの作成が不要で，かつ高速・網羅的に検証できるというメリットがある。
+
 ## 【G - L】
 
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
