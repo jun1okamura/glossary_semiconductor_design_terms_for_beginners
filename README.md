@@ -9,9 +9,8 @@
 
 ## 【A - F】
 
-### [Compiler]
-半導体設計におけるコンパイラーとは**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述（C言語）を命令セット（ISA）に変換する処理であるコンパイラーの呼応している。
-[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html）や[**Encounter/Genus(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系ではの[**Yosys**](https://yosyshq.net/)[GitHub](https://github.com/YosysHQ/yosys)が有名。
+### [Compiler](https://ja.wikipedia.org/wiki/Design_Compiler)
+半導体設計におけるコンパイラーとは**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述（C言語）を命令セット（ISA）に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Encounter/Genus(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系ではの[**Yosys**](https://yosyshq.net/)[GitHub](https://github.com/YosysHQ/yosys)が有名。
 
 ### [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
