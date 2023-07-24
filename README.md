@@ -38,8 +38,8 @@
 ### [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
 **Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
 
-### [Formal Verifier](https://en.wikipedia.org/wiki/Formal_verification)
-半導体設計における **Formal Verifier** (形式的検証)とは、回路記述間を数学的に解析することで，記述間(例えばRTL記述とゲート記述)の正当性を検証する手法である。シミュレータのように回路を動作させて検証するのではないので、シミュレーション・パターンの作成が不要で，かつ高速・網羅的に検証できるというメリットがある。
+### [Formal Verification](https://en.wikipedia.org/wiki/Formal_verification)
+半導体設計における **Formal Verifier** (形式的検証)とは、回路記述間を数学的に解析することで，記述間(例えばRTL記述とゲート記述)の等価性の検証（フォーマリティ検証）や、動作や性能に関する性質を回路記述が満たしているかの検証（プロパティ検証）がある。シミュレータのように回路を動作させて検証するのではないので、シミュレーション・パターンの作成が不要で，かつ高速・網羅的に検証できるというメリットがある。
 
 ## 【G - L】
 
@@ -49,7 +49,7 @@
 ### [GPIO]()
 
 ### [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
-**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。　C++と同様の言語仕様をベースに拡張した[**System-C**](https://en.wikipedia.org/wiki/SystemC)や、Verilogを拡張した[**SystemVerilog**](https://en.wikipedia.org/wiki/SystemVerilog)、Googleが開発しているOSSの[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
+**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。　C++と同様の言語仕様をベースに拡張した[**System-C**](https://en.wikipedia.org/wiki/SystemC)や、Googleが開発しているオープン系の[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
 
 ### [I2C]()
 
