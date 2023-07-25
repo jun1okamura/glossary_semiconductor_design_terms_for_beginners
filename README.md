@@ -70,9 +70,10 @@
 **Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。IISとは略さないので注意。
 
 ### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
-**Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、TrのSPICEモデルを提供することなく複数ベンダーのチップ間の信号品質やタイミング検証が可能となる。
+**Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
 
-### [JTAG]()
+### [JTAG](https://en.wikipedia.org/wiki/JTAG)
+**Joint Test Action Group** の略。業界標準のテスト手法、PCBの基板検査のための標準規格から始まった。インタフェースの仕様は[IEEE1149.1](https://www.ti.com/lit/an/ssya002c/ssya002c.pdf)で定められているが、実際には半導体メーカーがプライベート命令やオプションレジスタを使って拡張している為に「総合デバッグインタフェース」になっている。TCK/TDI/TDO/TMSの4線とTRSTの5線を使う場合がある。FPGAの書き込みや、CPUのデバッグ、基板検査、ICの内部回路のテスト等に使われる。
 
 ### [KGD]()
 
