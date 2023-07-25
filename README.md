@@ -44,7 +44,7 @@
 **Engineering Change Order**の略。P&R等の物理設計が完了したデザインの最終段階での回路変更を、一般にECOと呼ぶ。設計フローの上流に戻らずに、デザイン機能の変更を配線と未使用のStandard Cell(ECO用セル）を利用して実現する手続きのこと。ECOをサポートするツールもある。
 
 ### [FILL](https://semiengineering.com/knowledge_centers/materials/fill)
-**Metal Fill**や**Poly Fill**とも言われる。[**CMP**](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)による平坦化プロセス工程において、デッシング現象（広いメタル間スペースが過度のエッチングで皿状に凹んでしまう事）を防ぐ為に、電気的には意味のないメタルやポリ層を配置する作業。通常はレイアウト設計が完全に終わった最終工程で実行される。
+**Metal Fill**や**Poly Fill**とも言われる。[**CMP**](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)による平坦化プロセス工程において、デッシング現象（広いメタル間スペースが過度のエッチングで皿状に凹んでしまう事）を防ぐ為に、電気的には意味のないメタルやポリ層を配置する作業。通常はレイアウト設計が完全に終わった最終工程で実行される。DFMの一種。
 
 ### [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
 **Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
