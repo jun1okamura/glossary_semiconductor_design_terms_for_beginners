@@ -67,9 +67,10 @@
 **Inter-Integrated Circuit** の略。SDAとSCLのフィリップス社で開発された２線デジタルインターフェース。転送スピードは100K/400KHz、プルアップ抵抗でLo-Hiをドライブする仕様の為に高速動作や長距離伝送は難しい。通信に必要な信号線が少ないことと、回路規模が小さいことから、多くのセンサーやAD/DAコンバーター、ファン制御、小型LCDパネル、LEDアレー等で使われている。
 
 ### [I2S](https://en.wikipedia.org/wiki/I%C2%B2S)
-**Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。
+**Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。IISとは略さないので注意。
 
-### [IBIS]()
+### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
+**Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を単純化した電圧電流源やRLC回路でモデル化することで、TrのSPICEモデルを提供することなく複数ベンダーのチップ間の信号品質やタイミング検証が可能となる。
 
 ### [JTAG]()
 
