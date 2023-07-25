@@ -150,6 +150,8 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)
 チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
 
+### [TO]()
+
 ### [Verilog]()
 
 ### [VHDL]()
