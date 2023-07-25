@@ -27,7 +27,9 @@
 ### [DFM](https://en.wikipedia.org/wiki/Design_for_manufacturability)
 **Design For Manufacturability**の略。半導体設計におけるDFMは、製造されたチップの歩留まり率(Yield)を上げる為に行われる設計段階での工夫のことを総称する。DFMツールは、ポリ・メタル挿入(CMPでのDishing対策）、ダブルVIA挿入(VIAでのオープン対策)、配線拡張（配線切れ対策）などを行うツールである。リソグラフィーの解像度を改善する(OPC=Optical Proximity Correction：光学近接効果補正)為の補助パターン挿入ツールも広義のDFMツールに含まれる。またメモリの冗長回路、ECC回路の採用や、カスタムレイアウト設計で、最小寸法をなるべく避ける等も広義のDFMに含まれる。
 
-### [DFT]()
+### [DFT](https://en.wikipedia.org/wiki/Design_for_testing)
+**Design For Testing** or **Design For Testability**の略。日本語だと「テスト容易化設計」であるが、言い換えると「LSIのテストの実行を容易にするための回路設計手法」の総称を指す。具体的には、テストモードとしての独自機能を備えたLSI、セルフテスト回路を設けたLSI、論理回路のテストのためのスキャンパスを設けたLSI、CMOSの暗電流に着目したテスト手法、等々がある。
+採用する手法、技術と必要なシリコン面積等のオーバーヘッドと、テスト容易化で得られるテストコスト削減効果のバランスが重要である。
 
 ### [DLL]()
 
