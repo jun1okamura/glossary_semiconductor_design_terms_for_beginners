@@ -57,7 +57,8 @@
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII) 
 半導体Layout用のファイルフォーマット(**Graphic Design System II**の略).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールもある。
 
-### [GPIO]()
+### [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)
+**General Purpose Input/Output**の略。文字通り汎用IO回路、入出力設定、ドライブ電流調整、プルアップ・プルダウン、トライステート機能等が、ソフトウェアやレジスターにて設定できる。一般にはGPIOピンは、低速インターフェースやアナログ入出力と兼ねる場合が多い。
 
 ### [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
 **High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。　C++と同様の言語仕様をベースに拡張した[**System-C**](https://en.wikipedia.org/wiki/SystemC)や、Googleが開発しているオープン系の[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
