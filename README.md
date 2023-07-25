@@ -15,11 +15,15 @@
 ### [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)
 **Advanced eXtensible Interface**の略。AMBA(Advanced Microcontroller Bus Architecture)規格の一部として ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)チップ内部のIP間のバスインターフェース規格。バスにはホストとクライアントが接続されます。ホストがVALID信号を出力、クライアントがREADY信号を出力してハンドシェイク動作をして有効データを判断する。
 
+### [BGR]()
+
 ### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)
 **Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
 
 ### [CDR](https://en.wikipedia.org/wiki/Clock_recovery)
 **Clock and Data Recovery** の略。データとクロックを重畳させたシリアル信号から、受信側でクロック成分とデータ成分を切り分ける回路を指す。送信側では、データに含まれるエッジの場所や数を保証して変調し、受信側で信号に含まれるクロック成分をPLL同期させることでクロックを抽出し、抽出したクロックでデータを復調する。
+
+### [Chiplet]()
 
 ### [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
@@ -75,9 +79,11 @@
 ### [JTAG](https://en.wikipedia.org/wiki/JTAG)
 **Joint Test Action Group** の略。業界標準のテスト手法、PCBの基板検査のための標準規格から始まった。インタフェースの仕様は[IEEE1149.1](https://www.ti.com/lit/an/ssya002c/ssya002c.pdf)で定められているが、実際には半導体メーカーがプライベート命令やオプションレジスタを使って拡張している為に「総合デバッグインタフェース」になっている。TCK/TDI/TDO/TMSの4線とTRSTの5線を使う場合がある。FPGAの書き込みや、CPUのデバッグ、基板検査、ICの内部回路のテスト等に使われる。
 
-### [KGD]()
+### [KGD](https://xtech.nikkei.com/dm/article/WORD/20090121/164414/)
+**Known Good Die** の略。良品のベア・チップを指す通称。複数のチップを1つのパッケージに収めるMCP(Multi-Chip Package)やチップレット，縦に積んだ複数のチップ間を貫通電極で接続する3次元実装などでは，実装する前に良品チップであることが保証されていないと、実装後の不良品が多く発生する問題がある。チップを提供する側と実装する側は、相反するコスト分担関係にある為に、KGD自体の動作保証レベル・品質保証レベルに関しては個別の対応されている。
 
-### [LDO]()
+### [LDO](https://en.wikipedia.org/wiki/Low-dropout_regulator)
+**Low Dropout Regulator** の略。ディスクリート部品の三端子レギュレーターの事。チップ内部で使用する電源を、外部から入力された電源から降圧する回路(**IPブロックの一種**)。高電圧側(外部)と降圧電圧(内部)の間に可変抵抗（=トランジスター）を直列に挿入して降圧側の負荷電流に応じて降圧電圧が一定になる様に制御することから、シリーズ・レギュレーターとも言われる。
 
 ### [LIB](https://en.wikipedia.org/wiki/Standard_cell)
 **Liberty Timing Format** 記述のファイル(.lib)を指す。**Standard Cell**ライブラリの遅延/消費電力などの特性を記述したファイル。微細化に伴い、ばらつきに対応した拡張フォーマットには CCS(Composite Current Source)やECSM(effective current source model)などがある。遅延情報はSDF(Standard Delay Format: IEEE std 1497-2001)を用いてネットリストの各ネットにバックアノテートされる。
