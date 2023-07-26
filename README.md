@@ -48,7 +48,7 @@
 **Decap Cell** とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
 
 ### [ECO](https://en.wikipedia.org/wiki/Engineering_change_order)　(**EDA Methodology/Tool**)
-**Engineering Change Order**の略。P&R等の物理設計が完了したデザインの最終段階での回路変更を、一般にECOと呼ぶ。**pre-mask ECO**(Standard Cellの置き換えあり）と**post-mask ECO**(未使用のStandard Cell(ECO用セル）だけをつかう）に区別して使う場合もある。設計フローの上流に戻らずに、デザイン機能の変更やバグ修正を配線と未使用のStandard Cell(置き換えやECO用セル）を利用して実現する手続きのこと。ECOをサポートするツールもある。
+**Engineering Change Order**の略。P&R等の物理設計が完了したデザインの最終段階での回路変更を、一般にECOと呼ぶ。**pre-mask ECO**(Standard Cellの置き換えあり)と**post-mask ECO**(未使用のStandard Cell(ECO用セル)だけをつかう)に区別して使う場合もある。設計フローの上流に戻らずに、デザイン機能の変更やバグ修正を配線と未使用のStandard Cell(置き換えやECO用セル)を利用して実現する手続きのこと。ECOをサポートするツールもある。
 
 ### [ES]()　(**Design Knowledge**)
 
