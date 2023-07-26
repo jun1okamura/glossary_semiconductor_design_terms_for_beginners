@@ -23,7 +23,8 @@
 ### [CDR](https://en.wikipedia.org/wiki/Clock_recovery)　(**IPブロック(Hard IP)**)
 **Clock and Data Recovery** の略。データとクロックを重畳させたシリアル信号から、受信側でクロック成分とデータ成分を切り分ける回路を指す。送信側では、データに含まれるエッジの場所や数を保証して変調し、受信側で信号に含まれるクロック成分をPLL同期させることでクロックを抽出し、抽出したクロックでデータを復調する。
 
-### [CS]()　(**Design Knowledge**)
+### [CS](https://semicon.jeita.or.jp/word/word.html)　(**Design Knowledge**)
+**Commercial Sample** の略。顧客評価用サンプルのこと、量産する前に顧客を限定して配布（販売）するチップのこと。
 
 ### [CSR]()　(**Design Knowledge**)
 
@@ -50,7 +51,8 @@
 ### [ECO](https://en.wikipedia.org/wiki/Engineering_change_order)　(**EDA Methodology/Tool**)
 **Engineering Change Order**の略。P&R等の物理設計が完了したデザインの最終段階での回路変更を、一般にECOと呼ぶ。**pre-mask ECO**(Standard Cellの置き換えあり)と**post-mask ECO**(未使用のStandard Cell(ECO用セル)だけをつかう)に区別して使う場合もある。設計フローの上流に戻らずに、デザイン機能の変更やバグ修正を配線と未使用のStandard Cell(置き換えやECO用セル)を利用して実現する手続きのこと。ECOをサポートするツールもある。
 
-### [ES]()　(**Design Knowledge**)
+### [ES](https://semicon.jeita.or.jp/word/word.html)　(**Design Knowledge**)
+**Engineering Sample** の略。社内(パートナー企業)向け評価用サンプルのこと、機能評価＋テスト環境デバッグ＋ソフト開発＋信頼性試験等の評価・開発用のチップ。
 
 ### [FILL](https://semiengineering.com/knowledge_centers/materials/fill)　(**EDA Methodology/Tool**)
 **Metal Fill**や**Poly Fill**とも言われる。[**CMP**](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)による平坦化プロセス工程において、デッシング現象（広いメタル間スペースが過度のエッチングで皿状に凹んでしまう事）を防ぐ為に、電気的には意味のないメタルやポリ層を配置する作業。通常はレイアウト設計が完全に終わった最終工程で実行される。DFMの一種。
@@ -106,7 +108,8 @@
 ### [Master/Slave](https://en.wikipedia.org/wiki/Master/slave_(technology))　(**Design Knowledge**)
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
-### [MP]()　(**Design Knowledge**)
+### [MP](https://semicon.jeita.or.jp/word/word.html)　(**Design Knowledge**)
+**Mass Production (Sample)** の略。量産版のチップのこと。MPと呼ばずに素直に量産版と呼ぶこともある。
 
 ### [NOC]() 
 
