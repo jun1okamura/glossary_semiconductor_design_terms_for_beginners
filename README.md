@@ -73,7 +73,7 @@
 **High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。システム設計、ハードウェア設計向けの C++ クラスライブラリである[**SystemC**](https://en.wikipedia.org/wiki/SystemC)や、Googleが開発しているオープン系の[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
 
 ### [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)　(**IPブロック(Soft-IP)**)
-**Inter-Integrated Circuit** の略。SDAとSCLのフィリップス社で開発された２線デジタルインターフェース。転送スピードは100K/400KHz、プルアップ抵抗でLo-Hiをドライブする仕様の為に高速動作や長距離伝送は難しい。通信に必要な信号線が少ないことと、回路規模が小さいことから、多くのセンサーやAD/DAコンバーター、ファン制御、小型LCDパネル、LEDアレー等で使われている。アイ・スクエア・シーもしくはアイ・ツー・シーと呼ぶ。
+**Inter-Integrated Circuit** の略。SDAとSCLのフィリップス社で開発された２線デジタルインターフェース。転送スピードは100K/400KHz、プルアップ抵抗でLo-Hiをドライブする仕様の為に高速動作や長距離伝送は難しい。通信に必要な信号線が少ないことと、回路規模が小さいことから、多くのセンサーやAD/DAコンバーター、ファン制御、小型LCDパネル、LEDアレー等で使われている。アイ・スクェアード・シーもしくはアイ・ツー・シーと呼ぶ。
 
 ### [I2S](https://en.wikipedia.org/wiki/I%C2%B2S)　(**IPブロック(Soft-IP)**)
 **Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。IISとは略さないので注意。
