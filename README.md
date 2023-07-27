@@ -113,12 +113,17 @@
 
 ### [Magic]()　(**EDA Methodology/Tool**)
 
+### [Manufacturing-related Terminology]()　(**Design Knowledge**)
+
+- [CMP]()　
+- [OPC]()　
+- [RDL]()
+- [WIP]() 
+
 ### [Master/Slave](https://en.wikipedia.org/wiki/Master/slave_(technology))　(**Design Knowledge**)
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
 ### [NOC]() 
-
-### [OPC]()　(**Design Knowledge**)
 
 ### [OTP]()　(**IPブロック(Hard IP)**)
 
@@ -139,8 +144,6 @@
 
 ### [RAM generator](https://soclabs.org/design-flow/memory-generators)　(**Design Knowledge**)
 LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static_random-access_memory)が一般的で、商用では各種の[**Memory Compiler**](https://www.synopsys.com/dw/ipdir.php?ds=dwc_sram_memory_compilers)が用意されている。メモリコンパイラは、動作周波数、ポート数、アドレス幅、データ幅等をパラメータとして入力すると最適なメモリのライブラリ情報を自動生成するツールである。商用メモリコンパイラでは、メモリセル(BitCell)に特別なデザインルールを採用することで必要なシリコン面積を圧縮するものもある。オープン系では[**OpenRAM**](https://openram.org/)が有名で、2ポート(同時に読み書き可能）メモリにも対応している。
-
-### [RDL]()　(**Design Knowledge**)
 
 ### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)　(**Design Standard**)
 **Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。言語仕様として[**Verilog**](https://en.wikipedia.org/wiki/Verilog)や[**VHDL**](https://en.wikipedia.org/wiki/VHDL)が標準化されている。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
@@ -187,8 +190,6 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [Verilog]()  (**EDA Methodology/Tool**)
 
 ### [VHDL]()  (**EDA Methodology/Tool**)
-
-### [WIP]()  (**Design Knowledge**)
 
 ### [Wishbone]() (**Design Standard**)
 
