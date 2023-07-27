@@ -12,8 +12,14 @@
 ### [AFE](https://en.wikipedia.org/wiki/Analog_front-end)　(**IPブロック(Hard IP)**)
 **Analog Front-End** の略。センサー等のアナログ出力信号をデジタル信号へ変換するアナログ回路を指す。一般には、アンプやA/Dコンバータ、フィルタなどのアナログ回路を指すことが多いが、高速シリアル通信向けのクロックが重畳された小振幅信号やPAM(Pulse Amplitude Modulation)信号に変調された信号をデジタル信号に復調するミックスドシグナル回路もAFEと呼ぶことがある。SoC内部にAFEを搭載する場合と、SoCとは別チップでAFEを構成する場合がある。
 
-### [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)　(**Design Standard**)
-**Advanced eXtensible Interface**の略。AMBA(Advanced Microcontroller Bus Architecture)規格の一部として ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)チップ内部のIP間のバスインターフェース規格。IP間で valid/ready のハンドシェイク動作をして有効データを判断する。
+### [AMBA](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)　(**Design Standard**)
+**Advanced Microcontroller Bus Architecture**の略。チップ内部のIP間のバスインターフェース規格。IP間で valid/ready のハンドシェイク動作をして有効データを判断する。APB＞AHB＞AXIの順で進化した。
+- [APB](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_Peripheral_Bus_(APB))
+**Advanced Peripheral Bus**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0024/c/)低速の32bitバス規格。
+- [AHB](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)
+**Advanced High-performance Bus**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0011/a/)(64/128/256/512/1024)bitバス規格。
+- [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)
+**Advanced eXtensible Interface**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)インターフェース仕様。チャネルの概念が導入された。
 
 ### [BGR]() (**IPブロック(Hard IP)**)
 
@@ -105,6 +111,8 @@
 
 ## 【M - R】
 
+### [Magic]()　(**EDA Methodology/Tool**)
+
 ### [Master/Slave](https://en.wikipedia.org/wiki/Master/slave_(technology))　(**Design Knowledge**)
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
@@ -169,6 +177,9 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 ### [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)　(**EDA Methodology/Tool**)
 チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
+
+### [TCL](https://en.wikipedia.org/wiki/Tcl)　 (**EDA Methodology/Tool**)
+スクリプト言語。1980年代 **Magic** のスクリプト機能の拡張の為に開発された。商用の Synthsis ツールである DesignCompiler でもスクリプト言語として TCL を採用したことから EDA 業界のスクリプト言語として根付いている。
 
 ### [TO]()  (**Design Knowledge**)
 
