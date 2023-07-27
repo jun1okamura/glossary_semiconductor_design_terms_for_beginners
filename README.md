@@ -21,7 +21,8 @@
 - [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)
 **Advanced eXtensible Interface**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)インターフェース仕様。チャネルの概念が導入された。
 
-### [BGR]() (**IPブロック(Hard IP)**)
+### [BGR](https://en.wikipedia.org/wiki/Bandgap_voltage_reference) (**IPブロック(Hard IP)**)
+**BandGap voltage Reference**の略。正の温度特性を持つPN接合を流れる電流を、負の温度特性を持つ抵抗に流すことで、温度によらずに一定の電圧を発生する、基準電圧回路。SiのBandGap(1.26V)に近い電圧を出力する。回路安定点が２つあり適切なスタートアップ回路が必須である。
 
 ### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)　(**Design Knowledge**)
 **Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
