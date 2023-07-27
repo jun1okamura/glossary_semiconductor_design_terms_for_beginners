@@ -149,9 +149,9 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 ### [Sample]()　(**Design Knowledge**) 
 開発チップは、ES>CS>MP の順でステータスが上がる。
-- [**ES**](https://semicon.jeita.or.jp/word/word.html) **Engineering Sample** の略。社内(パートナー企業)向け評価用サンプルのこと、機能評価＋テスト環境デバッグ＋ソフト開発＋信頼性試験等の評価・開発用のチップ。
-- [**CS**](https://semicon.jeita.or.jp/word/word.html) **Commercial Sample** の略。顧客評価用サンプルのこと、量産する前に顧客を限定して配布（販売）するチップのこと。
-- [**MP**](https://semicon.jeita.or.jp/word/word.html) **Mass Production** の略。量産版のチップのこと。MPと呼ばずに素直に量産版と呼ぶこともある。
+- [**ES**](https://semicon.jeita.or.jp/word/word.html)　**Engineering Sample** の略。機能評価＋テスト開発＋ソフト開発＋信頼性試験等の社内・パートナーでの評価用チップ。
+- [**CS**](https://semicon.jeita.or.jp/word/word.html)　**Commercial Sample** の略。顧客評価用サンプルのこと、量産する前に顧客を限定して配布（販売）するチップのこと。
+- [**MP**](https://semicon.jeita.or.jp/word/word.html)　**Mass Production** の略。量産版のチップのこと。MPと呼ばずに素直に量産版と呼ぶこともある。
 
 ### [SCAN]()　(**Design Knowledge**)
 
