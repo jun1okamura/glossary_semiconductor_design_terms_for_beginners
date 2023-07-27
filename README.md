@@ -21,7 +21,7 @@
 - [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)
 **Advanced eXtensible Interface**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)インターフェース仕様。チャネルの概念が導入された。
 
-### [BGR](https://en.wikipedia.org/wiki/Bandgap_voltage_reference) (**IPブロック(Hard IP)**)
+### [BGR](https://en.wikipedia.org/wiki/Bandgap_voltage_reference)　(**IPブロック(Hard IP)**)
 **BandGap voltage Reference**の略。正の温度特性を持つPN接合を流れる電流を、負の温度特性を持つ抵抗に流すことで、温度によらずに一定の電圧を発生する、基準電圧回路。SiのBandGap(1.26V)に近い電圧を出力する。回路安定点が２つあり適切なスタートアップ回路が必須である。
 
 ### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)　(**Design Knowledge**)
@@ -34,8 +34,6 @@
 
 ### [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)　(**EDA Methodology/tool**)
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
-
-### [DDR]()　(**Design Standard**)
 
 ### [DFM](https://en.wikipedia.org/wiki/Design_for_manufacturability)　(**EDA Methodology/Tool**)
 **Design For Manufacturability**の略。半導体設計におけるDFMは、製造されたチップの歩留まり率(Yield)を上げる為に行われる設計段階での工夫のことを総称する。DFMツールは、ポリ・メタル挿入(CMPでのDishing対策）、ダブルVIA挿入(VIAのオープン対策)、配線拡張（配線切れ対策）などを行うツールである。リソグラフィーの解像度を改善する(OPC=Optical Proximity Correction：光学近接効果補正)為の補助パターン挿入ツールも広義のDFMツールに含まれる。またメモリの冗長回路・ECC回路の採用、カスタムレイアウト設計で「最小寸法をなるべく避ける」等も広義のDFMに含まれる。
@@ -69,20 +67,29 @@
 ### [GDSII](https://en.wikipedia.org/wiki/GDSII)  (**Design Standard**)
 半導体Layout用のファイルフォーマット(**Graphic Design System II**の略).1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールもある。
 
-### [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)　(**IPブロック(IO-PAD)**)
-**General Purpose Input/Output**の略。文字通り汎用IO回路、入出力設定、ドライブ電流調整、プルアップ・プルダウン、トライステート機能等が、ソフトウェアやレジスターにて設定できる。一般にはGPIOピンは、低速インターフェースやアナログ入出力と兼ねる場合が多い。
-
 ### [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)　(**Design Knowledge**)
 **High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。システム設計、ハードウェア設計向けの C++ クラスライブラリである[**SystemC**](https://en.wikipedia.org/wiki/SystemC)や、Googleが開発しているオープン系の[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
 
-### [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)　(**IPブロック(Soft-IP)**)
-**Inter-Integrated Circuit** の略。SDAとSCLのフィリップス社で開発された２線デジタルインターフェース。転送スピードは100K/400KHz、プルアップ抵抗でLo-Hiをドライブする仕様の為に高速動作や長距離伝送は難しい。通信に必要な信号線が少ないことと、回路規模が小さいことから、多くのセンサーやAD/DAコンバーター、ファン制御、小型LCDパネル、LEDアレー等で使われている。アイ・スクェアード・シーもしくはアイ・ツー・シーと呼ぶ。
-
-### [I2S](https://en.wikipedia.org/wiki/I%C2%B2S)　(**IPブロック(Soft-IP)**)
-**Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。IISとは略さないので注意。
-
 ### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)　(**Design Standard**)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
+
+### [Interface IP]()　(**Design Standard**) (**Soft-IP**)
+
+- [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)　
+**Inter-Integrated Circuit** の略。SDAとSCLのフィリップス社で開発された２線デジタルインターフェース。転送スピードは100K/400KHz、プルアップ抵抗でLo-Hiをドライブする仕様の為に高速動作や長距離伝送は難しい。通信に必要な信号線が少ないことと、回路規模が小さいことから、多くのセンサーやAD/DAコンバーター、ファン制御、小型LCDパネル、LEDアレー等で使われている。アイ・スクェアード・シーもしくはアイ・ツー・シーと呼ぶ。
+- [I2S](https://en.wikipedia.org/wiki/I%C2%B2S)　
+**Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。IISとは略さないので注意。
+- [QSPI]()　
+- [SPI]()　
+- [UART]()　
+
+### [Interface IP]()　(**Design Standard**) (**Hard-IP**)
+
+- [DDR]()
+- [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)
+**General Purpose Input/Output**の略。文字通り汎用IO回路、入出力設定、ドライブ電流調整、プルアップ・プルダウン、トライステート機能等が、ソフトウェアやレジスターにて設定できる。一般にはGPIOピンは、低速インターフェースやアナログ入出力と兼ねる場合が多い。
+- [LVDS]() 
+- [SERDES]()
 
 ### [JTAG](https://en.wikipedia.org/wiki/JTAG)　(**Design Standard**)
 **Joint Test Action Group** の略。業界標準のテスト手法、PCBの基板検査のための標準規格から始まった。インタフェースの仕様は[IEEE1149.1](https://www.ti.com/lit/an/ssya002c/ssya002c.pdf)で定められているが、実際には半導体メーカーがプライベート命令やオプションレジスタを使って拡張している為に「総合デバッグインタフェース」になっている。TCK/TDI/TDO/TMSの4線とTRSTの5線を使う場合がある。FPGAの書き込みや、CPUのデバッグ、基板検査、ICの内部回路のテスト等に使われる。
@@ -98,8 +105,6 @@
 
 ### [LPE](https://en.wikipedia.org/wiki/Parasitic_extraction)　(**EDA Methodology/Tool**)
 **Layout Parasitic Extraction** の略。レイアウト情報から回路図には明示的に記述されていない寄生素子（RLC）を抽出して[SPICE](https://en.wikipedia.org/wiki/SPICE)等のネット情報として出力するツール。膨大な数の寄生素子が出力されることで回路シミュレーションが実行できないという課題に対応するために、寄生素子を電気的に等価な記述に圧縮記述する機能がある。ロジック設計ではネットの遅延情報としてフィードバックされる。
-
-### [LVDS]()  (**IPブロック(Hard IP)**)
 
 ### [LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)　(**EDA Methodology/Tool**)
 **Layout Versus Schematic** の略。回路図とレイアウトの比較検証作業。回路図から抽出したネット情報とレイアウトから抽出したネット情報の等価性チェック。[SPICE](https://en.wikipedia.org/wiki/SPICE)や[CDL](https://en.wikipedia.org/wiki/Circuit_design_language)記述のネットを使って等価検証を行う。手書きの回路図しか無かった80年代では、人手でレイアウトの逆読みと手書き回路図との比較をダブル・トリプルに検証していた時代もあった。
@@ -117,18 +122,20 @@
 
 ### [OTP]()　(**IPブロック(Hard IP)**)
 
+### [Package]()　(**Design Knowledge**)
+
+- [DIP]()　
+- [QFN]()　
+- [QFP]()　
+- [SOP]()　
+- [WCSP]() 
+
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
 
 ### [PDN]()　(**Design Knowledge**)
 
 ### [PLL]()　(**IPブロック(Hard IP)**)
-
-### [QFN]()　(**Design Knowledge**)
-
-### [QFP]()　(**Design Knowledge**)
-
-### [QSPI]()　(**IPブロック(Soft-IP)**)
 
 ### [RAM generator](https://soclabs.org/design-flow/memory-generators)　(**Design Knowledge**)
 LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static_random-access_memory)が一般的で、商用では各種の[**Memory Compiler**](https://www.synopsys.com/dw/ipdir.php?ds=dwc_sram_memory_compilers)が用意されている。メモリコンパイラは、動作周波数、ポート数、アドレス幅、データ幅等をパラメータとして入力すると最適なメモリのライブラリ情報を自動生成するツールである。商用メモリコンパイラでは、メモリセル(BitCell)に特別なデザインルールを採用することで必要なシリコン面積を圧縮するものもある。オープン系では[**OpenRAM**](https://openram.org/)が有名で、2ポート(同時に読み書き可能）メモリにも対応している。
@@ -151,15 +158,11 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [SDC](https://www.macnica.co.jp/business/semiconductor/articles/intel/133417)　(**Design Standard**)
 **Synopsys Design Constraint**の略。Synopsys社によって開発された設計制約のフォーマット、現在では業界標準になっている。回路が満たすべきタイミング情報（クロックの周期等）を記載する。
 
-### [SERDES]()  (**IPブロック(Hard IP)**)
-
 ### [SDF](https://en.wikipedia.org/wiki/Standard_Delay_Format)　(**Design Standard**)
 **Standard Delay Format**の略。遅延情報を記述する[IEEE標準フォーマット](https://ieeexplore.ieee.org/document/972829)。パスの遅延時間や遅延時間の制約条件、配線遅延時間なども扱うことができる。
 
 ### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)　(**Design Knowledge**)
 [**CADENCE**](https://www.cadence.com/en_US/home.html)が提供する（Cadenceに統合される前のSDA社時代からSKILLは存在する）EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴（だと理解している）。個人的にはテキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じだと理解。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
-
-### [SPI]()　(**IPブロック(Soft-IP)**)
 
 ### [SPICE](https://en.wikipedia.org/wiki/SPICE)　(**EDA Methodology/Tool**)
 **Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[**HSPICE(Synopsys)**](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)や[**Spector(Cadence)**](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEでは[**LTspice(Analog Device)**](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
@@ -181,13 +184,9 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 ### [TO]()  (**Design Knowledge**)
 
-### [UART]()　(**IPブロック(Soft-IP)**)
-
 ### [Verilog]()  (**EDA Methodology/Tool**)
 
 ### [VHDL]()  (**EDA Methodology/Tool**)
-
-### [WCSP]()  (**Design Knowledge**)
 
 ### [WIP]()  (**Design Knowledge**)
 
