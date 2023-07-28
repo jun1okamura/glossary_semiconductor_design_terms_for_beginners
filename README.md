@@ -46,19 +46,25 @@
 
 ### [CSR]()　(**Design Knowledge**)
 
-### [Decap Cell](https://ivlsi.com/decap-cells-vlsi-physical-design/)　(**Design Knowledge**)
-**Decap Cell** とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
-
 ### [Design Language]()  (**EDA Methodology/Tool**)
-
-- [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
-**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。システム設計、ハードウェア設計向けの C++ クラスライブラリである[**SystemC**](https://en.wikipedia.org/wiki/SystemC)や、Googleが開発しているオープン系の[**XLS**](https://github.com/google/xls)等、その他にもいろいろある。
 
 - [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
 **Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。言語仕様として[**Verilog**](https://en.wikipedia.org/wiki/Verilog)や[**VHDL**](https://en.wikipedia.org/wiki/VHDL)が標準化されている。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
--- [Verilog]()
--- [System Verilog]()
--- [VHDL]()
+
+  - [Verilog]()
+
+  - [System Verilog]()
+
+  - [VHDL]()
+
+- [Chisel](https://www.chisel-lang.org/) UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。モジュールからRTLを自動生成する。
+
+- [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
+**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。
+
+  - [SystemC](https://en.wikipedia.org/wiki/SystemC) システム設計・ハードウェア設計向けの C++ クラスライブラリ。
+
+  - [XLS](https://github.com/google/xls) Googleが開発しているオープン系のHLS等
 
 ### [EDA Design Flow]()  (**EDA Methodology/Tool**)
 
@@ -101,12 +107,6 @@
 - [SDF](https://en.wikipedia.org/wiki/Standard_Delay_Format)
 **Standard Delay Format**の略。遅延情報を記述する[IEEE標準フォーマット](https://ieeexplore.ieee.org/document/972829)。パスの遅延時間や遅延時間の制約条件、配線遅延時間なども扱うことができる。
 
-### [FILL](https://semiengineering.com/knowledge_centers/materials/fill)　(**EDA Methodology/Tool**)
-**Metal Fill**や**Poly Fill**とも言われる。[**CMP**](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)による平坦化プロセス工程において、デッシング現象（広いメタル間スペースが過度のエッチングで皿状に凹んでしまう事）を防ぐ為に、電気的には意味のないメタルやポリ層を配置する作業。通常はレイアウト設計が完全に終わった最終工程で実行される。DFMの一種。
-
-### [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)　(**Design Knowledge**)
-**Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
-
 ## 【G - L】
 
 ### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)　(**Design Standard**)
@@ -147,7 +147,7 @@
 
 ### [Manufacturing-related Terminology]()　(**Design Knowledge**)
 
-- [CMP]()　
+- [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)
 
 - [OPC]()　
 
@@ -215,7 +215,13 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ### [Standard Cell](https://en.wikipedia.org/wiki/Standard_cell)　(**Design Knowledge**)
 **SC**とか**スタセル**とか短縮されて呼ばれることが多い。デジタル回路設計用のRTL記述言語([Verilog](https://en.wikipedia.org/wiki/Verilog)や[VHDL](https://en.wikipedia.org/wiki/VHDL))から論理合成ツールを介して最終的にネットとして展開される基本回路（Inverter/NAND/NOR/FF等）群のレイアウトとタイミング(遅延等）情報をまとめたファイル(.lib）を指す。同じ基本回路（例えばInverter)でもネット負荷に応じた駆動能力を持つ複数の素子がライブラリに登録されている。一般にタイミング（遅延）と消費電力はトレードオフの関係にあるので、クリティカルパスを解決するために特別なスタセルを特注・置き換えてタイミングエラーを回避するすることも行われる。また、OAI/AOI等の複合ゲートや、スキャン挿入用のDFF等の特殊回路を登録することも一般的である。
 
-### [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)　(**EDA Methodology/Tool**)
+- [Decap Cell](https://ivlsi.com/decap-cells-vlsi-physical-design/)　(**Design Knowledge**)
+**Decap Cell** とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
+
+- [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)　(**Design Knowledge**)
+**Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
+
+- [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)　(**EDA Methodology/Tool**)
 チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
 
 ### [TCL](https://en.wikipedia.org/wiki/Tcl)　 (**EDA Methodology/Tool**)
