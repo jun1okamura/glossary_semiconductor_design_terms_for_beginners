@@ -163,16 +163,15 @@
 ### [NOC]() 
 
 ### [Package]()　(**Design Knowledge**)
+挿入型のDIPから表面実装型のQFPへ進化、フットプリントの縮小でQFNが生まれ、CSPへ進化した。QFP/QFN の頭に、"L"・"T"を付けて薄型のパッケージ仕様を表す。
 
-- [DIP]()　
+- [DIP](https://en.wikipedia.org/wiki/Dual_in-line_package)　**Dual In-line Package**の略。1960-80年代ICのパッケージといえばDIPでした。
 
-- [QFN]()
+- [QFP](https://en.wikipedia.org/wiki/Quad_flat_package)　**Quad Flat Package**の略。4方向にリード端子のあるパッケージ。二方向にしかリード端子のないパッケージはSOPと呼ぶ。
 
-- [QFP]()　
+- [QFN](https://en.wikipedia.org/wiki/Flat_no-leads_package) **Quad-Flat No-leads**の略。4方向に端子のあるリードがないパッケージ。二方向にしかリード端子のないパッケージはDFNと呼ぶ。
 
-- [SOP]()　
-
-- [WCSP]() 
+- [CSP](https://en.wikipedia.org/wiki/Chip-scale_package) **chip scale package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer上に儲けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
 
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
