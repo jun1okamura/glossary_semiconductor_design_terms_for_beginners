@@ -46,28 +46,6 @@
 
 ### [CSR]()　(**Design Knowledge**)
 
-### [Hardware Description Language]()  (**EDA Methodology/Tool**)
-
-- [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
-**Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
-
-  - [Verilog](https://en.wikipedia.org/wiki/Verilog) 代表的なRTL言語[**IEEE 1364-2005**](https://ieeexplore.ieee.org/document/1620780)として標準化されている。
-
-  - [Verilog-AMS](https://en.wikipedia.org/wiki/Verilog-AMS) ミックスドシグナル拡張（AMS）を含む Verilog の[**拡張言語仕様**](https://www.accellera.org/images/downloads/standards/v-ams/VAMS-LRM-2-4.pdf)
-
-  - [System Verilog](https://en.wikipedia.org/wiki/SystemVerilog) 検証系の機能が追加された Verilog の拡張言語[**IEEE 1800-2012**](https://ieeexplore.ieee.org/document/6469140)として標準化されている。
-
-  - [VHDL](https://en.wikipedia.org/wiki/VHDL) 代表的なRTL言語[**IEEE 1076-2008**](https://ieeexplore.ieee.org/document/4772740)として標準化されている。
-
-- [Chisel](https://www.chisel-lang.org/) UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。モジュールからRTLを自動生成する。
-
-- [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
-**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。
-
-  - [SystemC](https://en.wikipedia.org/wiki/SystemC) システム設計・ハードウェア設計向けの C++ クラスライブラリ。
-
-  - [XLS](https://github.com/google/xls) Googleが開発しているオープン系のHLS等
-
 ### [EDA Design Flow]()  (**EDA Methodology/Tool**)
 
 - [Synthesis](https://en.wikipedia.org/wiki/Logic_synthesis)
@@ -110,6 +88,28 @@
 **Standard Delay Format**の略。遅延情報を記述する[IEEE標準フォーマット](https://ieeexplore.ieee.org/document/972829)。パスの遅延時間や遅延時間の制約条件、配線遅延時間なども扱うことができる。
 
 ## 【G - L】
+
+### [Hardware Description Language]()  (**EDA Methodology/Tool**)
+
+- [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
+**Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
+
+  - [Verilog](https://en.wikipedia.org/wiki/Verilog) 代表的なRTL言語[**IEEE 1364-2005**](https://ieeexplore.ieee.org/document/1620780)として標準化されている。
+
+  - [Verilog-AMS](https://en.wikipedia.org/wiki/Verilog-AMS) ミックスドシグナル拡張（AMS）を含む Verilog の[**拡張言語仕様**](https://www.accellera.org/images/downloads/standards/v-ams/VAMS-LRM-2-4.pdf)
+
+  - [System Verilog](https://en.wikipedia.org/wiki/SystemVerilog) 検証系の機能が追加された Verilog の拡張言語[**IEEE 1800-2012**](https://ieeexplore.ieee.org/document/6469140)として標準化されている。
+
+  - [VHDL](https://en.wikipedia.org/wiki/VHDL) 代表的なRTL言語[**IEEE 1076-2008**](https://ieeexplore.ieee.org/document/4772740)として標準化されている。
+
+- [Chisel](https://www.chisel-lang.org/) UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。モジュールからRTLを自動生成する。
+
+- [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
+**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。
+
+  - [SystemC](https://en.wikipedia.org/wiki/SystemC) システム設計・ハードウェア設計向けの C++ クラスライブラリ。
+
+  - [XLS](https://github.com/google/xls) Googleが開発しているオープン系のHLS等
 
 ### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)　(**Design Standard**)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
