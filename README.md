@@ -30,7 +30,13 @@
 
 - [PLL]()
 
-### [AMBA](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)　(**Design Standard**)
+### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)　(**Design Knowledge**)
+**Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
+
+### [BUS](https://en.wikipedia.org/wiki/Bus_(computing))　(**Design Standard**)
+一つの通信経路に対して、複数のデバイスが接続されるバス・トポロジーを構成する通信経路・方式のこと。一対一（ピアツーピア）の接続の場合はバスと呼ばずにチャネルと呼ぶ。
+
+#### [AMBA](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)
 **Advanced Microcontroller Bus Architecture**の略。チップ内部のIP間のバスインターフェース規格。IP間で valid/ready のハンドシェイク動作をして有効データを判断する。APB＞AHB＞AXIの順で進化した。
 - [APB](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_Peripheral_Bus_(APB))
 **Advanced Peripheral Bus**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0024/c/)低速の32bitバス規格。
@@ -41,8 +47,11 @@
 - [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)
 **Advanced eXtensible Interface**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)インターフェース仕様。チャネルの概念が導入された。
 
-### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)　(**Design Knowledge**)
-**Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
+#### [Wishbone](https://en.wikipedia.org/wiki/Wishbone_(computer_bus))
+オープンIPの流通組織 [**Open Core**](https://opencores.org/) がIP間接続のために規定したオープンソースの[バス規格](https://cdn.opencores.org/downloads/wbspec_b4.pdf)のこと。8/16/32/64ビット幅のMaster-Slave接続。
+
+#### [NOC](https://en.wikipedia.org/wiki/Network_on_a_chip)
+**Network On Chip** の略。複数の速度の異なるIP間通信が必要なSoCチップ設計において、通信を一旦パケット化することで、速度や頻度の異なるIP間通信を効率的に処理することを目的に考案された。AXIフォーマットのIP間通信をNOCのパケットに変換して送受信できる。コンピューター間で行われていた広域ネットワーク通信の概念をチップ内のIP間の通信に適用したもの。
 
 ### [CSR]()　(**Design Knowledge**)
 
@@ -160,12 +169,10 @@
 ### [Master/Slave](https://en.wikipedia.org/wiki/Master/slave_(technology))　(**Design Knowledge**)
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
-### [NOC]() 
-
 ### [Package]()　(**Design Knowledge**)
 挿入型のDIPから表面実装型のQFPへ進化、フットプリントの縮小でQFNが生まれ、CSPへ進化した。QFP/QFN の頭に、"L"・"T"を付けて薄型のパッケージ仕様を表す。
 
-- [DIP](https://en.wikipedia.org/wiki/Dual_in-line_package)　**Dual In-line Package**の略。1960-80年代ICのパッケージといえばDIPでした。
+- [DIP](https://en.wikipedia.org/wiki/Dual_in-line_package)　**Dual In-line Package**の略。1970-80年代ICのパッケージといえばDIPでした。
 
 - [QFP](https://en.wikipedia.org/wiki/Quad_flat_package)　**Quad Flat Package**の略。4方向にリード端子のあるパッケージ。二方向にしかリード端子のないパッケージはSOPと呼ぶ。
 
@@ -229,7 +236,5 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 スクリプト言語。1980年代 **Magic** のスクリプト機能の拡張の為に開発された。商用の Synthsis ツールである DesignCompiler でもスクリプト言語として TCL を採用したことから EDA 業界のスクリプト言語として根付いている。
 
 ### [TO]()  (**Design Knowledge**)
-
-### [Wishbone]() (**Design Standard**)
 
 ## 【X - Z】
