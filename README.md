@@ -30,8 +30,8 @@
 **One Time Programmable memory**の略。一度限り書き込めるメモリブロックIPのことを指す。デバイスのシリアル番号、暗号コード、MACアドレス等のデジタル認識や、ADCやDAC、温度センサー等の校正データー、メモリの冗長セル置き換え等に使われる。昔はレーザーで物理的に加工(レーザートリム)していたが、電気的に、MOSトランジスターのVthを変えたり、破壊したりする方式が主流になっている。
 
 - [PLL](https://en.wikipedia.org/wiki/Phase-locked_loop)
-**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックと自走するVCOからのN分週したクロックをPDで比較することで、外部クロックの周波数に対してN倍の周波数のクロックを発生することができる。外部クロックをM分週することで、N/M倍の周波数のクロックを発生したり、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する[**Fractional PLL**]()もある。クロック発信機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等がある。
-  
+**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックと自走するVCOからのN分週したクロックをPDで比較することで、外部クロックの周波数に対してN倍の周波数のクロックを発生することができる。外部クロックをM分週することで、N/M倍の周波数のクロックを発生したり、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する[**Fractional PLL**]()もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、両者の間に時間軸の隔たるが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
+    
 ### [BUS](https://en.wikipedia.org/wiki/Bus_(computing))　(**Design Standard**)
 一つの通信経路に対して、複数のデバイスが接続されるバス・トポロジーを構成する通信経路方式のこと。一対一（ピアツーピア）の接続の場合はバスと呼ばずにチャネルと呼ぶ。
 
@@ -101,7 +101,7 @@
 **Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
 
 #### [CSR](https://en.wikipedia.org/wiki/Control/Status_Register)
-**Control Status Register** の略。CPUの計算処理の結果フラグ（オーバーフローとかキャリーとか）や動作モード（スーパバイザとかユーザー）、状態（割子もやトラップ）状態が格納されるレジスターのこと。
+**Control Status Register** の略。CPUの計算処理の結果フラグ（オーバーフローとかキャリーとか）や動作モード（スーパバイザとかユーザー）、状態（割込やトラップ）状態が格納されるレジスターのこと。
 
 #### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
@@ -172,8 +172,6 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 ## 【M - R】
 
-### [Magic]()　(**EDA Methodology/Tool**)
-
 ### [Manufacturing-related Terminology]()　(**Design Knowledge**)
 
 - [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)
@@ -193,7 +191,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 - [QFN](https://en.wikipedia.org/wiki/Flat_no-leads_package) **Quad-Flat No-leads**の略。4方向に端子のあるリードがないパッケージ。二方向にしかリード端子のないパッケージはDFNと呼ぶ。
 
-- [CSP](https://en.wikipedia.org/wiki/Chip-scale_package) **chip scale package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer上に儲けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
+- [CSP](https://en.wikipedia.org/wiki/Chip-scale_package) **Chip Scale Package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer上に儲けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
 
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
@@ -214,6 +212,10 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)　
 **Layout Versus Schematic** の略。回路図とレイアウトの比較検証作業。回路図から抽出したネット情報とレイアウトから抽出したネット情報の等価性チェック。[SPICE](https://en.wikipedia.org/wiki/SPICE)や[CDL](https://en.wikipedia.org/wiki/Circuit_design_language)記述のネットを使って等価検証を行う。手書きの回路図しか無かった80年代では、人手でレイアウトの逆読みと手書き回路図との比較をダブル・トリプルに検証していた時代もあった。
 
+  - [Magic](http://bwrcs.eecs.berkeley.edu/Classes/IcBook/magic/)
+
+  - [Calibre](https://eda.sw.siemens.com/en-US/ic/calibre-design/) 
+
 ### [RAM generator](https://soclabs.org/design-flow/memory-generators)　(**Design Knowledge**)
 LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static_random-access_memory)が一般的で、商用では各種の[**Memory Compiler**](https://www.synopsys.com/dw/ipdir.php?ds=dwc_sram_memory_compilers)が用意されている。メモリコンパイラは、動作周波数、ポート数、アドレス幅、データ幅等をパラメータとして入力すると最適なメモリのライブラリ情報を自動生成するツールである。商用メモリコンパイラでは、メモリセル(BitCell)に特別なデザインルールを採用することで必要なシリコン面積を圧縮するものもある。オープン系では[**OpenRAM**](https://openram.org/)が有名で、2ポート(同時に読み書き可能）メモリにも対応している。
 
@@ -227,19 +229,28 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 - [**MP**](https://semicon.jeita.or.jp/word/word.html)　**Mass Production** の略。量産版のチップのこと。MPと呼ばずに素直に量産版と呼ぶこともある。
 
-### [SCAN]()　(**Design Knowledge**)
+### [Simulator]()　(**EDA Methodology/Tool**)
+半導体設計においては**回路シミュレーター**を指す。（光学シミュレーターや加工シミュレーター、プロセスシミュレーター等も半導体開発には重要です）
 
-### [SPICE](https://en.wikipedia.org/wiki/SPICE)　(**EDA Methodology/Tool**)
+#### [SPICE](https://en.wikipedia.org/wiki/SPICE)
 **Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[**HSPICE(Synopsys)**](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)や[**Spector(Cadence)**](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEでは[**LTspice(Analog Device)**](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
+
+#### [Event Driven Simulator]()
+
+#### [High-Speed SPICE]()
+
+#### [PSS Simulator](https://en.wikipedia.org/wiki/Periodic_steady-state_analysis)
 
 ### [Standard Cell](https://en.wikipedia.org/wiki/Standard_cell)　(**Design Knowledge**)
 **SC**とか**スタセル**とか短縮されて呼ばれることが多い。デジタル回路設計用のRTL記述言語([Verilog](https://en.wikipedia.org/wiki/Verilog)や[VHDL](https://en.wikipedia.org/wiki/VHDL))から論理合成ツールを介して最終的にネットとして展開される基本回路（Inverter/NAND/NOR/FF等）群のレイアウトとタイミング(遅延等）情報をまとめたファイル(.lib）を指す。同じ基本回路（例えばInverter)でもネット負荷に応じた駆動能力を持つ複数の素子がライブラリに登録されている。一般にタイミング（遅延）と消費電力はトレードオフの関係にあるので、クリティカルパスを解決するために特別なスタセルを特注・置き換えてタイミングエラーを回避するすることも行われる。また、OAI/AOI等の複合ゲートや、スキャン挿入用のDFF等の特殊回路を登録することも一般的である。
 
-- [Decap Cell](https://ivlsi.com/decap-cells-vlsi-physical-design/)　(**Design Knowledge**)
+- [Decap Cell](https://ivlsi.com/decap-cells-vlsi-physical-design/)
 **Decap Cell** とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
 
-- [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)　(**Design Knowledge**)
+- [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
 **Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
+
+- [SCAN Cell]()
 
 - [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)　(**EDA Methodology/Tool**)
 チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
