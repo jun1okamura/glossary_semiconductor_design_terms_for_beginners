@@ -212,6 +212,8 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)　
 **Layout Versus Schematic** の略。回路図とレイアウトの比較検証作業。回路図から抽出したネット情報とレイアウトから抽出したネット情報の等価性チェック。[SPICE](https://en.wikipedia.org/wiki/SPICE)や[CDL](https://en.wikipedia.org/wiki/Circuit_design_language)記述のネットを使って等価検証を行う。手書きの回路図しか無かった80年代では、人手でレイアウトの逆読みと手書き回路図との比較をダブル・トリプルに検証していた時代もあった。
 
+- Tools
+
   - [Magic](http://bwrcs.eecs.berkeley.edu/Classes/IcBook/magic/)
 
   - [Calibre](https://eda.sw.siemens.com/en-US/ic/calibre-design/) 
@@ -235,9 +237,11 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 #### [SPICE](https://en.wikipedia.org/wiki/SPICE)
 **Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[**HSPICE(Synopsys)**](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)や[**Spector(Cadence)**](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEでは[**LTspice(Analog Device)**](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
 
-#### [Event Driven Simulator]()
+#### [Event Driven Simulator](https://en.wikipedia.org/wiki/Discrete-event_simulation)
+ロジック回路の動作をトランジスター/ゲート/RTLレベルのプリミティブでトレースするシミュレーター、回路信号の変化＝イベントを時間順に記憶（イベントホイールに登録）して順番にイベントが信号遅延により伝搬するプリミティブでの新たなイベントの発生を繰り返し新たに記憶しながら解く。解析精度はイベントホイールの時間刻みとプリミティブ素子や配線の遅延モデルに依存する。VerilogやVHDLのシミュレーターはイベントドリブン。
 
-#### [High-Speed SPICE]()
+#### [Fast SPICE]()
+キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる問題を解決するために、厳密解を諦めて、回路をある程度の大きさの回路ブロックに切り分けて(Partioning）回路行列を小型にして回路方程式を解く回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベントドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベントレベルシミュレーターがメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
 
 #### [PSS Simulator](https://en.wikipedia.org/wiki/Periodic_steady-state_analysis)
 
