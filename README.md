@@ -26,15 +26,14 @@
 - [LDO](https://en.wikipedia.org/wiki/Low-dropout_regulator)
 **Low Dropout Regulator** の略。ディスクリート部品の三端子レギュレーターの事。チップ内部で使用する電源を、外部から入力された電源から降圧する回路。高電圧側(外部)と降圧電圧(内部)の間に可変抵抗（=トランジスター）を直列に挿入して降圧側の負荷電流に応じて降圧電圧が一定になる様に制御することから、シリーズ・レギュレーターとも言われる。
 
-- [OTP]()
+- [OTP](https://en.wikipedia.org/wiki/Programmable_ROM#One_time_programmable_memory)
+**One Time Programmable memory**の略。一度限り書き込めるメモリブロックIPのことを指す。デバイスのシリアル番号、暗号コード、MACアドレス等のデジタル認識や、ADCやDAC、温度センサー等の校正データー、メモリの冗長セル置き換え等に使われる。昔はレーザーで物理的に加工(レーザートリム)していたが、電気的に、MOSトランジスターのVthを変えたり、破壊したりする方式が主流になっている。
 
-- [PLL]()
-
-### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)　(**Design Knowledge**)
-**Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
-
+- [PLL](https://en.wikipedia.org/wiki/Phase-locked_loop)
+**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックと自走するVCOからのN分週したクロックをPDで比較することで、外部クロックの周波数に対してN倍の周波数のクロックを発生することができる。外部クロックをM分週することで、N/M倍の周波数のクロックを発生したり、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する[**Fractional PLL**]()もある。クロック発信機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等がある。
+  
 ### [BUS](https://en.wikipedia.org/wiki/Bus_(computing))　(**Design Standard**)
-一つの通信経路に対して、複数のデバイスが接続されるバス・トポロジーを構成する通信経路・方式のこと。一対一（ピアツーピア）の接続の場合はバスと呼ばずにチャネルと呼ぶ。
+一つの通信経路に対して、複数のデバイスが接続されるバス・トポロジーを構成する通信経路方式のこと。一対一（ピアツーピア）の接続の場合はバスと呼ばずにチャネルと呼ぶ。
 
 #### [AMBA](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)
 **Advanced Microcontroller Bus Architecture**の略。チップ内部のIP間のバスインターフェース規格。IP間で valid/ready のハンドシェイク動作をして有効データを判断する。APB＞AHB＞AXIの順で進化した。
@@ -52,8 +51,6 @@
 
 #### [NOC](https://en.wikipedia.org/wiki/Network_on_a_chip)
 **Network On Chip** の略。複数の速度の異なるIP間通信が必要なSoCチップ設計において、通信を一旦パケット化することで、速度や頻度の異なるIP間通信を効率的に処理することを目的に考案された。AXIフォーマットのIP間通信をNOCのパケットに変換して送受信できる。コンピューター間で行われていた広域ネットワーク通信の概念をチップ内のIP間の通信に適用したもの。
-
-### [CSR]()　(**Design Knowledge**)
 
 ### [EDA Design Flow]()  (**EDA Methodology/Tool**)
 
@@ -98,6 +95,35 @@
 
 ## 【G - L】
 
+### [General (Better to know)]()　(**Design Standard**)
+
+#### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)
+**Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
+
+#### [CSR](https://en.wikipedia.org/wiki/Control/Status_Register)
+**Control Status Register** の略。CPUの計算処理の結果フラグ（オーバーフローとかキャリーとか）や動作モード（スーパバイザとかユーザー）、状態（割子もやトラップ）状態が格納されるレジスターのこと。
+
+#### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
+**Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
+
+#### [JTAG](https://en.wikipedia.org/wiki/JTAG)
+**Joint Test Action Group** の略。業界標準のテスト手法、PCBの基板検査のための標準規格から始まった。インタフェースの仕様は[IEEE1149.1](https://www.ti.com/lit/an/ssya002c/ssya002c.pdf)で定められているが、実際には半導体メーカーがプライベート命令やオプションレジスタを使って拡張している為に「総合デバッグインタフェース」になっている。TCK/TDI/TDO/TMSの4線とTRSTの5線を使う場合がある。FPGAの書き込みや、CPUのデバッグ、基板検査、ICの内部回路のテスト等に使われる。
+
+#### [KGD](https://xtech.nikkei.com/dm/article/WORD/20090121/164414/)
+**Known Good Die** の略。良品のベア・チップを指す通称。複数のチップを1つのパッケージに収めるMCP(Multi-Chip Package)やチップレット，縦に積んだ複数のチップ間を貫通電極で接続する3次元実装などでは，実装する前に良品チップであることが保証されていないと、実装後の不良品が多く発生する問題がある。チップを提供する側と実装する側は、相反するコスト分担関係にある為に、KGD自体の動作保証レベル・品質保証レベルに関しては個別の対応されている。
+
+#### [Master/Slave](https://en.wikipedia.org/wiki/Master/slave_(technology))
+デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
+
+#### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)
+[**CADENCE**](https://www.cadence.com/en_US/home.html)が提供する（Cadenceに統合される前のSDA社時代からSKILLは存在する）EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴（だと理解している）。個人的にはテキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じだと理解。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
+
+#### [TCL](https://en.wikipedia.org/wiki/Tcl)
+スクリプト言語。1980年代 **Magic** のスクリプト機能の拡張の為に開発された。商用の Synthsis ツールである DesignCompiler でもスクリプト言語として TCL を採用したことから EDA 業界のスクリプト言語として根付いている。
+
+#### [TO](https://en.wikipedia.org/wiki/Tape-out) 
+**Tape Out**の略。半導体開発における**TO**は、設計・検証が完了してGDSIIフォーマットのレイアウトデータをマスク変換する組織（マスクハウスや前工程ファブ）に送付すること。TO前の最終検証を**Sign-Off**手続きと呼ぶ。
+
 ### [Hardware Description Language]()  (**EDA Methodology/Tool**)
 
 #### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
@@ -120,9 +146,6 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [SystemC](https://en.wikipedia.org/wiki/SystemC) システム設計・ハードウェア設計向けの C++ クラスライブラリ。
 
 - [XLS](https://github.com/google/xls) Googleが開発しているオープン系のHLS等
-
-### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)　(**Design Standard**)
-**Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
 
 ### [Interface IP]()　(**Design Standard**) 
 
@@ -147,12 +170,6 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 - [UART]()　
 
-### [JTAG](https://en.wikipedia.org/wiki/JTAG)　(**Design Standard**)
-**Joint Test Action Group** の略。業界標準のテスト手法、PCBの基板検査のための標準規格から始まった。インタフェースの仕様は[IEEE1149.1](https://www.ti.com/lit/an/ssya002c/ssya002c.pdf)で定められているが、実際には半導体メーカーがプライベート命令やオプションレジスタを使って拡張している為に「総合デバッグインタフェース」になっている。TCK/TDI/TDO/TMSの4線とTRSTの5線を使う場合がある。FPGAの書き込みや、CPUのデバッグ、基板検査、ICの内部回路のテスト等に使われる。
-
-### [KGD](https://xtech.nikkei.com/dm/article/WORD/20090121/164414/)　(**Design Knowledge**)
-**Known Good Die** の略。良品のベア・チップを指す通称。複数のチップを1つのパッケージに収めるMCP(Multi-Chip Package)やチップレット，縦に積んだ複数のチップ間を貫通電極で接続する3次元実装などでは，実装する前に良品チップであることが保証されていないと、実装後の不良品が多く発生する問題がある。チップを提供する側と実装する側は、相反するコスト分担関係にある為に、KGD自体の動作保証レベル・品質保証レベルに関しては個別の対応されている。
-
 ## 【M - R】
 
 ### [Magic]()　(**EDA Methodology/Tool**)
@@ -166,9 +183,6 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [RDL]()
 
 - [WIP]() 
-
-### [Master/Slave](https://en.wikipedia.org/wiki/Master/slave_(technology))　(**Design Knowledge**)
-デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
 ### [Package]()　(**Design Knowledge**)
 挿入型のDIPから表面実装型のQFPへ進化、フットプリントの縮小でQFNが生まれ、CSPへ進化した。QFP/QFN の頭に、"L"・"T"を付けて薄型のパッケージ仕様を表す。
@@ -215,9 +229,6 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 ### [SCAN]()　(**Design Knowledge**)
 
-### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)　(**Design Knowledge**)
-[**CADENCE**](https://www.cadence.com/en_US/home.html)が提供する（Cadenceに統合される前のSDA社時代からSKILLは存在する）EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴（だと理解している）。個人的にはテキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じだと理解。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
-
 ### [SPICE](https://en.wikipedia.org/wiki/SPICE)　(**EDA Methodology/Tool**)
 **Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[**HSPICE(Synopsys)**](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)や[**Spector(Cadence)**](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEでは[**LTspice(Analog Device)**](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
 
@@ -232,10 +243,5 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 - [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)　(**EDA Methodology/Tool**)
 チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
-
-### [TCL](https://en.wikipedia.org/wiki/Tcl)　 (**EDA Methodology/Tool**)
-スクリプト言語。1980年代 **Magic** のスクリプト機能の拡張の為に開発された。商用の Synthsis ツールである DesignCompiler でもスクリプト言語として TCL を採用したことから EDA 業界のスクリプト言語として根付いている。
-
-### [TO]()  (**Design Knowledge**)
 
 ## 【X - Z】
