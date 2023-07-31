@@ -79,7 +79,9 @@
 - [Formal Verification](https://en.wikipedia.org/wiki/Formal_verification)：
 半導体設計における **Formal Verification** (形式的検証)とは、回路記述間を数学的に解析することで，記述間(例えばRTL記述とゲート記述)の論理が等価であるかどうかの検証（等価性検証）や、回路記述が動作性能に関する記述を満たしているかの検証（プロパティ検証）がある。シミュレータのように回路を動作させて検証するのではないので、シミュレーション・パターンの作成が不要で，かつ高速・網羅的に検証できるというメリットがある。
 
-### [File Format]()　(**Design Standard**)
+### [File Format](https://en.wikipedia.org/wiki/File_format)　(**Design Standard**)
+EDAツールで使われるフォーマットを説明する。
+
 - [CDL](https://en.wikipedia.org/wiki/Circuit_design_language)：
 **Circuit Design Language** の略。SPICEフォーマットからモデル情報を除た LVS や LPE の為に使われるファイルフォーマット。
 
@@ -100,7 +102,8 @@
 
 ## 【G - L】
 
-### [General (Better to know)]()　(**Design Standard**)
+### General (Better to know)　(**Design Standard**)
+半導体設計の際に良く使われる用語です。
 
 #### [ATPG](https://en.wikipedia.org/wiki/Automatic_test_pattern_generation)
 **Automatic Test Pattern Generation**の略。設計したチップのテストに必要なテストプログラムを自動で生成する方法およびツールのこと。ネットリストを読み込み、不良モデルを仮定してテストパターンを自動合成するツール。
