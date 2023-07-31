@@ -122,6 +122,9 @@
 #### [Master/Slave](https://en.wikipedia.org/wiki/Master/slave_(technology))
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
+#### [PDN](https://en.wikipedia.org/wiki/Power_integrity)
+**Power distribution network**の略。電源ネットワークの事であり、電源ネットワークによって決まる電源インピーダンスのことを指す。チップ内部の電源ネットワークに加えて、パッケージやチップ近傍のPCBの電源配線や平滑容量の配置等も考慮する場合がある。電源電圧の局部的なドロップは回路の動作不良を導く。また、チップの入出力信号の品質をSignal Integrity(SI)と呼び、電源インピーダンスと電源ドロップの品質をPower Integrity(PI)と呼ぶ。SI/PIは相互にとても関係が深い。
+
 #### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)
 CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在する)EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。テキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じ。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
 
@@ -222,8 +225,6 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
-
-### [PDN]()　(**Design Knowledge**)
 
 ### [Pysical Verification](https://en.wikipedia.org/wiki/Physical_verification)　(**EDA Methodology/Tool**)
 
