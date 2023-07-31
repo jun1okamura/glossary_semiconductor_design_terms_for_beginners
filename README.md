@@ -56,16 +56,16 @@
 チップ設計(一般にはRTLからGDSIIまで)に必要なEDAツールの組み合わせと一連の流れを指す。オープンソースなEDAツールで構成された[OpenLane](https://openlane.readthedocs.io/en/latest/)が整備されたことで、商用のツールを使わずにロジックチップを設計する環境が整い始めた。
 
 - [Synthesis](https://en.wikipedia.org/wiki/Logic_synthesis)：
-**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、Synopsysの[Design Compiler](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)やCadenceの[Genus/RTL Compiler](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系では、[**Yosys**](https://yosyshq.net/)+[**ABC**](https://people.eecs.berkeley.edu/~alanmi/abc/) が有名→[GitHub-Yosys](https://github.com/YosysHQ/yosys), [GitHub-ABC](https://github.com/berkeley-abc/abc)
+**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[Design Compiler](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)(Synopsys)や[Genus/RTL Compiler](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)(Cadence)がある。オープン系では、[**Yosys**](https://yosyshq.net/)+[**ABC**](https://people.eecs.berkeley.edu/~alanmi/abc/) が有名→[GitHub-Yosys](https://github.com/YosysHQ/yosys), [GitHub-ABC](https://github.com/berkeley-abc/abc)
 
 - [STA](https://en.wikipedia.org/wiki/Static_timing_analysis)：
-**Static Timing Analysis**の略。タイミング検証方法の一つ。入力から出力（同期回路の場合はFFからFF）までの経路に関して遅延の合計を計算し、**SDC**ファイルに記載された設計タイミング条件を満たされているかどうかを検証する。各経路の最大遅延を合計してセットアップ条件を満たしているか、各部の最小遅延を合計してホールド条件を満たしているか、両者のチェックを行う。Synopsysの[Prime Time](https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html)が商用ではデファクト。オープン系には[**OpenSTA**](https://github.com/The-OpenROAD-Project/OpenSTA)がある。
+**Static Timing Analysis**の略。タイミング検証方法の一つ。入力から出力（同期回路の場合はFFからFF）までの経路に関して遅延の合計を計算し、**SDC**ファイルに記載された設計タイミング条件を満たされているかどうかを検証する。各経路の最大遅延を合計してセットアップ条件を満たしているか、各部の最小遅延を合計してホールド条件を満たしているか、両者のチェックを行う。[Prime Time](https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html)(Synopsys)が商用ではデファクト。オープン系には[**OpenSTA**](https://github.com/The-OpenROAD-Project/OpenSTA)がある。
 
 - [DFT](https://en.wikipedia.org/wiki/Design_for_testing)：
 **Design For Testing** or **Design For Testability**の略。日本語だと「テスト容易化設計」であるが、言い換えると「LSIのテストの実行を容易にするための回路設計手法」の総称を指す。具体的には、テストモードとしての独自機能を備えたLSI、セルフテスト回路を設けたLSI、論理回路のテストのためのスキャンパスを設けたLSI、CMOSの暗電流に着目したテスト手法、等々がある。採用する手法、技術と必要なシリコン面積等のオーバーヘッドと、テスト容易化で得られるテストコスト削減効果のバランスが重要である。
 
 - [P&R/PnR](https://en.wikipedia.org/wiki/Place_and_route)：
-**Place and Route**の略。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールではSynopsysの[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)や、Cadenceの[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)がある。
+**Place and Route**の略。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールでは[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)(Synopsys)や、[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)(Cadence)がある。
 
 - [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)：
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
@@ -112,7 +112,7 @@
 **Control Status Register** の略。CPUの計算処理の結果フラグ（オーバーフローとかキャリーとか）や動作モード（スーパバイザとかユーザー）、状態（割込やトラップ）状態が格納されるレジスターのこと。
 
 #### [Emulator](https://en.wikipedia.org/wiki/Hardware_emulation)
-エミュレータは，ロジック回路をFPGAや専用ハード等にマッピングして，その回路の動作を高速に実行する装置のこと。シミュレーターでは評価することが難しい画像や音声の品質等の検証や、OSのブートシーケンス等の長い時間がかかる検証に使われる。Cadenceの[Palladium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/acceleration-and-emulation/palladium-z1.html)やSynopsysの[Zebu](https://www.synopsys.com/verification/emulation/zebu-empower.html)、Siemensの[Veloce](https://eda.sw.siemens.com/en-US/ic/veloce/)等がある。一般に大変高価な装置なので、複数の大型FPGAの組み合わせで代用することもあるが、その場合ネットに手を加えると厳密な検証にはならないデメリットもある。
+エミュレータは，ロジック回路をFPGAや専用ハード等にマッピングして，その回路の動作を高速に実行する装置のこと。シミュレーターでは評価することが難しい画像や音声の品質等の検証や、OSのブートシーケンス等の長い時間がかかる検証に使われる。[Palladium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/acceleration-and-emulation/palladium-z1.html)(Cadence)や[Zebu](https://www.synopsys.com/verification/emulation/zebu-empower.html)(Synopsys)、[Veloce](https://eda.sw.siemens.com/en-US/ic/veloce/)(Siemens)等がある。一般に大変高価な装置なので、複数の大型FPGAの組み合わせで代用することもあるが、その場合ネットに手を加えると厳密な検証にはならないデメリットもある。
 
 #### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
@@ -277,7 +277,7 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 半導体設計においては**回路シミュレーター**を指す。（光学シミュレーターや加工シミュレーター、プロセスシミュレーター等も半導体開発には重要です）
 
 #### [SPICE](https://en.wikipedia.org/wiki/SPICE)
-**Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、Synopsysの[HSPICE](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)やCadenceの[Spector()](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEではAnalog Deviceの[LTspice](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
+**Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[HSPICE](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)(Synopsys)や[Spector()](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)(Cadence)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEではAnalog Deviceの[LTspice](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
 
 #### [Event Driven Simulator](https://en.wikipedia.org/wiki/Discrete-event_simulation)
 ロジック回路の動作をトランジスター/ゲート/RTLレベルのプリミティブでトレースするシミュレーター、回路信号の変化＝イベントを時間順に記憶（イベントホイールに登録）して順番にイベントが信号遅延により伝搬するプリミティブでの新たなイベントの発生を繰り返し新たに記憶しながら解く。解析精度はイベントホイールの時間刻みとプリミティブ素子や配線の遅延モデルに依存する。VerilogやVHDLのシミュレーターはイベントドリブンで実装できる。
