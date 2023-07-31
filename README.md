@@ -9,7 +9,7 @@
 
 ## 【A - F】
 
-### [Analog Hard IP]()　(**Design Knowledge**)
+### Analog Hard IP　(**Design Knowledge**)
 
 - [AFE](https://en.wikipedia.org/wiki/Analog_front-end)：
 **Analog Front-End** の略。センサー等のアナログ出力信号をデジタル信号へ変換するアナログ回路を指す。一般には、アンプやA/Dコンバータ、フィルタなどのアナログ回路を指すことが多いが、高速シリアル通信向けのクロックが重畳された小振幅信号やPAM(Pulse Amplitude Modulation)信号に変調された信号をデジタル信号に復調するミックスドシグナル回路もAFEと呼ぶことがある。SoC内部にAFEを搭載する場合と、SoCとは別チップでAFEを構成する場合がある。
@@ -171,7 +171,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 - [XLS](https://github.com/google/xls) Googleが開発しているオープン系のHLS等
 
-### [Interface IP]()　(**Design Standard**) 
+### Interface IP　(**Design Standard**) 
 
 - [DDR](https://en.wikipedia.org/wiki/Double_data_rate)：
 **Double Data Rate**の略。転送クロックの両エッジでデータを転送することで2倍の転送速度を可能にする通信方式を指すが、DRAM(SDRAM)とのインターフェースとして標準化されて以来、DDRというとDRAM用のインターフェースを指すことが多い。[JEDEC](https://www.jedec.org/standards-documents/docs/jesd-79f)で標準化されている。
@@ -212,7 +212,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
   
 ## 【M - R】
 
-### [Manufacturing-related Terminology]()　(**Design Knowledge**)
+### Manufacturing-related Terminology　(**Design Knowledge**)
 
 - [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)：
 **Chemical Mechanical Polishing**の略。半導体設計でのCMPとは、各プロセスステップ毎にWafer表面を化学薬品(スラリー)と微細なやすり(パット)により平坦化する工程のこと、ゴミを嫌うクリーンルームには馴染まないプロセス方式だが、微細化が進み焦点深度が浅くなった露光機でパターンを現像する為にブレークスルーとなった技術。パターンが無い領域が皿状に削られる(Dishing)を防ぐ為に、DFM工程にてFillパターンが挿入される。  
@@ -272,7 +272,7 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 ## 【S - V】
 
-### [Sample]()　(**Design Knowledge**) 
+### Sample (**Design Knowledge**) 
 開発チップは、ES>CS>MP の順でステータスが上がる。
 - [**ES**](https://semicon.jeita.or.jp/word/word.html)：
 **Engineering Sample** の略。機能評価＋テスト開発＋ソフト開発＋信頼性試験等の社内・パートナーでの評価用チップ。
@@ -283,11 +283,11 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 - [**MP**](https://semicon.jeita.or.jp/word/word.html)：
 **Mass Production** の略。量産版のチップのこと。MPと呼ばずに素直に量産版と呼ぶこともある。
 
-### [Simulator]()　(**EDA Methodology/Tool**)
+### [Simulator](https://en.wikipedia.org/wiki/Computer_simulation)　(**EDA Methodology/Tool**)
 半導体設計においては**回路シミュレーター**を指す。（光学シミュレーターや加工シミュレーター、プロセスシミュレーター等も半導体開発には重要です）
 
 #### [SPICE](https://en.wikipedia.org/wiki/SPICE)
-**Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[HSPICE](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)(Synopsys)や[Spector()](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)(Cadence)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEではAnalog Deviceの[LTspice](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
+**Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[HSPICE](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)(Synopsys)や[Spector](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)(Cadence)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEではAnalog Deviceの[LTspice](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
 
 #### [Event Driven Simulator](https://en.wikipedia.org/wiki/Discrete-event_simulation)
 ロジック回路の動作をトランジスター/ゲート/RTLレベルのプリミティブでトレースするシミュレーター、回路信号の変化＝イベントを時間順に記憶（イベントホイールに登録）して順番にイベントが信号遅延により伝搬するプリミティブでの新たなイベントの発生を繰り返し新たに記憶しながら解く。解析精度はイベントホイールの時間刻みとプリミティブ素子や配線の遅延モデルに依存する。VerilogやVHDLのシミュレーターはイベントドリブンで実装できる。
@@ -295,8 +295,8 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 #### [Cycle-base Simulator](https://en.wikipedia.org/wiki/Logic_simulation)
 ロジック回路の動作を素子の遅延時間を無視して静的に演算順序を決定しておき，実行時にはクロック・サイクルごとに一度だけ演算を行なうことで、イベント・ドリブン手法と比べて、数倍～100倍高速に論理機能検証が可能とする方式。サイクル・ベース・シミュレータでは、実行時の高速化の為にネットリストを一旦コンパイルした後にサイクル毎に演算する。
 
-#### [Fast SPICE]()
-キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる問題を解決するために、厳密解を諦めて、回路をある程度の大きさの回路ブロックに切り分けて(Partioning）回路行列を小型にして回路方程式を解く回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベントドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベントドリブン方式がメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
+#### [Fast SPICE](https://www.electronicdesign.com/technologies/test-measurement/article/21801299/whats-the-difference-between-spice-and-fastspice-circuit-simulators)
+キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる課題があった。そこで厳密解を諦めて、回路をある程度の大きさの回路ブロックに切り分けて(Partioning）回路行列を小型にすることで高速実行を可能とした回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベントドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベントドリブン方式がメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
 
 #### [PSS Simulator](https://en.wikipedia.org/wiki/Periodic_steady-state_analysis)
 指定された基本周波数における回路の応答を一周期分計算して周期定常応答を解析する。PSS解析は、回路の周期的な動作点を決定し、周期的な時変小信号解析(位相ノイズ解析）の開始点として利用される。
