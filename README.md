@@ -103,7 +103,7 @@ EDAツールで使われるフォーマットを説明する。
 ## 【G - L】
 
 ### General (Better to know)　(**Design Standard**)
-半導体設計の際に良く使われる用語です。
+半導体設計で良く使われる用語をまとめています。
 
 #### [ATPG](https://en.wikipedia.org/wiki/Automatic_test_pattern_generation)
 **Automatic Test Pattern Generation**の略。設計したチップのテストに必要なテストプログラムを自動で生成する方法およびツールのこと。ネットリストを読み込み、不良モデルを仮定してテストパターンを自動合成するツール。
