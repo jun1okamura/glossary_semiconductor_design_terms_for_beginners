@@ -206,6 +206,9 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [OPC](https://en.wikipedia.org/wiki/Optical_proximity_correction)：
 **Optical Proximity Correction**の略。半導体設計でのOPCとは、露光波長近くパターンを現像する為に、元のレイアウトデーターを補正する工程およびツールのことを指す。ちなみに、露光波長より更に細かいパターンを現像する為に、異なるマスクで2度露光することをダブルパターニングと呼ぶ。
 
+- [MCM](https://en.wikipedia.org/wiki/Multi-chip_module)：
+**Multi-Chip Module**の略。半導体設計でのMCMとは、複数にチップを一つのパッケージに封入することを指す。パワー半導体＋コントローラーやメモリ＋CPU等をMCMとしてインナーフレームやボンディングで接続したことから始まり。最近は、CIS＋コントローラーを３D積層したチップ、Siインターポーザーでチップ間を高速通信チャネルで接続するチップレット技術に進化している。
+
 - [RDL](https://en.wikipedia.org/wiki/Redistribution_layer)：
 **ReDistribution Layer**の略。半導体設計でのRDLとは、CSPパッケージ向けの最配線層のことを指す。
 
