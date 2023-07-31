@@ -118,7 +118,7 @@ EDAツールで使われるフォーマットを説明する。
 エミュレータは，ロジック回路をFPGAや専用ハード等にマッピングして，その回路の動作を高速に実行する装置のこと。シミュレーターでは評価することが難しい画像や音声の品質等の検証や、OSのブートシーケンス等の長い時間がかかる検証に使われる。[Palladium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/acceleration-and-emulation/palladium-z1.html)(Cadence)や[Zebu](https://www.synopsys.com/verification/emulation/zebu-empower.html)(Synopsys)、[Veloce](https://eda.sw.siemens.com/en-US/ic/veloce/)(Siemens)等がある。一般に大変高価な装置なので、複数の大型FPGAの組み合わせで代用することもあるが、その場合ネットに手を加えると厳密な検証にはならないデメリットもある。
 
 #### [ESD](https://en.wikipedia.org/wiki/Electrostatic_discharge)
-**ElectroStatic Discharge**の略。静電気によるチップの破壊およびその対策回路・評価方法・基準のことを指す。HBM(Human Body Model)やCDM(Charged Device Model)等の基準がある。適切にESD素子を配置しないと製品に必要なESD基準を満たすことができない。RFやSERDES等の高速信号を扱う製品ではESDに特別な工夫が必要になる。
+**ElectroStatic Discharge**の略。静電気によるチップの破壊およびその対策回路・評価方法・基準のことを指す。HBM(Human Body Model)やCDM(Charged Device Model)等の基準がある。適切にESD素子を配置しないと製品に必要なESD基準を満たすことができない。RFやSerDes等の高速信号を扱う製品ではESDに特別な工夫が必要になる。
 
 #### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
@@ -174,7 +174,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 ### [Interface IP]()　(**Design Standard**) 
 
 - [DDR](https://en.wikipedia.org/wiki/Double_data_rate)：
-**Double Data Rate**の略。転送クロックの両エッジでデータを転送することで2倍の転送速度を可能にする通信方式をさすが、DRAM(SDRAM)との接続方式として標準化されて以来、DDRというとDRAMとの通信方式を指すことが多い。[JEDEC](https://www.jedec.org/standards-documents/docs/jesd-79f)で標準化されている。
+**Double Data Rate**の略。転送クロックの両エッジでデータを転送することで2倍の転送速度を可能にする通信方式を指すが、DRAM(SDRAM)とのインターフェースとして標準化されて以来、DDRというとDRAM用のインターフェースを指すことが多い。[JEDEC](https://www.jedec.org/standards-documents/docs/jesd-79f)で標準化されている。
   
 - [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)：
 **General Purpose Input/Output**の略。文字通り汎用IO回路、入出力設定、ドライブ電流調整、プルアップ・プルダウン、トライステート機能等が、ソフトウェアやレジスターにて設定できる。一般にはGPIOピンは、低速インターフェースやアナログ入出力と兼ねる場合が多い。
@@ -190,7 +190,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 で標準化された小振幅差動伝送方式のこと。LVDSは信号の電気的な規格のことだが、高速伝送のIOを総称する場合もある。特に液晶パネルとメイン基板との間の画像向け通信規格としてLVDS＋SerDes(７逓倍方式)がデファクトとして長い間使われてきたことから、LVDSと言うと液晶パネルとの画像通信規格と理解している人も多い。
 
 - [PCIe](https://en.wikipedia.org/wiki/PCI_Express)：
-**PCI express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。高速転送を実現する為に、それまでのパラレル伝送方式から SERDES＋CDR のシリアル伝送方式に変更した為にPCIに**express**が加えられてPCIeと呼ぶ規格になった。
+**PCI express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。高速転送を実現する為に、それまでのパラレル伝送方式から SerDes＋CDR のシリアル伝送方式に変更した為にPCIに**express**が加えられてPCIeと呼ぶ規格になった。
 
 - [UCIe](https://en.wikipedia.org/wiki/UCIe)：
 **Universal Chiplet Interconnect Express**の略。2022年に、AMD/Arm/ASE Group/Google-Cloud/Intel/Meta/Microsoft/Qualcomm/Samsung/TSMC により立ち上げられたチップレット間の高速SerDes通信規格とその[標準化組織](https://www.uciexpress.org/)のこと。
@@ -199,9 +199,9 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 **Serial Paralel Interface**の略。一般にはSCLK/MOSI/MISO/CSの4線を使った全二重シリアル通信方式を指す。I2Cと比較してピン数が増える代わりに、高速に全二重通信できるメリットがあり、CPUやFPGA等のプロセッサーチップと外部との通信向けに採用される。
 
 - [QSPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Quad_SPI)：
-**Quad_SPI**の略。SPIの4線にSIO2とSIO3の2線を加えて、半二重で4倍のデータを通信できるようにしたSPIの拡張規格。フラッシュメモリ等の外部メモリとの接続に使われることが多い。
+**Quad SPI**の略。SPIの4線にSIO2とSIO3の2線を加えて、半二重で4倍のデータを通信できるようにしたSPIの拡張規格。フラッシュメモリ等の外部メモリとの接続に使われることが多い。
 
-- [SERDES](https://en.wikipedia.org/wiki/SerDes)：
+- [SerDes](https://en.wikipedia.org/wiki/SerDes)：
 **Serializer DeSerirializer**の略。広義にはパラレルーシリアル変換とその逆変換のことを指すが、高速シリアル通信技術を総称してSerDesと言うことが多い。技術的には Source Synchronous Clocking と Embedded Clocking 方式に大きく分けられる。通信経路での信号の劣化を抑える為にコード変換したり、擬似ランダム信号によるスクランブルをかけて信号帯域を制限する。またトレーニングシーケンスを導入してケーブルの品質や長さの違いを自動的に補償することも行われる。前者の代表として HDMI で後者の代表は PCIe 等がある。
   
 - [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)：
