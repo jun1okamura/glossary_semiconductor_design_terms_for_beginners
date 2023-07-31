@@ -11,25 +11,25 @@
 
 ### [Analog Hard IP]()　(**Design Knowledge**)
 
-- [AFE](https://en.wikipedia.org/wiki/Analog_front-end)
+- [AFE](https://en.wikipedia.org/wiki/Analog_front-end)：
 **Analog Front-End** の略。センサー等のアナログ出力信号をデジタル信号へ変換するアナログ回路を指す。一般には、アンプやA/Dコンバータ、フィルタなどのアナログ回路を指すことが多いが、高速シリアル通信向けのクロックが重畳された小振幅信号やPAM(Pulse Amplitude Modulation)信号に変調された信号をデジタル信号に復調するミックスドシグナル回路もAFEと呼ぶことがある。SoC内部にAFEを搭載する場合と、SoCとは別チップでAFEを構成する場合がある。
 
-- [BGR](https://en.wikipedia.org/wiki/Bandgap_voltage_reference)
+- [BGR](https://en.wikipedia.org/wiki/Bandgap_voltage_reference)：
 **BandGap voltage Reference**の略。正の温度特性を持つPN接合を流れる電流を、負の温度特性を持つ抵抗に流すことで、温度によらずに一定の電圧を発生する、基準電圧回路。SiのBandGap(1.26V)に近い電圧を出力する。回路安定点が２つあり適切なスタートアップ回路が必須である。
 
-- [CDR](https://en.wikipedia.org/wiki/Clock_recovery)
+- [CDR](https://en.wikipedia.org/wiki/Clock_recovery)：
 **Clock and Data Recovery** の略。データとクロックを重畳させたシリアル信号から、受信側でクロック成分とデータ成分を切り分ける回路を指す。送信側では、データに含まれるエッジの場所や数を保証してコード変換(代表的な例として[8b10b](https://ja.wikipedia.org/wiki/8b/10b)エンコードがある)し、受信側では信号に含まれるクロック成分をPLLで同期させることでクロックを抽出、抽出したクロックでデータを復調する。
 
-- [DLL](https://en.wikipedia.org/wiki/Delay-locked_loop)
+- [DLL](https://en.wikipedia.org/wiki/Delay-locked_loop)：
 **Delay Locked Loop**の略。外部クロックとインバーター（遅延をアナログ的に制御する場合と、量子化された遅延をデジタル的に選択する場合がある）の遅延信号との間で位相をロックをすることで、負の遅延を持ったクロック信号を発生して、セットアップ・ホールドのタイミングマージンを改善できる。同様に外部クロックに対して複数の位相を持った多層クロックを発生したり、数多くの応用回路が提案されている。PLLと比較して、外部クロックの位相の変化に瞬時に追随できる利点がある一方で、PLLの様に、任意の逓倍クロックを発生することは出来ない。
 
-- [LDO](https://en.wikipedia.org/wiki/Low-dropout_regulator)
+- [LDO](https://en.wikipedia.org/wiki/Low-dropout_regulator)：
 **Low Dropout Regulator** の略。ディスクリート部品の三端子レギュレーターの事。チップ内部で使用する電源を、外部から入力された電源から降圧する回路。高電圧側(外部)と降圧電圧(内部)の間に可変抵抗（=トランジスター）を直列に挿入して降圧側の負荷電流に応じて降圧電圧が一定になる様に制御することから、シリーズ・レギュレーターとも言われる。
 
-- [OTP](https://en.wikipedia.org/wiki/Programmable_ROM#One_time_programmable_memory)
+- [OTP](https://en.wikipedia.org/wiki/Programmable_ROM#One_time_programmable_memory)：
 **One Time Programmable memory**の略。一度限り書き込めるメモリブロックIPのことを指す。デバイスのシリアル番号、暗号コード、MACアドレス等のデジタル認識や、ADCやDAC、温度センサー等の校正データー、メモリの冗長セル置き換え等に使われる。昔はレーザーで物理的に加工(レーザートリム)していたが、電気的に、MOSトランジスターのVthを変えたり、破壊したりする方式が主流になっている。
 
-- [PLL](https://en.wikipedia.org/wiki/Phase-locked_loop)
+- [PLL](https://en.wikipedia.org/wiki/Phase-locked_loop)：
 **Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックをM分週した信号と自走するVCOからN分週した信号をPDで比較することで、外部クロックに対して、N/M倍の周波数のクロックを発生できる。また、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する [Fractional PLL](https://www.electronics-notes.com/articles/radio/frequency-synthesizer/pll-indirect-digital-fractional-n-synthesis.php) もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、特性間の時間刻みの隔たりが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
     
 ### [BUS](https://en.wikipedia.org/wiki/Bus_(computing))　(**Design Standard**)
@@ -37,13 +37,13 @@
 
 #### [AMBA](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)
 **Advanced Microcontroller Bus Architecture**の略。チップ内部のIP間のバスインターフェース規格。IP間で valid/ready のハンドシェイク動作をして有効データを判断する。APB＞AHB＞AXIの順で進化した。
-- [APB](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_Peripheral_Bus_(APB))
+- [APB](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_Peripheral_Bus_(APB))：
 **Advanced Peripheral Bus**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0024/c/)低速の32bitバス規格。
   
-- [AHB](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)
+- [AHB](https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture)：
 **Advanced High-performance Bus**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0011/a/)(64/128/256/512/1024)bitバス規格。
 
-- [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)
+- [AXI](https://en.wikipedia.org/wiki/Advanced_eXtensible_Interface)：
 **Advanced eXtensible Interface**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)インターフェース仕様。チャネルの概念が導入された。
 
 #### [Wishbone](https://en.wikipedia.org/wiki/Wishbone_(computer_bus))
@@ -54,44 +54,44 @@
 
 ### [EDA Design Flow]()  (**EDA Methodology/Tool**)
 
-- [Synthesis](https://en.wikipedia.org/wiki/Logic_synthesis)
+- [Synthesis](https://en.wikipedia.org/wiki/Logic_synthesis)：
 **論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Genus/RTL Compiler(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系では、[**Yosys**](https://yosyshq.net/)+[**ABC**](https://people.eecs.berkeley.edu/~alanmi/abc/) が有名→[GitHub-Yosys](https://github.com/YosysHQ/yosys), [GitHub-ABC](https://github.com/berkeley-abc/abc)
 
-- [STA](https://en.wikipedia.org/wiki/Static_timing_analysis)
+- [STA](https://en.wikipedia.org/wiki/Static_timing_analysis)：
 **Static Timing Analysis**の略。タイミング検証方法の一つ。入力から出力（同期回路の場合はFFからFF）までの経路に関して遅延の合計を計算し、**SDC**ファイルに記載された設計タイミング条件を満たされているかどうかを検証する。各経路の最大遅延を合計してセットアップ条件を満たしているか、各部の最小遅延を合計してホールド条件を満たしているか、両者のチェックを行う。[**Prime Time(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html)が商用ではデファクト。オープン系には[**OpenSTA**](https://github.com/The-OpenROAD-Project/OpenSTA)がある。
 
-- [DFT](https://en.wikipedia.org/wiki/Design_for_testing)
+- [DFT](https://en.wikipedia.org/wiki/Design_for_testing)：
 **Design For Testing** or **Design For Testability**の略。日本語だと「テスト容易化設計」であるが、言い換えると「LSIのテストの実行を容易にするための回路設計手法」の総称を指す。具体的には、テストモードとしての独自機能を備えたLSI、セルフテスト回路を設けたLSI、論理回路のテストのためのスキャンパスを設けたLSI、CMOSの暗電流に着目したテスト手法、等々がある。採用する手法、技術と必要なシリコン面積等のオーバーヘッドと、テスト容易化で得られるテストコスト削減効果のバランスが重要である。
 
-- [P&R/PnR](https://en.wikipedia.org/wiki/Place_and_route)
+- [P&R/PnR](https://en.wikipedia.org/wiki/Place_and_route)：
 **Place and Route**の略。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールではSynopsysの[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)や、Cadenceの[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)がある。
 
-- [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)
+- [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)：
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
 
-- [DFM](https://en.wikipedia.org/wiki/Design_for_manufacturability)
+- [DFM](https://en.wikipedia.org/wiki/Design_for_manufacturability)：
 **Design For Manufacturability**の略。半導体設計におけるDFMは、製造されたチップの歩留まり率(Yield)を上げる為に行われる設計段階での工夫のことを総称する。DFMツールは、ポリ・メタル挿入(CMPでのDishing対策）、ダブルVIA挿入(VIAのオープン対策)、配線拡張（配線切れ対策）などを行うツールである。リソグラフィーの解像度を改善する(OPC=Optical Proximity Correction：光学近接効果補正)為の補助パターン挿入ツールも広義のDFMツールに含まれる。またメモリの冗長回路・ECC回路の採用、カスタムレイアウト設計で「最小寸法をなるべく避ける」等も広義のDFMに含まれる。
 
-- [ECO](https://en.wikipedia.org/wiki/Engineering_change_order)
+- [ECO](https://en.wikipedia.org/wiki/Engineering_change_order)：
 **Engineering Change Order**の略。P&R等の物理設計が完了したデザインの最終段階での回路変更を、一般にECOと呼ぶ。**pre-mask ECO**(Standard Cellの置き換えあり)と**post-mask ECO**(未使用のStandard Cell(ECO用セル)だけをつかう)に区別して使う場合もある。設計フローの上流に戻らずに、デザイン機能の変更やバグ修正を配線と未使用のStandard Cell(置き換えやECO用セル)を利用して実現する手続きのこと。ECOをサポートするツールもある。
 
-- [Formal Verification](https://en.wikipedia.org/wiki/Formal_verification)
+- [Formal Verification](https://en.wikipedia.org/wiki/Formal_verification)：
 半導体設計における **Formal Verification** (形式的検証)とは、回路記述間を数学的に解析することで，記述間(例えばRTL記述とゲート記述)の論理が等価であるかどうかの検証（等価性検証）や、回路記述が動作性能に関する記述を満たしているかの検証（プロパティ検証）がある。シミュレータのように回路を動作させて検証するのではないので、シミュレーション・パターンの作成が不要で，かつ高速・網羅的に検証できるというメリットがある。
 
 ### [File Format]()　(**Design Standard**)
-- [CDL](https://en.wikipedia.org/wiki/Circuit_design_language)
+- [CDL](https://en.wikipedia.org/wiki/Circuit_design_language)：
 **Circuit Design Language** の略。SPICEフォーマットからモデル情報を除た LVS や LPE の為に使われるファイルフォーマット。
 
-- [GDSII](https://en.wikipedia.org/wiki/GDSII)
+- [GDSII](https://en.wikipedia.org/wiki/GDSII)：
 **Graphic Design System II**の略。1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールもある。
 
-- [LIB](https://en.wikipedia.org/wiki/Standard_cell)
+- [LIB](https://en.wikipedia.org/wiki/Standard_cell)：
 **Liberty Timing Format** 記述のファイル(.lib)を指す。**Standard Cell**ライブラリの遅延/消費電力などの特性を記述したファイル。微細化に伴い、ばらつきに対応した拡張フォーマットには CCS(Composite Current Source)やECSM(effective current source model)などがある。遅延情報はSDF(Standard Delay Format: IEEE std 1497-2001)を用いてネットリストの各ネットにバックアノテートされる。
 
-- [SDC](https://www.macnica.co.jp/business/semiconductor/articles/intel/133417)
+- [SDC](https://www.macnica.co.jp/business/semiconductor/articles/intel/133417)：
 **Synopsys Design Constraint**の略。Synopsys社によって開発された設計制約のフォーマット、現在では業界標準になっている。回路が満たすべきタイミング情報（クロックの周期等）を記載する。
 
-- [SDF](https://en.wikipedia.org/wiki/Standard_Delay_Format)
+- [SDF](https://en.wikipedia.org/wiki/Standard_Delay_Format)：
 **Standard Delay Format**の略。遅延情報を記述する[IEEE標準フォーマット](https://ieeexplore.ieee.org/document/972829)。パスの遅延時間や遅延時間の制約条件、配線遅延時間なども扱うことができる。
 
 ## 【G - L】
@@ -99,7 +99,7 @@
 ### [General (Better to know)]()　(**Design Standard**)
 
 #### [ATPG](https://en.wikipedia.org/wiki/Automatic_test_pattern_generation)
-**Automatic Test Pattern Generation)**の略。設計したチップのテストに必要なテストプログラムを自動で生成する方法およびツールのこと。ネットリストを読み込み、不良モデルを仮定してテストパターンを自動合成するツール。
+**Automatic Test Pattern Generation**の略。設計したチップのテストに必要なテストプログラムを自動で生成する方法およびツールのこと。ネットリストを読み込み、不良モデルを仮定してテストパターンを自動合成するツール。
 
 #### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)
 **Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
@@ -159,85 +159,89 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 ### [Interface IP]()　(**Design Standard**) 
 
-- [DDR](https://en.wikipedia.org/wiki/Double_data_rate)　
+- [DDR](https://en.wikipedia.org/wiki/Double_data_rate)：
 **Double Data Rate**の略。転送クロックの両エッジでデータを転送することで2倍の転送速度を可能にする通信方式をさすが、DRAM(SDRAM)との接続方式として標準化されて以来、DDRというとDRAMとの通信方式を指すことが多い。[JEDEC](https://www.jedec.org/standards-documents/docs/jesd-79f)で標準化されている。
   
-- [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)　
+- [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)：
 **General Purpose Input/Output**の略。文字通り汎用IO回路、入出力設定、ドライブ電流調整、プルアップ・プルダウン、トライステート機能等が、ソフトウェアやレジスターにて設定できる。一般にはGPIOピンは、低速インターフェースやアナログ入出力と兼ねる場合が多い。
 
-- [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)　
+- [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)：
 **Inter-Integrated Circuit** の略。SDAとSCLのフィリップス社で開発された２線デジタルインターフェース。転送スピードは100K/400KHz、プルアップ抵抗でLo-Hiをドライブする仕様の為に高速動作や長距離伝送は難しい。通信に必要な信号線が少ないことと、回路規模が小さいことから、多くのセンサーやAD/DAコンバーター、ファン制御、小型LCDパネル、LEDアレー等で使われている。アイ・スクェアード・シーもしくはアイ・ツー・シーと呼ぶ。
 
-- [I2S](https://en.wikipedia.org/wiki/I%C2%B2S)　
+- [I2S](https://en.wikipedia.org/wiki/I%C2%B2S)：
 **Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。IISとは略さないので注意。
 
-- [LVDS](https://en.wikipedia.org/wiki/Low-voltage_differential_signaling)　
+- [LVDS](https://en.wikipedia.org/wiki/Low-voltage_differential_signaling)：
 **Low-Voltage Differential Signaling**の略。[ANSI/TIA/EIA-644](https://www.tij.co.jp/jp/lit/ug/jajd001/jajd001.pdf?HQS=ti-null-null-tedfaq_if-jp)
 で標準化された小振幅差動伝送方式のこと。LVDSは信号の電気的な規格のことだが、高速伝送のIOを総称する場合もある。特に液晶パネルとメイン基板との間の画像向け通信規格としてLVDS＋SerDes(７逓倍方式)がデファクトとして長い間使われてきたことから、LVDSと言うと液晶パネルとの画像通信規格と理解している人も多い。
 
-- [PCIe](https://en.wikipedia.org/wiki/PCI_Express)　
+- [PCIe](https://en.wikipedia.org/wiki/PCI_Express)：
 **PCI express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。高速転送を実現する為に、それまでのパラレル伝送方式から SERDES＋CDR のシリアル伝送方式に変更した為にPCIに**express**が加えられてPCIeと呼ぶ規格になった。
 
-- [UCIe](https://en.wikipedia.org/wiki/UCIe)　
+- [UCIe](https://en.wikipedia.org/wiki/UCIe)：
 **Universal Chiplet Interconnect Express**の略。2022年に、AMD/Arm/ASE Group/Google-Cloud/Intel/Meta/Microsoft/Qualcomm/Samsung/TSMC により立ち上げられたチップレット間の高速SerDes通信規格とその[標準化組織](https://www.uciexpress.org/)のこと。
    
-- [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Intelligent_SPI_controllers)　
+- [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Intelligent_SPI_controllers)：
 **Serial Paralel Interface**の略。一般にはSCLK/MOSI/MISO/CSの4線を使った全二重シリアル通信方式を指す。I2Cと比較してピン数が増える代わりに、高速に全二重通信できるメリットがあり、CPUやFPGA等のプロセッサーチップと外部との通信向けに採用される。
 
-- [QSPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Quad_SPI)　
+- [QSPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Quad_SPI)：
 **Quad_SPI**の略。SPIの4線にSIO2とSIO3の2線を加えて、半二重で4倍のデータを通信できるようにしたSPIの拡張規格。フラッシュメモリ等の外部メモリとの接続に使われることが多い。
 
-- [SERDES](https://en.wikipedia.org/wiki/SerDes)　
+- [SERDES](https://en.wikipedia.org/wiki/SerDes)：
 **Serializer DeSerirializer**の略。広義にはパラレルーシリアル変換とその逆変換のことを指すが、高速シリアル通信技術を総称してSerDesと言うことが多い。技術的には Source Synchronous Clocking と Embedded Clocking 方式に大きく分けられる。通信経路での信号の劣化を抑える為にコード変換したり、擬似ランダム信号によるスクランブルをかけて信号帯域を制限する。またトレーニングシーケンスを導入してケーブルの品質や長さの違いを自動的に補償することも行われる。前者の代表として HDMI で後者の代表は PCIe 等がある。
   
-- [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)　
+- [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)：
 **Universal Asynchronous Receiver Transmitter**の略。非同期シリアル通信方式（つまりクロックは伝送しない）TXとRXによる全二重通信を行う。クロックは送受信側で独立クロックを使うので、通信をする前に双方のデータ転送速度や規格（ボーレートやストップビット等）を合わせておく必要がある。受信側では受信したデータをオーバーサンプルすることで、送受信端で異なるクロックソースの誤差を吸収する。昔は大型コンピューターと端末の間の通信として使われたので RS232 や RS422 規格に電気的に変換して長距離接続に対応していた。
   
-- [USB](https://en.wikipedia.org/wiki/USB)　
+- [USB](https://en.wikipedia.org/wiki/USB)：
 **Universal Serial Bus**の略。PCの周辺機器接続用インターフェースとしてCompaq/DEC/IBM/Intel/Microsoft/NEC/Nortelにより1995年に提唱された。[USB-IF](https://www.usb.org/)による標準化を進めた為に、業界標準として広く利用されるようになった。外部機器(最初はマウス)用に電源を供給できる先駆けとなったインターフェースである。また Plug-and-Play を実現する為に、ソフトウェア階層とデバイス側レジスターの標準化を進めたことも特徴的。今では当然だが、外部機器向けのドライバーをインストールしなくてもUSBを挿すだけで使えるようになった影には、世界中のエンジニアの多くの知恵と努力が重ねられている。
   
 ## 【M - R】
 
 ### [Manufacturing-related Terminology]()　(**Design Knowledge**)
 
-- [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)
+- [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)：
 **Chemical Mechanical Polishing**の略。半導体設計でのCMPとは、各プロセスステップ毎にWafer表面を化学薬品(スラリー)と微細なやすり(パット)により平坦化する工程のこと、ゴミを嫌うクリーンルームには馴染まないプロセス方式だが、微細化が進み焦点深度が浅くなった露光機でパターンを現像する為にブレークスルーとなった技術。パターンが無い領域が皿状に削られる(Dishing)を防ぐ為に、DFM工程にてFillパターンが挿入される。  
   
-- [OPC](https://en.wikipedia.org/wiki/Optical_proximity_correction)　
+- [OPC](https://en.wikipedia.org/wiki/Optical_proximity_correction)：
 **Optical Proximity Correction**の略。半導体設計でのOPCとは、露光波長近くパターンを現像する為に、元のレイアウトデーターを補正する工程およびツールのことを指す。ちなみに、露光波長より更に細かいパターンを現像する為に、異なるマスクで2度露光することをダブルパターニングと呼ぶ。
 
-- [RDL](https://en.wikipedia.org/wiki/Redistribution_layer)
+- [RDL](https://en.wikipedia.org/wiki/Redistribution_layer)：
 **ReDistribution Layer**の略。半導体設計でのRDLとは、CSPパッケージ向けの最配線層のことを指す。
 
-- [WIP](https://en.wikipedia.org/wiki/Work_in_process)
+- [WIP](https://en.wikipedia.org/wiki/Work_in_process)：
 **Work In Process**の略。半導体設計でのWIPとは、チップがどの工程にあるのか？を言う場合が多い。
   
 ### [Package]()　(**Design Knowledge**)
 挿入型のDIPから表面実装型のQFPへ進化、フットプリントの縮小でQFNが生まれ、CSPへ進化した。QFP/QFN の頭に、"L"・"T"を付けて薄型のパッケージ仕様を表す。
 
-- [DIP](https://en.wikipedia.org/wiki/Dual_in-line_package)　**Dual In-line Package**の略。1970-80年代ICのパッケージといえばDIPでした。
+- [DIP](https://en.wikipedia.org/wiki/Dual_in-line_package)：
+**Dual In-line Package**の略。1970-80年代ICのパッケージといえばDIPでした。
 
-- [QFP](https://en.wikipedia.org/wiki/Quad_flat_package)　**Quad Flat Package**の略。4方向にリード端子のあるパッケージ。二方向にしかリード端子のないパッケージはSOPと呼ぶ。
+- [QFP](https://en.wikipedia.org/wiki/Quad_flat_package)：
+**Quad Flat Package**の略。4方向にリード端子のあるパッケージ。二方向にしかリード端子のないパッケージはSOPと呼ぶ。
 
-- [QFN](https://en.wikipedia.org/wiki/Flat_no-leads_package) **Quad-Flat No-leads**の略。4方向に端子のあるリードがないパッケージ。二方向にしかリード端子のないパッケージはDFNと呼ぶ。
+- [QFN](https://en.wikipedia.org/wiki/Flat_no-leads_package)：
+**Quad-Flat No-leads**の略。4方向に端子のあるリードがないパッケージ。二方向にしかリード端子のないパッケージはDFNと呼ぶ。
 
-- [CSP](https://en.wikipedia.org/wiki/Chip-scale_package) **Chip Scale Package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer状態で設けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
+- [CSP](https://en.wikipedia.org/wiki/Chip-scale_package)：
+**Chip Scale Package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer状態で設けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
 
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
 
 ### [Pysical Verification](https://en.wikipedia.org/wiki/Physical_verification)　(**EDA Methodology/Tool**)
 
-- [DRC](https://en.wikipedia.org/wiki/Design_rule_checking)
+- [DRC](https://en.wikipedia.org/wiki/Design_rule_checking)：
 **Design Rule Checking** の略。半導体プロセスの加工工程における物理的な寸法や公差から決められた設計制約の検証作業。PCBのパターン設計でのDRCと基本は同じ。最先端プロセスになるほどに設計制約は増加するので、DRCに必要なルールファイルは複雑化し実行時間も増加している。80年代、1umルールの頃は手書したレイアウト図面をミニコンでDRCを実行し、数十センチにもなるラインプリンター紙に出力されたエラーを一つ一つ人手で修正していた時代もあった。
 
-- [ERC](https://en.wikipedia.org/wiki/Physical_verification#Electrical_Rule_Check_(ERC))
+- [ERC](https://en.wikipedia.org/wiki/Physical_verification#Electrical_Rule_Check_(ERC))：
 **Electrical Rule Check** の略。電源ショートやフローティング信号、短絡信号等の電気的に致命的なルールのチェック。ラッチアップやESD関連のルールをチェックする場合もある。
 
-- [LPE](https://en.wikipedia.org/wiki/Parasitic_extraction)　
+- [LPE](https://en.wikipedia.org/wiki/Parasitic_extraction)：
 **Layout Parasitic Extraction** の略。レイアウト情報から回路図には明示的に記述されていない寄生素子（RLC）を抽出して[SPICE](https://en.wikipedia.org/wiki/SPICE)等のネット情報として出力するツール。膨大な数の寄生素子が出力されることで回路シミュレーションが実行できないという課題に対応するために、寄生素子を電気的に等価な記述に圧縮記述する機能がある。ロジック設計ではネットの遅延情報としてフィードバックされる。
 
-- [LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)　
+- [LVS](https://en.wikipedia.org/wiki/Layout_Versus_Schematic)：
 **Layout Versus Schematic** の略。回路図とレイアウトの比較検証作業。回路図から抽出したネット情報とレイアウトから抽出したネット情報の等価性チェック。[SPICE](https://en.wikipedia.org/wiki/SPICE)や[CDL](https://en.wikipedia.org/wiki/Circuit_design_language)記述のネットを使って等価検証を行う。手書きの回路図しか無かった80年代では、人手でレイアウトの逆読みと手書き回路図との比較をダブル・トリプルに検証していた時代もあった。
 
 - Tools
@@ -253,11 +257,14 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 
 ### [Sample]()　(**Design Knowledge**) 
 開発チップは、ES>CS>MP の順でステータスが上がる。
-- [**ES**](https://semicon.jeita.or.jp/word/word.html)　**Engineering Sample** の略。機能評価＋テスト開発＋ソフト開発＋信頼性試験等の社内・パートナーでの評価用チップ。
+- [**ES**](https://semicon.jeita.or.jp/word/word.html)：
+**Engineering Sample** の略。機能評価＋テスト開発＋ソフト開発＋信頼性試験等の社内・パートナーでの評価用チップ。
 
-- [**CS**](https://semicon.jeita.or.jp/word/word.html)　**Commercial Sample** の略。顧客評価用サンプルのこと、量産する前に顧客を限定して配布（販売）するチップのこと。
+- [**CS**](https://semicon.jeita.or.jp/word/word.html)：
+**Commercial Sample** の略。顧客評価用サンプルのこと、量産する前に顧客を限定して配布（販売）するチップのこと。
 
-- [**MP**](https://semicon.jeita.or.jp/word/word.html)　**Mass Production** の略。量産版のチップのこと。MPと呼ばずに素直に量産版と呼ぶこともある。
+- [**MP**](https://semicon.jeita.or.jp/word/word.html)：
+**Mass Production** の略。量産版のチップのこと。MPと呼ばずに素直に量産版と呼ぶこともある。
 
 ### [Simulator]()　(**EDA Methodology/Tool**)
 半導体設計においては**回路シミュレーター**を指す。（光学シミュレーターや加工シミュレーター、プロセスシミュレーター等も半導体開発には重要です）
@@ -289,7 +296,7 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 - [LEF](https://en.wikipedia.org/wiki/Library_Exchange_Format)
 とは、**Library Exchange Format**の略。一般には、P&Rに最低限必要なレイアウト外形とピンの配置だけの設計データを指す。
 
-- [SCAN Cell](https://en.wikipedia.org/wiki/Scan_chain)
+- [SCAN Cell](https://en.wikipedia.org/wiki/Scan_chain)：
 とは、外部から同期回路のラッチ(F/F)の入力信号をシリアルレジスターとして設定可能にできるDFT用のスタンダードセルのこと。「SCANを張る」とは F/F を Scan-F/F に変更して、テスト用の信号を外部から一筆書きになるように配線することを指す。
 
 - [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)
