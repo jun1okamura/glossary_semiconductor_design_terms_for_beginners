@@ -170,7 +170,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 **PCI express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。高速転送を実現する為に、それまでのパラレル伝送方式から SERDES＋CDR のシリアル伝送方式に変更した為にPCIに**express**が加えられてPCIeと呼ぶ規格になった。
 
 - [UCIe](https://en.wikipedia.org/wiki/UCIe)
-**Universal Chiplet Interconnect Express**の略。AMD/Arm/ASE Group/Google Cloud/Intel/Meta/Microsoft/Qualcomm/Samsung/TSMCにより立ち上げられたチップレット用の通信規格と[標準団体](https://www.uciexpress.org/)。
+**Universal Chiplet Interconnect Express**の略。2022年に、AMD/Arm/ASE Group/Google-Cloud/Intel/Meta/Microsoft/Qualcomm/Samsung/TSMC により立ち上げられたチップレット間の高速SerDes通信規格とその[標準化組織](https://www.uciexpress.org/)のこと。
    
 - [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Intelligent_SPI_controllers)
 **Serial Paralel Interface**の略。一般にはSCLK/MOSI/MISO/CSの4線を使った全二重シリアル通信方式を指す。I2Cと比較してピン数が増える代わりに、高速に全二重通信できるメリットがあり、CPUやFPGA等のプロセッサーチップと外部との通信向けに採用される。
@@ -192,13 +192,17 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 ### [Manufacturing-related Terminology]()　(**Design Knowledge**)
 
 - [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)
+**Chemical Mechanical Polishing**の略。半導体設計でのCMPとは、各プロセスステップ毎にWafer表面を化学薬品(スラリー)と微細なやすり(パット)により平坦化する工程のこと、ゴミを嫌うクリーンルームには馴染まないプロセス方式だが、微細化が進み焦点深度の浅い露光機でパターンを現像する為にブレークスルーとなった技術。パターンが無い領域が皿状に削られる(Dishing)を防ぐ為に、DFM工程にてFillパターンが挿入される。  
+  
+- [OPC](https://en.wikipedia.org/wiki/Optical_proximity_correction)　
+**Optical Proximity Correction**の略。半導体設計でのOPCとは、露光波長以下のパターンを現像する為に、元のレイアウトデーターを補正する工程およびツールのことを指す。  
+ 
+- [RDL](https://en.wikipedia.org/wiki/Redistribution_layer)
+**ReDistribution Layer**の略。半導体設計でのRDLとは、CSPパッケージ向けの最配線層のことを指す。
 
-- [OPC]()　
-
-- [RDL]()
-
-- [WIP]() 
-
+- [WIP](https://en.wikipedia.org/wiki/Work_in_process)
+**Work In Process**の略。半導体設計でのWIPとは、チップがどの工程にあるのか？を言う場合が多い。
+  
 ### [Package]()　(**Design Knowledge**)
 挿入型のDIPから表面実装型のQFPへ進化、フットプリントの縮小でQFNが生まれ、CSPへ進化した。QFP/QFN の頭に、"L"・"T"を付けて薄型のパッケージ仕様を表す。
 
