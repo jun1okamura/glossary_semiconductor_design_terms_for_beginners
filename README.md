@@ -117,6 +117,9 @@ EDAツールで使われるフォーマットを説明する。
 #### [Emulator](https://en.wikipedia.org/wiki/Hardware_emulation)
 エミュレータは，ロジック回路をFPGAや専用ハード等にマッピングして，その回路の動作を高速に実行する装置のこと。シミュレーターでは評価することが難しい画像や音声の品質等の検証や、OSのブートシーケンス等の長い時間がかかる検証に使われる。[Palladium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/acceleration-and-emulation/palladium-z1.html)(Cadence)や[Zebu](https://www.synopsys.com/verification/emulation/zebu-empower.html)(Synopsys)、[Veloce](https://eda.sw.siemens.com/en-US/ic/veloce/)(Siemens)等がある。一般に大変高価な装置なので、複数の大型FPGAの組み合わせで代用することもあるが、その場合ネットに手を加えると厳密な検証にはならないデメリットもある。
 
+#### [ESD](https://en.wikipedia.org/wiki/Electrostatic_discharge)
+**ElectroStatic Discharge**の略。静電気によるチップの破壊およびその対策回路・評価方法・基準のことを指す。HBM(Human Body Model)やCDM(Charged Device Model)等の基準がある。適切にESD素子を配置しないと製品に必要なESD基準を満たすことができない。RFやSERDES等の高速信号を扱う製品ではESDに特別な工夫が必要になる。
+
 #### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
 
