@@ -133,6 +133,8 @@ EDAツールで使われるフォーマットを説明する。
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
 #### [MiM/MoM]()
+**Metal Oxide Metal/Metal Insulator Metal**の略。半導体設計で容量素子というとMOSトランジスターのゲート容量を使うことが一般的だが、容量値の電圧や温度依存性が大きい事が課題であり、そのような課題を解決するためにゲートPolySiの他に対抗電極
+用にもう一枚PolySiを導入してPoly-Polyの容量素子が使われて来たが、素子の微細化と配線の多層化に伴い、メタル配線層を組み合わせて容量素子として使うMiM/MoMが主流となっている。
 
 #### [PDN](https://en.wikipedia.org/wiki/Power_integrity)
 **Power distribution network**の略。電源ネットワークの事であり、電源ネットワークによって決まる電源インピーダンスのことを指す。チップ内部の電源ネットワークに加えて、パッケージやチップ近傍のPCBの電源配線や平滑容量の配置等も考慮する場合がある。電源電圧の局所的なドロップは回路の動作不良を導く。また、チップの入出力信号の品質をSignal Integrity(SI)と呼び、電源インピーダンスと電源ドロップの品質をPower Integrity(PI)と呼ぶ。SI/PIは相互にとても関係が深い。
@@ -221,7 +223,11 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
   
 - [Edge Seal]()
 
-- [FEOL/BEOL]()
+- [FEOL](https://en.wikipedia.org/wiki/Front_end_of_line)/[BEOL](https://en.wikipedia.org/wiki/Back_end_of_line)：
+半導体の製造工程において、Si表面にトランジスターを作るまでの工程を**FEOL**といい、トランジスターを結ぶ配線層の工程を**BEOL**という。
+
+- [GAA](https://en.wikipedia.org/wiki/Multigate_device#GAAFET)
+**Gate-All-Around FET**の略。
 
 - [OPC](https://en.wikipedia.org/wiki/Optical_proximity_correction)：
 **Optical Proximity Correction**の略。半導体設計でのOPCとは、露光波長近くのパターンを現像する為に、元のレイアウトデーターを補正する工程およびツールのことを指す。ちなみに、露光波長より更に細かいパターンを現像する為に、異なるマスクで2度露光することをダブルパターニングと呼ぶ。
