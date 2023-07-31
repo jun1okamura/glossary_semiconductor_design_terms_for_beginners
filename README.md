@@ -150,7 +150,8 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 ### [Interface IP]()　(**Design Standard**) 
 
-- [DDR]()
+- [DDR](https://en.wikipedia.org/wiki/Double_data_rate)
+**Double Data Rate**の略。転送クロックの両エッジでデータを転送することで2倍の転送速度を可能にする通信方式をさすが、DRAM(SDRAM)との接続方式として標準化されて以来、DDRというとDRAMとの通信方式を指すことが多い。[JEDEC](https://www.jedec.org/standards-documents/docs/jesd-79f)で標準化されている。
   
 - [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output)
 **General Purpose Input/Output**の略。文字通り汎用IO回路、入出力設定、ドライブ電流調整、プルアップ・プルダウン、トライステート機能等が、ソフトウェアやレジスターにて設定できる。一般にはGPIOピンは、低速インターフェースやアナログ入出力と兼ねる場合が多い。
@@ -161,17 +162,26 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [I2S](https://en.wikipedia.org/wiki/I%C2%B2S)　
 **Inter-IC Sound** の略。デジタルPCM信号(音声)向けのフィリップス社で開発されたデジタルインターフェース。BCLK/LRCLK/DATAの3線で接続する場合とMCLKを加えた4線で接続する場合がある。2チャンネルのステレオ対応のI2Sを多チャンネルに拡張したTDM(Time Division Multiplexing)フォーマットもある。IISとは略さないので注意。
 
-- [LVDS]() 
+- [LVDS](https://en.wikipedia.org/wiki/Low-voltage_differential_signaling)
+**Low-Voltage Differential Signaling**の略。[ANSI/TIA/EIA-644](https://www.tij.co.jp/jp/lit/ug/jajd001/jajd001.pdf?HQS=ti-null-null-tedfaq_if-jp)
+で標準化された小振幅差動伝送方式のこと。LVDSは信号の電気的な規格のことだが、高速伝送のIOを総称する場合もある。特に液晶パネルとメイン基板との間の画像向け通信規格としてLVDS＋SerDes(７逓倍方式)がデファクトとして長い間使われてきたことから、LVDSと言うと液晶パネルとの画像通信規格と理解している人も多い。
 
-- [PCIe]()
+- [PCIe](https://en.wikipedia.org/wiki/PCI_Express)
+**PCI express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。PCIeは高速転送を実現する為に、それまでのパラレル伝送方式から SERDES＋CDR のシリアル伝送方式に変更した為に**express**が加えられた。
+
+- [UCIe]()　
+   
+- [SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Intelligent_SPI_controllers)
+**Serial Paralel Interface**の略。一般にはSCLK/MOSI/MISO/CSの4線を使った全二重シリアル通信方式を指す。I2Cと比較してピン数が増える代わりに、高速に全二重通信できるメリットがあり、CPUやFPGA等のプロセッサーチップと外部との通信向けに採用される。
+
+- [QSPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Quad_SPI)
+**Quad_SPI**の略。SPIの4線にSIO2とSIO3の2線を加えて、半二重で4倍のデータを通信できるようにしたSPIの拡張規格。フラッシュメモリ等の外部メモリとの接続に使われることが多い。
+
+- [SERDES](https://en.wikipedia.org/wiki/SerDes)
+**Serializer DeSerirializer**の略。広義にはパラレルーシリアル変換とその逆変換のことを指すが、高速シリアル通信技術を総称してSerDesと言うことが多い。技術的には Source Synchronous Clocking と Embedded Clocking 方式に大きく分けられる。通信経路での信号の劣化を抑える為にコード変換したり、擬似ランダム信号によるスクランブルをかけて信号帯域を制限する。またトレーニングシーケンスを導入してケーブルの品質や長さの違いを自動的に補償することも行われる。前者の代表として HDMI で後者の代表は PCIe 等がある。
   
-- [QSPI]()
-
-- [SERDES]()
-
-- [SPI]()　
-
-- [UART]()　
+- [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)
+**Universal Asynchronous Receiver Transmitter**の略。
 
 - [USB]()　
 
