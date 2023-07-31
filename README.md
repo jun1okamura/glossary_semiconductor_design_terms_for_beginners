@@ -108,7 +108,7 @@
 **Control Status Register** の略。CPUの計算処理の結果フラグ（オーバーフローとかキャリーとか）や動作モード（スーパバイザとかユーザー）、状態（割込やトラップ）状態が格納されるレジスターのこと。
 
 #### [Emulator](https://en.wikipedia.org/wiki/Hardware_emulation)
-エミュレータは，ロジック回路をFPGAや専用ハード等にマッピングして，その回路の動作を高速に実行する装置のこと。シミュレーターでは評価することが難しい画像や音声の品質等の検証や、OSのブートシーケンス等の長い時間がかかる検証に使われる。Cadenceの[Palladium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/acceleration-and-emulation/palladium-z1.html)やSynopsysの[Zebu](https://www.synopsys.com/verification/emulation/zebu-empower.html)、Siemensの[Veloce](https://eda.sw.siemens.com/en-US/ic/veloce/)等がある。
+エミュレータは，ロジック回路をFPGAや専用ハード等にマッピングして，その回路の動作を高速に実行する装置のこと。シミュレーターでは評価することが難しい画像や音声の品質等の検証や、OSのブートシーケンス等の長い時間がかかる検証に使われる。Cadenceの[Palladium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/acceleration-and-emulation/palladium-z1.html)やSynopsysの[Zebu](https://www.synopsys.com/verification/emulation/zebu-empower.html)、Siemensの[Veloce](https://eda.sw.siemens.com/en-US/ic/veloce/)等がある。一般に大変高価な装置なので、複数の大型FPGAの組み合わせで代用することもあるが、その場合ネットに手を加えると厳密な検証にはならないデメリットもある。
 
 #### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
