@@ -18,7 +18,7 @@
 **BandGap voltage Reference**の略。正の温度特性を持つPN接合を流れる電流を、負の温度特性を持つ抵抗に流すことで、温度によらずに一定の電圧を発生する、基準電圧回路。SiのBandGap(1.26V)に近い電圧を出力する。回路安定点が２つあり適切なスタートアップ回路が必須である。
 
 - [CDR](https://en.wikipedia.org/wiki/Clock_recovery)
-**Clock and Data Recovery** の略。データとクロックを重畳させたシリアル信号から、受信側でクロック成分とデータ成分を切り分ける回路を指す。送信側では、データに含まれるエッジの場所や数を保証して変調し、受信側で信号に含まれるクロック成分をPLL同期させることでクロックを抽出し、抽出したクロックでデータを復調する。
+**Clock and Data Recovery** の略。データとクロックを重畳させたシリアル信号から、受信側でクロック成分とデータ成分を切り分ける回路を指す。送信側では、データに含まれるエッジの場所や数を保証してコード変換(代表的な例として[8b10b](https://ja.wikipedia.org/wiki/8b/10b)エンコードがある)し、受信側では信号に含まれるクロック成分をPLLで同期させることでクロックを抽出、抽出したクロックでデータを復調する。
 
 - [DLL](https://en.wikipedia.org/wiki/Delay-locked_loop)
 **Delay Locked Loop**の略。外部クロックとインバーター（遅延をアナログ的に制御する場合と、量子化された遅延をデジタル的に選択する場合がある）の遅延信号との間で位相をロックをすることで、負の遅延を持ったクロック信号を発生して、セットアップ・ホールドのタイミングマージンを改善できる。同様に外部クロックに対して複数の位相を持った多層クロックを発生したり、数多くの応用回路が提案されている。PLLと比較して、外部クロックの位相の変化に瞬時に追随できる利点がある一方で、PLLの様に、任意の逓倍クロックを発生することは出来ない。
@@ -30,7 +30,7 @@
 **One Time Programmable memory**の略。一度限り書き込めるメモリブロックIPのことを指す。デバイスのシリアル番号、暗号コード、MACアドレス等のデジタル認識や、ADCやDAC、温度センサー等の校正データー、メモリの冗長セル置き換え等に使われる。昔はレーザーで物理的に加工(レーザートリム)していたが、電気的に、MOSトランジスターのVthを変えたり、破壊したりする方式が主流になっている。
 
 - [PLL](https://en.wikipedia.org/wiki/Phase-locked_loop)
-**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックと自走するVCOからのN分週したクロックをPDで比較することで、外部クロックの周波数に対してN倍の周波数のクロックを発生することができる。外部クロックをM分週することで、N/M倍の周波数のクロックを発生したり、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する[**Fractional PLL**]()もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、両者の間に時間軸の隔たるが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
+**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックをM分週した信号と自走するVCOからN分週した信号をPDで比較することで、外部クロックに対して、N/M倍の周波数のクロックを発生できる。また、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する[**Fractional PLL**]()もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、特性間の時間刻みの隔たりが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
     
 ### [BUS](https://en.wikipedia.org/wiki/Bus_(computing))　(**Design Standard**)
 一つの通信経路に対して、複数のデバイスが接続されるバス・トポロジーを構成する通信経路方式のこと。一対一（ピアツーピア）の接続の場合はバスと呼ばずにチャネルと呼ぶ。
@@ -47,7 +47,7 @@
 **Advanced eXtensible Interface**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)インターフェース仕様。チャネルの概念が導入された。
 
 #### [Wishbone](https://en.wikipedia.org/wiki/Wishbone_(computer_bus))
-オープンIPの流通組織 [**Open Core**](https://opencores.org/) がIP間接続のために規定したオープンソースの[バス規格](https://cdn.opencores.org/downloads/wbspec_b4.pdf)のこと。8/16/32/64ビット幅のMaster-Slave接続。
+オープンIPの流通組織 [**Open Core**](https://opencores.org/) がIP間接続のために規定したオープンソースの[バス規格](https://github.com/fossi-foundation/wishbone)のこと。8/16/32/64ビット幅のMaster-Slave接続。
 
 #### [NOC](https://en.wikipedia.org/wiki/Network_on_a_chip)
 **Network On Chip** の略。複数の速度の異なるIP間通信が必要なSoCチップ設計において、通信を一旦パケット化することで、速度や頻度の異なるIP間通信を効率的に処理することを目的に考案された。AXIフォーマットのIP間通信をNOCのパケットに変換して送受信できる。コンピューター間で行われていた広域ネットワーク通信の概念をチップ内のIP間の通信に適用したもの。
@@ -129,13 +129,13 @@
 #### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
 **Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
 
-- [Verilog](https://en.wikipedia.org/wiki/Verilog) 代表的なRTL言語[**IEEE 1364-2005**](https://ieeexplore.ieee.org/document/1620780)として標準化されている。
+- [Verilog](https://en.wikipedia.org/wiki/Verilog) 代表的なRTL言語[**IEEE 1364-2005**](https://ieeexplore.ieee.org/document/1620780)として標準化されている。最新版であれば規格書を無料で入手できる
 
 - [Verilog-AMS](https://en.wikipedia.org/wiki/Verilog-AMS) ミックスドシグナル拡張（AMS）を含む Verilog の[**拡張言語仕様**](https://www.accellera.org/images/downloads/standards/v-ams/VAMS-LRM-2-4.pdf)
 
-- [System Verilog](https://en.wikipedia.org/wiki/SystemVerilog) 検証系の機能が追加された Verilog の拡張言語[**IEEE 1800-2012**](https://ieeexplore.ieee.org/document/6469140)として標準化されている。
+- [SystemVerilog](https://en.wikipedia.org/wiki/SystemVerilog) 検証系の機能が追加された Verilog の拡張言語[**IEEE 1800-2012**](https://ieeexplore.ieee.org/document/6469140)として標準化されている。最新版であれば規格書を無料で入手できる
 
-- [VHDL](https://en.wikipedia.org/wiki/VHDL) 代表的なRTL言語[**IEEE 1076-2008**](https://ieeexplore.ieee.org/document/4772740)として標準化されている。
+- [VHDL](https://en.wikipedia.org/wiki/VHDL) 代表的なRTL言語[**IEEE 1076-2017**]([https://ieeexplore.ieee.org/document/4772740](https://ieeexplore.ieee.org/document/8299595))として標準化されている。最新版であれば規格書を無料で入手できる
 
 #### [Chisel](https://www.chisel-lang.org/) 
 UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。モジュールからRTLを自動生成する。
@@ -162,6 +162,8 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 - [LVDS]() 
 
+- [PCIe]()
+  
 - [QSPI]()
 
 - [SERDES]()
@@ -169,6 +171,8 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [SPI]()　
 
 - [UART]()　
+
+- [USB]()　
 
 ## 【M - R】
 
@@ -191,7 +195,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 - [QFN](https://en.wikipedia.org/wiki/Flat_no-leads_package) **Quad-Flat No-leads**の略。4方向に端子のあるリードがないパッケージ。二方向にしかリード端子のないパッケージはDFNと呼ぶ。
 
-- [CSP](https://en.wikipedia.org/wiki/Chip-scale_package) **Chip Scale Package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer上に儲けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
+- [CSP](https://en.wikipedia.org/wiki/Chip-scale_package) **Chip Scale Package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer状態で設けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
 
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
@@ -238,12 +242,16 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 **Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[**HSPICE(Synopsys)**](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)や[**Spector(Cadence)**](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEでは[**LTspice(Analog Device)**](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
 
 #### [Event Driven Simulator](https://en.wikipedia.org/wiki/Discrete-event_simulation)
-ロジック回路の動作をトランジスター/ゲート/RTLレベルのプリミティブでトレースするシミュレーター、回路信号の変化＝イベントを時間順に記憶（イベントホイールに登録）して順番にイベントが信号遅延により伝搬するプリミティブでの新たなイベントの発生を繰り返し新たに記憶しながら解く。解析精度はイベントホイールの時間刻みとプリミティブ素子や配線の遅延モデルに依存する。VerilogやVHDLのシミュレーターはイベントドリブン。
+ロジック回路の動作をトランジスター/ゲート/RTLレベルのプリミティブでトレースするシミュレーター、回路信号の変化＝イベントを時間順に記憶（イベントホイールに登録）して順番にイベントが信号遅延により伝搬するプリミティブでの新たなイベントの発生を繰り返し新たに記憶しながら解く。解析精度はイベントホイールの時間刻みとプリミティブ素子や配線の遅延モデルに依存する。VerilogやVHDLのシミュレーターはイベントドリブンで実装できる。
+
+#### [Cycle-base Simulator](https://en.wikipedia.org/wiki/Logic_simulation)
+ロジック回路の動作を素子の遅延時間を無視して静的に演算順序を決定しておき，実行時にはクロック・サイクルごとに一度だけ演算を行なうことで、イベント・ドリブン手法と比べて、数倍～100倍高速に論理機能検証が可能とする方式。サイクル・ベース・シミュレータの実行形式は，コンパイル方式，またはダイレクト・コンパイル方式である。
 
 #### [Fast SPICE]()
-キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる問題を解決するために、厳密解を諦めて、回路をある程度の大きさの回路ブロックに切り分けて(Partioning）回路行列を小型にして回路方程式を解く回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベントドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベントレベルシミュレーターがメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
+キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる問題を解決するために、厳密解を諦めて、回路をある程度の大きさの回路ブロックに切り分けて(Partioning）回路行列を小型にして回路方程式を解く回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベントドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベントドリブン方式がメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
 
 #### [PSS Simulator](https://en.wikipedia.org/wiki/Periodic_steady-state_analysis)
+指定された基本周波数における回路の応答を一周期分計算して周期定常応答を解析する。PSS解析は、回路の周期的な動作点を決定し、周期的な時変小信号解析(位相ノイズ解析）の開始点として利用される。
 
 ### [Standard Cell](https://en.wikipedia.org/wiki/Standard_cell)　(**Design Knowledge**)
 **SC**とか**スタセル**とか短縮されて呼ばれることが多い。デジタル回路設計用のRTL記述言語([Verilog](https://en.wikipedia.org/wiki/Verilog)や[VHDL](https://en.wikipedia.org/wiki/VHDL))から論理合成ツールを介して最終的にネットとして展開される基本回路（Inverter/NAND/NOR/FF等）群のレイアウトとタイミング(遅延等）情報をまとめたファイル(.lib）を指す。同じ基本回路（例えばInverter)でもネット負荷に応じた駆動能力を持つ複数の素子がライブラリに登録されている。一般にタイミング（遅延）と消費電力はトレードオフの関係にあるので、クリティカルパスを解決するために特別なスタセルを特注・置き換えてタイミングエラーを回避するすることも行われる。また、OAI/AOI等の複合ゲートや、スキャン挿入用のDFF等の特殊回路を登録することも一般的である。
