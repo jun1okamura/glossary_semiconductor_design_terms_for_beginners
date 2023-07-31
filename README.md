@@ -274,18 +274,18 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 **SC**とか**スタセル**とか短縮されて呼ばれることが多い。デジタル回路設計用のRTL記述言語([Verilog](https://en.wikipedia.org/wiki/Verilog)や[VHDL](https://en.wikipedia.org/wiki/VHDL))から論理合成ツールを介して最終的にネットとして展開される基本回路（Inverter/NAND/NOR/FF等）群のレイアウトとタイミング(遅延等）情報をまとめたファイル(.lib）を指す。同じ基本回路（例えばInverter)でもネット負荷に応じた駆動能力を持つ複数の素子がライブラリに登録されている。一般にタイミング（遅延）と消費電力はトレードオフの関係にあるので、クリティカルパスを解決するために特別なスタセルを特注・置き換えてタイミングエラーを回避するすることも行われる。また、OAI/AOI等の複合ゲートや、スキャン挿入用のDFF等の特殊回路を登録することも一般的である。
 
 - [Decap Cell](https://ivlsi.com/decap-cells-vlsi-physical-design/)
-**Decap Cell** とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
+とは、電源間容量用のスタンダードセルの呼称。電源配線の寄生抵抗に由来する電源電圧のダイナミックな電圧降下を補償する為に、半導体回路を構成するスタンダードセルの近傍に電源間容量（通常はMOS容量素子）を配置する。
 
 - [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
-**Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
+とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
 
 - [LEF](https://en.wikipedia.org/wiki/Library_Exchange_Format)
-**Library Exchange Format**のこと、一般には、P&Rに最低限必要なレイアウト外形とピンの配置だけの設計データを指す。
+とは、**Library Exchange Format**の略。一般には、P&Rに最低限必要なレイアウト外形とピンの配置だけの設計データを指す。
 
 - [SCAN Cell](https://en.wikipedia.org/wiki/Scan_chain)
-**SCAN Cell**とは、外部から同期回路のラッチ(F/F)の入力信号をシリアルレジスターとして設定可能にできるDFT用のスタンダードセルのこと。「SCANを張る」とは F/F を Scan-F/F に変更して、テスト用の信号を外部から一筆書きになるように配線することを指す。
+とは、外部から同期回路のラッチ(F/F)の入力信号をシリアルレジスターとして設定可能にできるDFT用のスタンダードセルのこと。「SCANを張る」とは F/F を Scan-F/F に変更して、テスト用の信号を外部から一筆書きになるように配線することを指す。
 
-- [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)　(**EDA Methodology/Tool**)
-チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
+- [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)
+とは、チップの基板層（Nwell/Pwell)への電源供給用のセル。適当な間隔で基板へ電源を接続して基板層のインピーダンスを下げて[**ラッチアップ**](https://en.wikipedia.org/wiki/Latch-up)によるチップの破壊を予防する。半導体物理をかじっていないと全く意味不明だが、ひたすらDRCのエラーを消さないと大変なことになる。
 
 ## 【X - Z】
