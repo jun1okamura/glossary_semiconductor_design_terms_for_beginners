@@ -221,9 +221,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
   
 - [Edge Seal]()
 
-- [FEOL]()
-
-- [BEOL]()
+- [FEOL/BEOL]()
 
 - [OPC](https://en.wikipedia.org/wiki/Optical_proximity_correction)：
 **Optical Proximity Correction**の略。半導体設計でのOPCとは、露光波長近くのパターンを現像する為に、元のレイアウトデーターを補正する工程およびツールのことを指す。ちなみに、露光波長より更に細かいパターンを現像する為に、異なるマスクで2度露光することをダブルパターニングと呼ぶ。
