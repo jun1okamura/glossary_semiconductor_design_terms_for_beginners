@@ -224,7 +224,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 **Multi-Chip Module**の略。半導体設計でのMCMとは、複数にチップを一つのパッケージに封入することを指す。パワー半導体＋コントローラーやメモリ＋CPU等をMCMとしてインナーフレームやボンディングで接続したことから始まり。最近は、CIS＋コントローラーを３D積層したチップ、Siインターポーザーでチップ間を高速通信チャネルで接続するチップレット技術に進化している。
 
 - [RDL](https://en.wikipedia.org/wiki/Redistribution_layer)：
-**ReDistribution Layer**の略。半導体設計でのRDLとは、CSPパッケージ向けの最配線層のことを指す。
+**ReDistribution Layer**の略。半導体設計でのRDLとは、CSPパッケージ向けの再配線層のことを指す。
 
 - [WIP](https://en.wikipedia.org/wiki/Work_in_process)：
 **Work In Process**の略。半導体設計でのWIPとは、チップがどの工程にあるのか？を言う場合が多い。
