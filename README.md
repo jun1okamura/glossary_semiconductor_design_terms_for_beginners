@@ -98,11 +98,17 @@
 
 ### [General (Better to know)]()　(**Design Standard**)
 
+#### [ATPG](https://en.wikipedia.org/wiki/Automatic_test_pattern_generation)
+**Automatic Test Pattern Generation)**の略。設計したチップのテストに必要なテストプログラムを自動で生成する方法およびツールのこと。ネットリストを読み込み、不良モデルを仮定してテストパターンを自動合成するツール。
+
 #### [BIST](https://en.wikipedia.org/wiki/Built-in_self-test)
 **Buit-in Self TEST**の略。設計した回路の動作チェックを内蔵したテスト用の回路を使ってテストすること。費用のかかる半導体専用テスターを使わずに合否を判定する。内蔵メモリのテストに使われることが多いが、メモリ以外にもAFE回路等の半導体専用テスターではテスト出来ない回路のテストの為に利用される。
 
 #### [CSR](https://en.wikipedia.org/wiki/Control/Status_Register)
 **Control Status Register** の略。CPUの計算処理の結果フラグ（オーバーフローとかキャリーとか）や動作モード（スーパバイザとかユーザー）、状態（割込やトラップ）状態が格納されるレジスターのこと。
+
+#### [Emulator](https://en.wikipedia.org/wiki/Hardware_emulation)
+エミュレータは，ロジック回路をFPGAや専用ハード等にマッピングして，その回路の動作を高速に実行する装置のこと。シミュレーターでは評価することが難しい画像や音声の品質等の検証や、OSのブートシーケンス等の長い時間がかかる検証に使われる。Cadenceの[Palladium](https://www.cadence.com/en_US/home/tools/system-design-and-verification/acceleration-and-emulation/palladium-z1.html)やSynopsysの[Zebu](https://www.synopsys.com/verification/emulation/zebu-empower.html)、Siemensの[Veloce](https://eda.sw.siemens.com/en-US/ic/veloce/)等がある。
 
 #### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
