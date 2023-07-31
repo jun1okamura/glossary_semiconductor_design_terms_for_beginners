@@ -279,7 +279,10 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 - [Filler Cell](https://vlsi.pro/physical-only-cells-filler-cells/)
 **Filler Cell** とは、スタンダードセル間の隙間に挿入してレイアウト上の空き地を埋めることで、電源接続とDRCエラー等の物理的な不都合を解消する為のセル。
 
-- [SCAN Cell]()
+- [LEF](https://en.wikipedia.org/wiki/Library_Exchange_Format)
+**Library Exchange Format**のこと、一般には、P&Rに最低限必要なレイアウト外形とピンの配置だけの設計データを指す。
+
+- [SCAN Cell](https://en.wikipedia.org/wiki/Scan_chain)
 **SCAN Cell**とは、外部から同期回路のラッチ(F/F)の入力信号をシリアルレジスターとして設定可能にできるDFT用のスタンダードセルのこと。「SCANを張る」とは F/F を Scan-F/F に変更して、テスト用の信号を外部から一筆書きになるように配線することを指す。
 
 - [Tap Cell](https://ivlsi.com/tap-cell-placement-vlsi-physical-design/)　(**EDA Methodology/Tool**)
