@@ -139,7 +139,7 @@ EDAツールで使われるフォーマットを説明する。
 CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在する)EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。テキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じ。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
 
 #### [SSO/SSN](https://en.wikipedia.org/wiki/Ground_bounce)
-***Simultaneous Switching Output/simultaneous switching noise**の略。複数の出力が同時にスイッチング動作をすることで、電源にスパイク電流が流れること及びそれによるノイズを指す。幅の広いパラレル信号（データバス等）で特に問題となる。
+**Simultaneous Switching Output/Simultaneous Switching Noise**の略。複数の出力が同時にスイッチング動作をすることで、電源にスパイク電流が流れること及びそれによるノイズを指す。幅の広いパラレル信号（データバス等）で特に問題となる。
 
 #### [TCL](https://en.wikipedia.org/wiki/Tcl)
 スクリプト言語。1980年代 **Magic** のスクリプト機能の拡張の為に開発された。商用の Synthsis ツールである DesignCompiler でもスクリプト言語として TCL を採用したことから EDA 業界のスクリプト言語として根付いている。
