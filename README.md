@@ -88,6 +88,9 @@
 - [LIB](https://en.wikipedia.org/wiki/Standard_cell)：
 **Liberty Timing Format** 記述のファイル(.lib)を指す。**Standard Cell**ライブラリの遅延/消費電力などの特性を記述したファイル。微細化に伴い、ばらつきに対応した拡張フォーマットには CCS(Composite Current Source)やECSM(effective current source model)などがある。遅延情報はSDF(Standard Delay Format: IEEE std 1497-2001)を用いてネットリストの各ネットにバックアノテートされる。
 
+- [MEBES](https://www.layouteditor.org/layout/file-formats/mebes)：
+**Manufacturing Electron Beam Exposure System**の略。[EtecSystem](https://en.wikipedia.org/wiki/Etec_Systems)の電子線描画装置向けのファイルフォーマット。露光用のマスクを作製する際に GDSII から MEBES へ変換する。
+
 - [SDC](https://www.macnica.co.jp/business/semiconductor/articles/intel/133417)：
 **Synopsys Design Constraint**の略。Synopsys社によって開発された設計制約のフォーマット、現在では業界標準になっている。回路が満たすべきタイミング情報（クロックの周期等）を記載する。
 
