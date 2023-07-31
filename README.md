@@ -47,7 +47,7 @@
 **Advanced eXtensible Interface**の略。ARM により[定義された](https://developer.arm.com/documentation/ihi0022/latest/)インターフェース仕様。チャネルの概念が導入された。
 
 #### [Wishbone](https://en.wikipedia.org/wiki/Wishbone_(computer_bus))
-オープンIPの流通組織 [**Open Core**](https://opencores.org/) がIP間接続のために規定したオープンソースの[バス規格](https://github.com/fossi-foundation/wishbone)のこと。8/16/32/64ビット幅のMaster-Slave接続。
+オープンIPの流通組織 [**OpenCores**](https://opencores.org/) がIP間接続のために規定したオープンソースの[バス規格](https://github.com/fossi-foundation/wishbone)のこと。8/16/32/64ビット幅のMaster-Slave接続。
 
 #### [NOC](https://en.wikipedia.org/wiki/Network_on_a_chip)
 **Network On Chip** の略。複数の速度の異なるIP間通信が必要なSoCチップ設計において、通信を一旦パケット化することで、速度や頻度の異なるIP間通信を効率的に処理することを目的に考案された。AXIフォーマットのIP間通信をNOCのパケットに変換して送受信できる。コンピューター間で行われていた広域ネットワーク通信の概念をチップ内のIP間の通信に適用したもの。
@@ -192,7 +192,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 で標準化された小振幅差動伝送方式のこと。LVDSは信号の電気的な規格のことだが、高速伝送のIOを総称する場合もある。特に液晶パネルとメイン基板との間の画像向け通信規格としてLVDS＋SerDes(７逓倍データレート)がデファクトとして長い間使われてきたことから、LVDSと言うと液晶パネルとの画像通信規格と理解している人も多い。
 
 - [PCIe](https://en.wikipedia.org/wiki/PCI_Express)：
-**PCI express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。高速転送を実現する為に、それまでのパラレル伝送方式から SerDes＋CDR のシリアル伝送方式に変更した為にPCIに**express**が加えられてPCIeと呼ぶ規格になった。
+**PCI-Express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。高速転送を実現する為に、それまでのパラレル伝送方式から SerDes＋CDR のシリアル伝送方式に変更した為にPCIに**express**が加えられてPCIeと呼ぶ規格になった。
 
 - [UCIe](https://en.wikipedia.org/wiki/UCIe)：
 **Universal Chiplet Interconnect Express**の略。2022年に、AMD/Arm/ASE Group/Google-Cloud/Intel/Meta/Microsoft/Qualcomm/Samsung/TSMC により立ち上げられたチップレット間の高速SerDes通信規格とその[標準化組織](https://www.uciexpress.org/)のこと。
