@@ -219,6 +219,8 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 - [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)：
 **Chemical Mechanical Polishing**の略。半導体設計でのCMPとは、各プロセスステップ毎にWafer表面を化学薬品(スラリー)と微細なやすり(パット)により平坦化する工程のこと、ゴミを嫌うクリーンルームには馴染まないプロセス方式だが、微細化が進み焦点深度が浅くなった露光機でパターンを現像する為にブレークスルーとなった技術。パターンが無い領域が皿状に削られる(Dishing)を防ぐ為に、DFM工程にてFillパターンが挿入される。  
   
+- [Edge Seal]()
+
 - [FEOL]()
 
 - [BEOL]()
