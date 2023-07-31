@@ -64,7 +64,7 @@
 **Design For Testing** or **Design For Testability**の略。日本語だと「テスト容易化設計」であるが、言い換えると「LSIのテストの実行を容易にするための回路設計手法」の総称を指す。具体的には、テストモードとしての独自機能を備えたLSI、セルフテスト回路を設けたLSI、論理回路のテストのためのスキャンパスを設けたLSI、CMOSの暗電流に着目したテスト手法、等々がある。採用する手法、技術と必要なシリコン面積等のオーバーヘッドと、テスト容易化で得られるテストコスト削減効果のバランスが重要である。
 
 - [P&R/PnR](https://en.wikipedia.org/wiki/Place_and_route)
-**Place and Route**の略。日本語だと「配置配線」工程。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールではSynopsysの[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)や、Cadenceの[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)がある。
+**Place and Route**の略。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールではSynopsysの[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)や、Cadenceの[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)がある。
 
 - [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
@@ -181,10 +181,11 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 **Serializer DeSerirializer**の略。広義にはパラレルーシリアル変換とその逆変換のことを指すが、高速シリアル通信技術を総称してSerDesと言うことが多い。技術的には Source Synchronous Clocking と Embedded Clocking 方式に大きく分けられる。通信経路での信号の劣化を抑える為にコード変換したり、擬似ランダム信号によるスクランブルをかけて信号帯域を制限する。またトレーニングシーケンスを導入してケーブルの品質や長さの違いを自動的に補償することも行われる。前者の代表として HDMI で後者の代表は PCIe 等がある。
   
 - [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)
-**Universal Asynchronous Receiver Transmitter**の略。
-
-- [USB]()　
-
+**Universal Asynchronous Receiver Transmitter**の略。非同期シリアル通信方式（つまりクロックは伝送しない）TXとRXによる全二重通信を行う。クロックは送受信側で独立クロックを使うので、通信をする前に双方のデータ転送速度や規格（ボーレートやストップビット等）を合わせておく必要がある。受信側では受信したデータをオーバーサンプルすることで、送受信端で異なるクロックソースの誤差を吸収する。昔は大型コンピューターと端末の間の通信として使われたので RS232 や RS422 規格に電気的に変換して長距離接続に対応していた。
+  
+- [USB](https://en.wikipedia.org/wiki/USB)　
+**Universal Serial Bus**の略。
+  
 ## 【M - R】
 
 ### [Manufacturing-related Terminology]()　(**Design Knowledge**)
