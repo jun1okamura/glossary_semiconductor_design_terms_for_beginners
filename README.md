@@ -117,7 +117,7 @@
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
 #### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)
-[**CADENCE**](https://www.cadence.com/en_US/home.html)が提供する（Cadenceに統合される前のSDA社時代からSKILLは存在する）EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴（だと理解している）。個人的にはテキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じだと理解。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
+CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在する)EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。テキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じ。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
 
 #### [TCL](https://en.wikipedia.org/wiki/Tcl)
 スクリプト言語。1980年代 **Magic** のスクリプト機能の拡張の為に開発された。商用の Synthsis ツールである DesignCompiler でもスクリプト言語として TCL を採用したことから EDA 業界のスクリプト言語として根付いている。
@@ -184,7 +184,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 **Universal Asynchronous Receiver Transmitter**の略。非同期シリアル通信方式（つまりクロックは伝送しない）TXとRXによる全二重通信を行う。クロックは送受信側で独立クロックを使うので、通信をする前に双方のデータ転送速度や規格（ボーレートやストップビット等）を合わせておく必要がある。受信側では受信したデータをオーバーサンプルすることで、送受信端で異なるクロックソースの誤差を吸収する。昔は大型コンピューターと端末の間の通信として使われたので RS232 や RS422 規格に電気的に変換して長距離接続に対応していた。
   
 - [USB](https://en.wikipedia.org/wiki/USB)　
-**Universal Serial Bus**の略。
+**Universal Serial Bus**の略。PCの周辺機器接続用インターフェースとしてCompaq/DEC/IBM/Intel/Microsoft/NEC/Nortelにより1995年に提唱された。[USB-IF](https://www.usb.org/)による標準化を進めた為に、業界標準として広く利用されるようになった。外部機器(最初はマウス)用に電源を供給できる先駆けとなったインターフェースである。また Plug-and-Play を実現する為に、ソフトウェア階層とデバイス側レジスターの標準化を進めたことも特徴的。今では当然だが、外部機器向けのドライバーをインストールしなくてもUSBを挿すだけで使えるようになった影には、世界中のエンジニアの多くの知恵と努力が重ねられている。
   
 ## 【M - R】
 
