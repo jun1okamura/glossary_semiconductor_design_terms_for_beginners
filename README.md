@@ -142,13 +142,13 @@ CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在す�
 #### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
 **Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
 
-- [Verilog](https://en.wikipedia.org/wiki/Verilog) 代表的なRTL言語[**IEEE 1364-2005**](https://ieeexplore.ieee.org/document/1620780)として標準化されている。最新版であれば規格書を無料で入手できる
+- [Verilog](https://en.wikipedia.org/wiki/Verilog) 代表的なRTL言語[**IEEE 1364-2005**](https://ieeexplore.ieee.org/document/1620780)として標準化されている。最新版であれば規格書を無料で入手できる。
 
 - [Verilog-AMS](https://en.wikipedia.org/wiki/Verilog-AMS) ミックスドシグナル拡張（AMS）を含む Verilog の[**拡張言語仕様**](https://www.accellera.org/images/downloads/standards/v-ams/VAMS-LRM-2-4.pdf)
 
-- [SystemVerilog](https://en.wikipedia.org/wiki/SystemVerilog) 検証系の機能が追加された Verilog の拡張言語[**IEEE 1800-2012**](https://ieeexplore.ieee.org/document/6469140)として標準化されている。最新版であれば規格書を無料で入手できる
+- [SystemVerilog](https://en.wikipedia.org/wiki/SystemVerilog) 検証系の機能が追加された Verilog の拡張言語[**IEEE 1800-2017**](https://ieeexplore.ieee.org/document/8299595)として標準化されている。最新版であれば規格書を無料で入手できる。
 
-- [VHDL](https://en.wikipedia.org/wiki/VHDL) 代表的なRTL言語[**IEEE 1076-2017**]([https://ieeexplore.ieee.org/document/4772740](https://ieeexplore.ieee.org/document/8299595))として標準化されている。最新版であれば規格書を無料で入手できる
+- [VHDL](https://en.wikipedia.org/wiki/VHDL) 代表的なRTL言語[**IEEE 1076-2019**](https://ieeexplore.ieee.org/document/8938196)として標準化されている。最新版であれば規格書を無料で入手できる。
 
 #### [Chisel](https://www.chisel-lang.org/) 
 UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。モジュールからRTLを自動生成する。
