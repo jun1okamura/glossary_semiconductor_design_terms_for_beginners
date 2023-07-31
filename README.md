@@ -187,7 +187,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 - [LVDS](https://en.wikipedia.org/wiki/Low-voltage_differential_signaling)：
 **Low-Voltage Differential Signaling**の略。[ANSI/TIA/EIA-644](https://www.tij.co.jp/jp/lit/ug/jajd001/jajd001.pdf?HQS=ti-null-null-tedfaq_if-jp)
-で標準化された小振幅差動伝送方式のこと。LVDSは信号の電気的な規格のことだが、高速伝送のIOを総称する場合もある。特に液晶パネルとメイン基板との間の画像向け通信規格としてLVDS＋SerDes(７逓倍方式)がデファクトとして長い間使われてきたことから、LVDSと言うと液晶パネルとの画像通信規格と理解している人も多い。
+で標準化された小振幅差動伝送方式のこと。LVDSは信号の電気的な規格のことだが、高速伝送のIOを総称する場合もある。特に液晶パネルとメイン基板との間の画像向け通信規格としてLVDS＋SerDes(７逓倍データレート)がデファクトとして長い間使われてきたことから、LVDSと言うと液晶パネルとの画像通信規格と理解している人も多い。
 
 - [PCIe](https://en.wikipedia.org/wiki/PCI_Express)：
 **PCI express**のこと、PCIは(Peripheral Component Interconnect)のことで、インテルが1992年に提唱したPCマザーボード上のバス規格。PCI(32bit/33MHz)がルーツで、CPUの32bit化を契機にそれまでのISA(Industrial Standard Architecture)バスから置き換えられた。インテルは[PCI-SIG](https://pcisig.com/)による標準化を進めた為に、業界標準として広く利用されるようになった。高速転送を実現する為に、それまでのパラレル伝送方式から SerDes＋CDR のシリアル伝送方式に変更した為にPCIに**express**が加えられてPCIeと呼ぶ規格になった。
