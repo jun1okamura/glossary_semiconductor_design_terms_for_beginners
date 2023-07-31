@@ -55,7 +55,7 @@
 ### [EDA Design Flow]()  (**EDA Methodology/Tool**)
 
 - [Synthesis](https://en.wikipedia.org/wiki/Logic_synthesis)
-**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Genus/RTL Compiler(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系では、[**Yosys**](https://yosyshq.net/)が有名→[GitHub](https://github.com/YosysHQ/yosys)
+**論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Genus/RTL Compiler(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系では、[**Yosys**](https://yosyshq.net/)+[**ABC**](https://people.eecs.berkeley.edu/~alanmi/abc/) が有名→[GitHub-Yosys](https://github.com/YosysHQ/yosys), [GitHub-ABC](https://github.com/berkeley-abc/abc)
 
 - [STA](https://en.wikipedia.org/wiki/Static_timing_analysis)
 **Static Timing Analysis**の略。タイミング検証方法の一つ。入力から出力（同期回路の場合はFFからFF）までの経路に関して遅延の合計を計算し、**SDC**ファイルに記載された設計タイミング条件を満たされているかどうかを検証する。各経路の最大遅延を合計してセットアップ条件を満たしているか、各部の最小遅延を合計してホールド条件を満たしているか、両者のチェックを行う。[**Prime Time(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/signoff/primetime.html)が商用ではデファクト。オープン系には[**OpenSTA**](https://github.com/The-OpenROAD-Project/OpenSTA)がある。
