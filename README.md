@@ -52,7 +52,8 @@
 #### [NOC](https://en.wikipedia.org/wiki/Network_on_a_chip)
 **Network On Chip** の略。複数の速度の異なるIP間通信が必要なSoCチップ設計において、通信を一旦パケット化することで、速度や頻度の異なるIP間通信を効率的に処理することを目的に考案された。AXIフォーマットのIP間通信をNOCのパケットに変換して送受信できる。コンピューター間で行われていた広域ネットワーク通信の概念をチップ内のIP間の通信に適用したもの。
 
-### [EDA Design Flow]()  (**EDA Methodology/Tool**)
+### [EDA Design Flow](https://en.wikipedia.org/wiki/Design_flow_(EDA))  (**EDA Methodology/Tool**)
+チップ設計(一般にはRTLからGDSIIまで)に必要なEDAツールの組み合わせと一連の流れを指す。オープンソースなEDAツールで構成された[OpenLane](https://openlane.readthedocs.io/en/latest/)が整備されたことで、商用のツールを使わずにロジックチップを設計する環境が整い始めた。
 
 - [Synthesis](https://en.wikipedia.org/wiki/Logic_synthesis)：
 **論理合成ツール**のことを指す。抽象度の高い回路記述であるRTL記述から、**Standard Cell**ライブラリーに登録してあるゲート素子の組み合わせ記述（ネットリスト）に変換する処理及びツール。ソフトウェアの高位言語記述(C言語)を命令セット(ISA)に変換する処理であるコンパイラーに呼応している。商用のツールでは、[**Design Compiler(Synopsys)**](https://www.synopsys.com/implementation-and-signoff/rtl-synthesis-test/design-compiler-graphical.html)や[**Genus/RTL Compiler(Cadence)**](https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis.html)がある。オープン系では、[**Yosys**](https://yosyshq.net/)+[**ABC**](https://people.eecs.berkeley.edu/~alanmi/abc/) が有名→[GitHub-Yosys](https://github.com/YosysHQ/yosys), [GitHub-ABC](https://github.com/berkeley-abc/abc)
