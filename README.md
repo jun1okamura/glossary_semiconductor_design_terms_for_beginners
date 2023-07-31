@@ -246,9 +246,9 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 
 - Tools
 
-  - [Magic](http://bwrcs.eecs.berkeley.edu/Classes/IcBook/magic/)
+  - [Magic](http://bwrcs.eecs.berkeley.edu/Classes/IcBook/magic/)は、1983年UCB校で開発されたオープンソースのレイアウトツールであり、OpenLaneのDRCツールとして使われている。
 
-  - [Calibre](https://eda.sw.siemens.com/en-US/ic/calibre-design/) 
+  - [Calibre](https://eda.sw.siemens.com/en-US/ic/calibre-design/)は、Siemens社の大規模回路に対応したDRC/LVS/LPEの事実上の商用デファクトツール。
 
 ### [RAM generator](https://soclabs.org/design-flow/memory-generators)　(**Design Knowledge**)
 LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static_random-access_memory)が一般的で、商用では各種の[**Memory Compiler**](https://www.synopsys.com/dw/ipdir.php?ds=dwc_sram_memory_compilers)が用意されている。メモリコンパイラは、動作周波数、ポート数、アドレス幅、データ幅等をパラメータとして入力すると最適なメモリのライブラリ情報を自動生成するツールである。商用メモリコンパイラでは、メモリセル(BitCell)に特別なデザインルールを採用することで必要なシリコン面積を圧縮するものもある。オープン系では[**OpenRAM**](https://openram.org/)が有名で、2ポート(同時に読み書き可能）メモリにも対応している。
