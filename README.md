@@ -30,7 +30,7 @@
 **One Time Programmable memory**の略。一度限り書き込めるメモリブロックIPのことを指す。デバイスのシリアル番号、暗号コード、MACアドレス等のデジタル認識や、ADCやDAC、温度センサー等の校正データー、メモリの冗長セル置き換え等に使われる。昔はレーザーで物理的に加工(レーザートリム)していたが、電気的に、MOSトランジスターのVthを変えたり、破壊したりする方式が主流になっている。
 
 - [PLL](https://en.wikipedia.org/wiki/Phase-locked_loop)
-**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックをM分週した信号と自走するVCOからN分週した信号をPDで比較することで、外部クロックに対して、N/M倍の周波数のクロックを発生できる。また、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する[**Fractional PLL**]()もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、特性間の時間刻みの隔たりが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
+**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックをM分週した信号と自走するVCOからN分週した信号をPDで比較することで、外部クロックに対して、N/M倍の周波数のクロックを発生できる。また、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する [Fractional PLL](https://www.electronics-notes.com/articles/radio/frequency-synthesizer/pll-indirect-digital-fractional-n-synthesis.php) もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、特性間の時間刻みの隔たりが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
     
 ### [BUS](https://en.wikipedia.org/wiki/Bus_(computing))　(**Design Standard**)
 一つの通信経路に対して、複数のデバイスが接続されるバス・トポロジーを構成する通信経路方式のこと。一対一（ピアツーピア）の接続の場合はバスと呼ばずにチャネルと呼ぶ。
@@ -63,7 +63,8 @@
 - [DFT](https://en.wikipedia.org/wiki/Design_for_testing)
 **Design For Testing** or **Design For Testability**の略。日本語だと「テスト容易化設計」であるが、言い換えると「LSIのテストの実行を容易にするための回路設計手法」の総称を指す。具体的には、テストモードとしての独自機能を備えたLSI、セルフテスト回路を設けたLSI、論理回路のテストのためのスキャンパスを設けたLSI、CMOSの暗電流に着目したテスト手法、等々がある。採用する手法、技術と必要なシリコン面積等のオーバーヘッドと、テスト容易化で得られるテストコスト削減効果のバランスが重要である。
 
-- [P&R/PNR]()
+- [P&R/PnR](https://en.wikipedia.org/wiki/Place_and_route)
+**Place and Route**の略。日本語だと「配置配線」工程。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールではSynopsysの[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)や、Cadenceの[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)がある。
 
 - [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
