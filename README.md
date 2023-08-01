@@ -136,10 +136,10 @@ EDAツールで使われるファイルフォーマットを説明する。
 **Metal Insulator Metal/Metal Oxide Metal**の略。半導体設計で容量素子というとMOSトランジスターのゲート容量を使うことが一般的だが、容量値の電圧や温度依存性が大きい事が課題であり、そのような課題を解決するためにゲートPolySiの他に対抗電極用にもう一枚PolySiを導入してPoly-Polyの容量素子が使われて来たが、近年、素子の微細化と多層配線化に伴い、メタル配線層を組み合わせて容量素子として使うMiM/MoMが主流となっている。
 
 #### [PDN](https://en.wikipedia.org/wiki/Power_integrity)
-**Power distribution network**の略。電源ネットワークの事であり、電源ネットワークによって決まる電源インピーダンスのことを指す。チップ内部の電源ネットワークに加えて、パッケージやチップ近傍のPCBの電源配線や平滑容量の配置等も考慮する場合がある。電源電圧の局所的なドロップは回路の動作不良を導くので、必要に応じてPDNを補強することが求めれれる。また、チップの入出力信号の品質をSignal Integrity(SI)と呼び、電源インピーダンスと電源ドロップの品質をPower Integrity(PI)と呼ぶ。SI/PIは相互にとても関係が深い。
+**Power Distribution Network**の略。電源ネットワークの事であり、電源ネットワークによって決まる電源インピーダンスのことを指す。チップ内部の電源ネットワークに加えて、パッケージやチップ近傍のPCBの電源配線や平滑容量の配置等も考慮する場合がある。電源電圧の局所的なドロップは回路の動作不良を導くので、必要に応じてPDNを補強することが求めれれる。また、チップの入出力信号の品質をSignal Integrity(SI)と呼び、電源インピーダンスと電源ドロップの品質をPower Integrity(PI)と呼ぶ。SI/PIは相互にとても関係が深い。
 
 #### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)
-CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在する)EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。テキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じ。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
+スクリプト言語。CADENCE のEDA設計ツールにバンドルされている。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。テキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じ。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
 
 #### [SSO/SSN](https://en.wikipedia.org/wiki/Ground_bounce)
 **Simultaneous Switching Output/Simultaneous Switching Noise**の略。複数の出力が同時にスイッチング動作をすることで、電源にスパイク電流が流れること及びそれによるノイズの発生を指す。幅の広いパラレル信号（データバス等）で特に問題となる。
@@ -154,7 +154,7 @@ CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在す�
 ハードウェア記述言語(HDL)は、電子回路の記述形式であり、回路解析やシミュレーションをしたり、HDL記述からネットリストに変換や合成をし、配置配線してチップを作成するためのレイアウトデーターに変換する為に考案された。プログラミング言語の様に、式、文、制御構造からなるテキスト記述であるが、HDLには時間の概念が含まれていることに大きな違いがある。
 
 #### [RTL](https://en.wikipedia.org/wiki/Register-transfer_level)
-**Register-transfer level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
+**Register-Transfer Level** の略、ロジック回路の抽象的な記述レベル。ラッチ回路などの順序回路に相当する最小の部分を「レジスタ」として抽象化して、ロジック回路の動作を、レジスタからレジスタへの転送とその間の組合せ論理回路によるロジック演算の組み合わせとして記述する。C等の高級ソフトウェア言語と比べると、ロジックゲートや配線等のハードウェアを意識して記述する必要があり、初学者には難しいと感じることも多い。
 
 - [Verilog](https://en.wikipedia.org/wiki/Verilog) 代表的なRTL言語[**IEEE 1364-2005**](https://ieeexplore.ieee.org/document/1620780)として標準化されている。最新版であれば規格書を無料で入手できる。
 
@@ -168,7 +168,7 @@ CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在す�
 UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。モジュールからRTLを自動生成する。
 
 #### [HLS](https://en.wikipedia.org/wiki/High-level_synthesis)
-**High-level synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。
+**High-Level Synthesis** の略。RTL記述よりさらに抽象度を上げた記述からロジック回路を設計する手法。
 
 - [SystemC](https://en.wikipedia.org/wiki/SystemC) システム設計・ハードウェア設計向けの C++ クラスライブラリ。
 
@@ -308,7 +308,7 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 ロジック回路の動作を素子の遅延時間を無視して静的に演算順序を決定しておき，実行時にはクロック・サイクルごとに一度だけ演算を行なうことで、イベント・ドリブン手法と比べて、数倍～100倍高速に論理機能検証が可能とする方式。サイクル・ベース・シミュレータでは、実行時の高速化の為にネットリストを一旦コンパイルした後にサイクル毎に演算する。
 
 #### [Fast SPICE](https://www.electronicdesign.com/technologies/test-measurement/article/21801299/whats-the-difference-between-spice-and-fastspice-circuit-simulators)
-キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる課題があった。そこで厳密解を諦めて、回路をある程度の大きさのブロックに切り分けて(Partioning）行列を小型にすることで高速実行を可能とした回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベント・ドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベント・ドリブン方式がメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
+キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる課題があった。そこで厳密解を諦めて、回路をある程度の大きさのブロックに切り分けて(Partitioning）行列を小型にすることで高速実行を可能とした回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベント・ドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベント・ドリブン方式がメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
 
 #### [PSS Simulator](https://en.wikipedia.org/wiki/Periodic_steady-state_analysis)
 指定された基本周波数における回路の応答を一周期分計算して周期定常応答を解析する。PSS解析は、回路の周期的な動作点を決定し、周期的な時変小信号解析(位相ノイズ解析）の開始点として利用される。
