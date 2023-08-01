@@ -30,7 +30,7 @@
 **One Time Programmable memory**の略。一度限り書き込めるメモリブロックIPのことを指す。デバイスのシリアル番号、暗号コード、MACアドレス等のデジタル認識や、ADCやDAC、温度センサー等の校正データー、メモリの冗長セル置き換え等に使われる。昔はレーザーで物理的に加工(レーザートリム)していたが、電気的に、MOSトランジスターのVthを変えたり、破壊したりする方式が主流になっている。
 
 - [PLL](https://en.wikipedia.org/wiki/Phase-locked_loop)：
-**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックをM分週した信号と自走するVCOからN分週した信号をPDで比較することで、外部クロックに対して、N/M倍の周波数のクロックを発生できる。また、N倍とN＋1倍をランダムに選択することで外部クロックで割り切れない周波数を発生する [Fractional PLL](https://www.electronics-notes.com/articles/radio/frequency-synthesizer/pll-indirect-digital-fractional-n-synthesis.php) もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、特性間の時間刻みの隔たりが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
+**Phase Locked Loop**の略。VCO（Voltage Controlled Oscillator)、PD(Phase Detector)とLP(LoopFilter)により構成される。外部クロックをM分週した信号と自走するVCOからN分週した信号をPDで比較することで、外部クロックに対して、N/M倍の周波数のクロックを発生できる。また、N倍とN＋1倍を交代選択することで外部クロックで割り切れない周波数を発生する [Fractional PLL](https://www.electronics-notes.com/articles/radio/frequency-synthesizer/pll-indirect-digital-fractional-n-synthesis.php) もある。クロック発振機以外の応用として、CDRのビルディングブロックや、RF信号の復調、クロック信号のデスキューやノイズの除去、EMI対策向けのSSCG(スペクトラム拡散クロック発生器）等、多くの応用がある。PLLの設計は、応用に必要な動的な特性を、構成する部品の静的な特性設計により満たすことであり、特性間の時間刻みの隔たりが大きいのでトップダウン的な設計が求められる。またPLLからのクロックの位相ノイズの検証は、PSS解析シミュレーターとモデルが必要になる。
     
 ### [BUS](https://en.wikipedia.org/wiki/Bus_(computing))　(**Design Standard**)
 一つの通信経路に対して、複数のデバイスが接続されるバス・トポロジーを構成する通信経路方式のこと。一対一（ピアツーピア）の接続の場合はバスと呼ばずにチャネルと呼ぶ。
@@ -50,7 +50,7 @@
 オープンIPの流通組織 [**OpenCores**](https://opencores.org/) がIP間接続のために規定したオープンソースの[バス規格](https://github.com/fossi-foundation/wishbone)のこと。8/16/32/64ビット幅のMaster-Slave接続。
 
 #### [NOC](https://en.wikipedia.org/wiki/Network_on_a_chip)
-**Network On Chip** の略。複数の速度の異なるIP間通信が必要なSoCチップ設計において、通信を一旦パケット化することで、速度や頻度の異なるIP間通信を効率的に処理することを目的に考案された。AXIフォーマットのIP間通信をNOCのパケットに変換して送受信できる。コンピューター間で行われていた広域ネットワーク通信の概念をチップ内のIP間の通信に適用したもの。
+**Network On Chip** の略。複数の速度の異なるIP間通信が必要なSoCチップ設計において、通信を一旦パケット化することで、速度や頻度の異なるIP間通信を効率的に処理することを目的に考案された。例えば、AXIフォーマットのIP間通信をNOCのパケットに変換して送受信できる。コンピューター間で行われていた広域ネットワーク通信の概念をチップ内のIP間の通信に適用したもの。
 
 ### [EDA Design Flow](https://en.wikipedia.org/wiki/Design_flow_(EDA))  (**EDA Methodology/Tool**)
 チップ設計(一般にはRTLからGDSIIまで)に必要なEDAツールの組み合わせと一連の流れを指す。オープンソースなEDAツールで構成された[OpenLane](https://openlane.readthedocs.io/en/latest/)が整備されたことで、商用のツールを使わずにロジックチップを設計する環境が整い始めた。
@@ -64,8 +64,8 @@
 - [DFT](https://en.wikipedia.org/wiki/Design_for_testing)：
 **Design For Testing** or **Design For Testability**の略。日本語だと「テスト容易化設計」であるが、言い換えると「LSIのテストの実行を容易にするための回路設計手法」の総称を指す。具体的には、テストモードとしての独自機能を備えたLSI、セルフテスト回路を設けたLSI、論理回路のテストのためのスキャンパスを設けたLSI、CMOSの暗電流に着目したテスト手法、等々がある。採用する手法、技術と必要なシリコン面積等のオーバーヘッドと、テスト容易化で得られるテストコスト削減効果のバランスが重要である。
 
-- [P&R/PnR](https://en.wikipedia.org/wiki/Place_and_route)：
-**Place and Route**の略。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールでは[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)(Synopsys)や、[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)(Cadence)がある。
+- [P&R/APR](https://en.wikipedia.org/wiki/Place_and_route)：
+**Place and Route/Auto Place & Route**の略。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンド、P&R以降のレイアウト作業をバックエンドと呼ぶ場合が多い。商用ルールでは[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)(Synopsys)や、[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)(Cadence)がある。
 
 - [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)：
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
@@ -80,10 +80,10 @@
 半導体設計における **Formal Verification** (形式的検証)とは、回路記述間を数学的に解析することで，記述間(例えばRTL記述とゲート記述)の論理が等価であるかどうかの検証（等価性検証）や、回路記述が動作性能に関する記述を満たしているかの検証（プロパティ検証）がある。シミュレータのように回路を動作させて検証するのではないので、シミュレーション・パターンの作成が不要で，かつ高速・網羅的に検証できるというメリットがある。
 
 ### [File Format](https://en.wikipedia.org/wiki/File_format)　(**Design Standard**)
-EDAツールで使われるフォーマットを説明する。
+EDAツールで使われるファイルフォーマットを説明する。
 
 - [CDL](https://en.wikipedia.org/wiki/Circuit_design_language)：
-**Circuit Design Language** の略。SPICEフォーマットからモデル情報を除た LVS や LPE の為に使われるファイルフォーマット。
+**Circuit Design Language** の略。SPICE向けネットリストからモデル情報を除た LVS や LPE の為に使われるファイルフォーマット。
 
 - [GDSII](https://en.wikipedia.org/wiki/GDSII)：
 **Graphic Design System II**の略。1970年末に商用化されたLayout設計装置([Calma](https://en.wikipedia.org/wiki/Calma))が採用したファイルフォーマット。最近だと[GDSFACTORY](https://gdsfactory.github.io/gdsfactory/index.html)等のオープンソースなツールもある。
@@ -92,7 +92,7 @@ EDAツールで使われるフォーマットを説明する。
 **Liberty Timing Format** 記述のファイル(.lib)を指す。**Standard Cell**ライブラリの遅延/消費電力などの特性を記述したファイル。微細化に伴い、ばらつきに対応した拡張フォーマットには CCS(Composite Current Source)やECSM(effective current source model)などがある。遅延情報はSDF(Standard Delay Format: IEEE std 1497-2001)を用いてネットリストの各ネットにバックアノテートされる。
 
 - [MEBES](https://www.layouteditor.org/layout/file-formats/mebes)：
-**Manufacturing Electron Beam Exposure System**の略。[EtecSystem](https://en.wikipedia.org/wiki/Etec_Systems)の電子線描画装置向けのファイルフォーマット。露光用のマスクを作製する際に GDSII から MEBES へ変換する。
+**Manufacturing Electron Beam Exposure System**の略。[EtecSystem](https://en.wikipedia.org/wiki/Etec_Systems)の電子線描画装置向けのファイルフォーマット。露光用のマスクは GDSII レイアウト情報から MEBES フォーマットへ変換して作製する。
 
 - [SDC](https://www.macnica.co.jp/business/semiconductor/articles/intel/133417)：
 **Synopsys Design Constraint**の略。Synopsys社によって開発された設計制約のフォーマット、現在では業界標準になっている。回路が満たすべきタイミング情報（クロックの周期等）を記載する。
@@ -133,23 +133,22 @@ EDAツールで使われるフォーマットを説明する。
 デバイス間の接続関係の総称。ハードウェアだけでなくソフトウェアでの実装でも使われる。2020年頃より差別的な用語の見直しが広がり、ホスト/クライアントやMain/Secondary(M/Sが使えるから）との言い回しを使うようになっている。ホスト側デバイスがクライアント側デバイスに出した指示に応じて、クライアント側デバイスが応答する接続関係。
 
 #### [MiM/MoM]()
-**Metal Oxide Metal/Metal Insulator Metal**の略。半導体設計で容量素子というとMOSトランジスターのゲート容量を使うことが一般的だが、容量値の電圧や温度依存性が大きい事が課題であり、そのような課題を解決するためにゲートPolySiの他に対抗電極
-用にもう一枚PolySiを導入してPoly-Polyの容量素子が使われて来たが、素子の微細化と配線の多層化に伴い、メタル配線層を組み合わせて容量素子として使うMiM/MoMが主流となっている。
+**Metal Insulator Metal/Metal Oxide Metal**の略。半導体設計で容量素子というとMOSトランジスターのゲート容量を使うことが一般的だが、容量値の電圧や温度依存性が大きい事が課題であり、そのような課題を解決するためにゲートPolySiの他に対抗電極用にもう一枚PolySiを導入してPoly-Polyの容量素子が使われて来たが、近年、素子の微細化と多層配線化に伴い、メタル配線層を組み合わせて容量素子として使うMiM/MoMが主流となっている。
 
 #### [PDN](https://en.wikipedia.org/wiki/Power_integrity)
-**Power distribution network**の略。電源ネットワークの事であり、電源ネットワークによって決まる電源インピーダンスのことを指す。チップ内部の電源ネットワークに加えて、パッケージやチップ近傍のPCBの電源配線や平滑容量の配置等も考慮する場合がある。電源電圧の局所的なドロップは回路の動作不良を導く。また、チップの入出力信号の品質をSignal Integrity(SI)と呼び、電源インピーダンスと電源ドロップの品質をPower Integrity(PI)と呼ぶ。SI/PIは相互にとても関係が深い。
+**Power distribution network**の略。電源ネットワークの事であり、電源ネットワークによって決まる電源インピーダンスのことを指す。チップ内部の電源ネットワークに加えて、パッケージやチップ近傍のPCBの電源配線や平滑容量の配置等も考慮する場合がある。電源電圧の局所的なドロップは回路の動作不良を導くので、必要に応じてPDNを補強することが求めれれる。また、チップの入出力信号の品質をSignal Integrity(SI)と呼び、電源インピーダンスと電源ドロップの品質をPower Integrity(PI)と呼ぶ。SI/PIは相互にとても関係が深い。
 
 #### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)
 CADENCE の(Cadenceに統合される前のSDA社時代からSKILLは存在する)EDA設計ツールにバンドルされたスクリプト言語。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。テキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じ。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
 
 #### [SSO/SSN](https://en.wikipedia.org/wiki/Ground_bounce)
-**Simultaneous Switching Output/Simultaneous Switching Noise**の略。複数の出力が同時にスイッチング動作をすることで、電源にスパイク電流が流れること及びそれによるノイズを指す。幅の広いパラレル信号（データバス等）で特に問題となる。
+**Simultaneous Switching Output/Simultaneous Switching Noise**の略。複数の出力が同時にスイッチング動作をすることで、電源にスパイク電流が流れること及びそれによるノイズの発生を指す。幅の広いパラレル信号（データバス等）で特に問題となる。
 
 #### [TCL](https://en.wikipedia.org/wiki/Tcl)
 スクリプト言語。1980年代 **Magic** のスクリプト機能の拡張の為に開発された。商用の Synthsis ツールである DesignCompiler でもスクリプト言語として TCL を採用したことから EDA 業界のスクリプト言語として根付いている。
 
 #### [TO](https://en.wikipedia.org/wiki/Tape-out) 
-**Tape Out**の略。半導体開発における**TO**は、設計・検証が完了してGDSIIフォーマットのレイアウトデータをマスク変換する組織（マスクハウスや前工程ファブ）に送付すること。TO前の最終検証を**Sign-Off**手続きと呼ぶ。
+**Tape Out**の略。半導体開発における**TO**は、設計・検証が完了してGDSIIフォーマットのレイアウトデータをマスク変換(MEBESフォーマット)する組織（マスクハウスや前工程ファブ）に送付すること。TO前の最終検証を**Sign-Off**手続きと呼ぶ。
 
 ### [Hardware Description Language](https://en.wikipedia.org/wiki/Hardware_description_language)  (**EDA Methodology/Tool**)
 ハードウェア記述言語(HDL)は、電子回路の記述形式であり、回路解析やシミュレーションをしたり、HDL記述からネットリストに変換や合成をし、配置配線してチップを作成するためのレイアウトデーターに変換する為に考案された。プログラミング言語の様に、式、文、制御構造からなるテキスト記述であるが、HDLには時間の概念が含まれていることに大きな違いがある。
@@ -206,7 +205,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 **Quad SPI**の略。SPIの4線にSIO2とSIO3の2線を加えて、半二重で4倍のデータを通信できるようにしたSPIの拡張規格。フラッシュメモリ等の外部メモリとの接続に使われることが多い。
 
 - [SerDes](https://en.wikipedia.org/wiki/SerDes)：
-**Serializer DeSerirializer**の略。広義にはパラレルーシリアル変換とその逆変換のことを指すが、高速シリアル通信技術を総称してSerDesと言うことが多い。技術的には Source Synchronous Clocking と Embedded Clocking 方式に大きく分けられる。通信経路での信号の劣化を抑える為にコード変換したり、擬似ランダム信号によるスクランブルをかけて信号帯域を制限する。またトレーニングシーケンスを導入してケーブルの品質や長さの違いを自動的に補償することも行われる。前者の代表として HDMI で後者の代表は PCIe 等がある。
+**Serializer DeSerializer**の略。広義にはパラレルーシリアル変換とその逆変換のことを指すが、高速シリアル通信技術を総称してSerDesと言うことが多い。技術的には **Source Synchronous Clocking** と **Embedded Clocking** 方式に大きく分けられる。通信経路での信号の劣化を抑える為にコード変換したり、擬似ランダム信号によるスクランブルをかけて信号帯域を制限する。またトレーニングシーケンスを導入してケーブルの品質や長さの違いを自動的に補償することも行われる。前者の代表は HDMI、後者の代表は PCIe 等がある。
   
 - [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter)：
 **Universal Asynchronous Receiver Transmitter**の略。非同期シリアル通信方式（つまりクロックは伝送しない）TXとRXによる全二重通信を行う。クロックは送受信側で独立クロックを使うので、通信をする前に双方のデータ転送速度や規格（ボーレートやストップビット等）を合わせておく必要がある。受信側では受信したデータをオーバーサンプルすることで、送受信端で異なるクロックソースの誤差を吸収する。昔は大型コンピューターと端末の間の通信として使われたので RS232 や RS422 規格に電気的に変換して長距離接続に対応していた。
@@ -219,15 +218,16 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 ### Manufacturing-related Terminology　(**Design Knowledge**)
 
 - [CMP](https://en.wikipedia.org/wiki/Chemical-mechanical_polishing)：
-**Chemical Mechanical Polishing**の略。半導体設計でのCMPとは、各プロセスステップ毎にWafer表面を化学薬品(スラリー)と微細なやすり(パット)により平坦化する工程のこと、ゴミを嫌うクリーンルームには馴染まないプロセス方式だが、微細化が進み焦点深度が浅くなった露光機でパターンを現像する為にブレークスルーとなった技術。パターンが無い領域が皿状に削られる(Dishing)を防ぐ為に、DFM工程にてFillパターンが挿入される。  
+**Chemical Mechanical Polishing**の略。半導体設計でのCMPとは、各プロセスステップ毎にWafer表面を化学薬品(スラリー)と微細なやすり(パット)により平坦化する工程のこと、ゴミを嫌うクリーンルームには馴染まないプロセス方式だが、微細化が進み焦点深度が浅くなった露光機でパターンを現像する為にブレークスルーとなった技術。パターンが無い領域や広い領域が皿状に削られる(Dishing)を防ぐ為に、DFM工程にてFillパターンやスリットが挿入される。  
   
-- [Edge Seal]()
+- [Edge Seal](https://ir.nctu.edu.tw/bitstream/11536/13376/1/000232253500007.pdf)
+チップを分割するダイシング領域とチップ本体との間に設けられる特別な構造を指す。一般には、コンタクト/Viaと配線層を壁状に構成する。ダイシング時に発生する層間膜のクラックがダイシング領域からチップ本体内部に成長することを防ぐ。
 
 - [FEOL](https://en.wikipedia.org/wiki/Front_end_of_line)/[BEOL](https://en.wikipedia.org/wiki/Back_end_of_line)：
 半導体の製造工程において、Si表面にトランジスターを作るまでの工程を**FEOL**といい、トランジスターを結ぶ配線層の工程を**BEOL**という。
 
 - [GAA](https://en.wikipedia.org/wiki/Multigate_device#GAAFET)
-**Gate-All-Around FET**の略。
+**Gate-All-Around FET**の略。一般にMOSトランジスターはWafer表面にチャネル層を形成しチャネルに対抗したゲート層でチャンネルを抵抗を変調することで動作する。Wafer表面を使うMOSトランジスターを**PlanerFET**という、表面を凸凹状に加工してチャネル長を確保しつつ更に微細化(~16nm以降)したMOSトランジスターを**FinFET**という、チャネルをゲート層で海苔巻状に囲って３次元に積層した(~2nm以降)MOSトランジスターを**GAAFET**という。
 
 - [OPC](https://en.wikipedia.org/wiki/Optical_proximity_correction)：
 **Optical Proximity Correction**の略。半導体設計でのOPCとは、露光波長近くのパターンを現像する為に、元のレイアウトデーターを補正する工程およびツールのことを指す。ちなみに、露光波長より更に細かいパターンを現像する為に、異なるマスクで2度露光することをダブルパターニングと呼ぶ。
@@ -302,13 +302,13 @@ LSIに内蔵されるメモリは[**SRAM**](https://en.wikipedia.org/wiki/Static
 **Simulation Program with Integrated Circuit Emphasis** の略。キルヒホッフの回路方程式を解く回路シミュレーター。1970年代にUC BerkeleyでFORTRAN言語で開発され、SPICE2G6版で実用的に使われるようになった（商用や国内大手が自社開発していたSPICEは、SPICE2G6をルーツにしていた）。商用のSPICEでは、[HSPICE](https://www.synopsys.com/ja-jp/implementation-and-signoff/ams-simulation/primesim-hspice.html)(Synopsys)や[Spector](https://www.cadence.com/ja_JP/home/tools/custom-ic-analog-rf-design/circuit-simulation.html)(Cadence)がデファクト。オープン系ではC言語に書き直されたSPICE3版がベースの[**Ngspice**](https://ngspice.sourceforge.io/)や、並列化に優れた行列ソルバーを導入した[**Xyce**](https://xyce.sandia.gov/)が有名。フリーのSPICEではAnalog Deviceの[LTspice](https://www.analog.com/jp/design-center/design-tools-and-calculators/ltspice-simulator.html)が有名。
 
 #### [Event Driven Simulator](https://en.wikipedia.org/wiki/Discrete-event_simulation)
-ロジック回路の動作をトランジスター/ゲート/RTLレベルのプリミティブでトレースするシミュレーター、回路信号の変化＝イベントを時間順に記憶（イベントホイールに登録）して順番にイベントが信号遅延により伝搬するプリミティブでの新たなイベントの発生を繰り返し新たに記憶しながら解く。解析精度はイベントホイールの時間刻みとプリミティブ素子や配線の遅延モデルに依存する。VerilogやVHDLのシミュレーターはイベントドリブンで実装できる。
+ロジック回路の動作をトランジスター/ゲート/RTLレベルのプリミティブでトレースするシミュレーター、回路信号の変化＝イベントを時間順にイベントホイールに登録して順番にイベントが信号遅延により伝搬するプリミティブでの新たなイベントの発生を繰り返し登録しながら回路動作を解く。解析精度はイベントホイールの時間刻みとプリミティブ素子や配線の遅延モデルに依存する。VerilogやVHDLのシミュレーターはイベント・ドリブンで実装できる。
 
 #### [Cycle-base Simulator](https://en.wikipedia.org/wiki/Logic_simulation)
 ロジック回路の動作を素子の遅延時間を無視して静的に演算順序を決定しておき，実行時にはクロック・サイクルごとに一度だけ演算を行なうことで、イベント・ドリブン手法と比べて、数倍～100倍高速に論理機能検証が可能とする方式。サイクル・ベース・シミュレータでは、実行時の高速化の為にネットリストを一旦コンパイルした後にサイクル毎に演算する。
 
 #### [Fast SPICE](https://www.electronicdesign.com/technologies/test-measurement/article/21801299/whats-the-difference-between-spice-and-fastspice-circuit-simulators)
-キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる課題があった。そこで厳密解を諦めて、回路をある程度の大きさのブロックに切り分けて(Partioning）行列を小型にすることで高速実行を可能とした回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベントドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベントドリブン方式がメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
+キルヒホッフの回路方程式を解く回路シミュレーターは、回路規模に伴い回路行列が巨大化するために、シミュレーターの解析スピードが遅くなる課題があった。そこで厳密解を諦めて、回路をある程度の大きさのブロックに切り分けて(Partioning）行列を小型にすることで高速実行を可能とした回路シミュレーターのこと、回路ブロック間の信号の伝搬はイベント・ドリブンとして扱う等の工夫をしている。90年代頃にEPIC Design Technology社のトランジスターレベルのイベント・ドリブン方式がメモリ設計ツールとして注目されてから開発が加速した。商用ツールとして、**SpectorFX**(Cadence)や**AFS**(Siemens)、**PrimeSim**(Synopsys)等がある。
 
 #### [PSS Simulator](https://en.wikipedia.org/wiki/Periodic_steady-state_analysis)
 指定された基本周波数における回路の応答を一周期分計算して周期定常応答を解析する。PSS解析は、回路の周期的な動作点を決定し、周期的な時変小信号解析(位相ノイズ解析）の開始点として利用される。
