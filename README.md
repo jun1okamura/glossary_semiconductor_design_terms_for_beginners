@@ -224,7 +224,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 チップを分割するダイシング領域とチップ本体との間に設けられる特別な構造を指す。一般には、コンタクト/Viaと配線層を壁状に構成する。ダイシング時に発生する層間膜のクラックがダイシング領域からチップ本体内部に成長することを防ぐ。
 
 - [FEOL](https://en.wikipedia.org/wiki/Front_end_of_line)/[BEOL](https://en.wikipedia.org/wiki/Back_end_of_line)：
-半導体の製造工程において、Si表面にトランジスターを作るまでの工程を**FEOL**といい、トランジスターを結ぶ配線層の工程を**BEOL**という。
+半導体の製造工程において、トランジスターを作るまでの工程を**FEOL**といい、トランジスターを結ぶ配線層の工程を**BEOL**という。
 
 - [GAA](https://en.wikipedia.org/wiki/Multigate_device#GAAFET)
 **Gate-All-Around FET**の略。一般にMOSトランジスターはWafer表面にチャネル層を形成しチャネルに対抗したゲート層でチャンネルを抵抗を変調することで動作する。Wafer表面を使うMOSトランジスターを**PlanerFET**という、表面を凸凹状に加工してチャネル長を確保しつつ更に微細化(~16nm以降)したMOSトランジスターを**FinFET**という、チャネルをゲート層で海苔巻状に囲って３次元に積層した(~2nm以降)MOSトランジスターを**GAAFET**という。
