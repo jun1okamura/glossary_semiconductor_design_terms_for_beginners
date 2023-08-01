@@ -120,6 +120,9 @@ EDAツールで使われるファイルフォーマットを説明する。
 #### [ESD](https://en.wikipedia.org/wiki/Electrostatic_discharge)
 **ElectroStatic Discharge**の略。静電気によるチップの破壊およびその対策回路・評価方法・基準のことを指す。HBM(Human Body Model)やCDM(Charged Device Model)等の基準がある。適切にESD素子を配置しないと製品に必要なESD基準を満たすことができない。RFやSerDes等の高速信号を扱う製品ではESDに特別な工夫が必要になる。
 
+#### [GA](https://en.wikipedia.org/wiki/Gate_array)
+**Gate Array**の略。チップ全面にトランジスターを引き詰めたWaferを用意して在庫しておき、配線層だけでロジックチップを製造する方法。0.35um世代までASICといえばGAが主流だった。
+
 #### [IBIS](https://en.wikipedia.org/wiki/Input/output_Buffer_Information_Specification)
 **Input/output Buffer Information Specification** の略。PCBボード上のLSIチップ間の接続をシミュレーターにて検証する際に利用されるIOの特性モデル。実際のIOの回路を電圧電流源やRLC回路でモデル化することで、複数ベンダーのチップ間のPCBボードを含む信号品質やタイミング検証が可能となる。
 
