@@ -245,7 +245,7 @@ UC berkeleyが開発したRTLとHLSの中間のハードウェア設計言語。
 **Work In Process**の略。半導体設計でのWIPとは、チップがどの工程にあるのか？を言う場合が多い。
   
 ### [Package](https://en.wikipedia.org/wiki/Electronic_packaging)　(**Design Knowledge**)
-挿入型のDIPから表面実装型のQFPへ進化、フットプリントの縮小でQFNが生まれ、CSPへ進化した。QFP/QFN の頭に、"L"・"T"を付けて薄型のパッケージ仕様を表す。
+挿入型のDIPから表面実装型のQFPへ進化、フットプリントの縮小でQFNが生まれ、CSPへ進化した。QFP/QFN の頭に、"L","T"を付けて薄型のパッケージ仕様を表す。
 
 - [DIP](https://en.wikipedia.org/wiki/Dual_in-line_package)：
 **Dual In-line Package**の略。1970-80年代ICのパッケージといえばDIPでした。
