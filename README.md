@@ -65,7 +65,7 @@
 **Design For Testing** or **Design For Testability**の略。日本語だと「テスト容易化設計」であるが、言い換えると「LSIのテストの実行を容易にするための回路設計手法」の総称を指す。具体的には、テストモードとしての独自機能を備えたLSI、セルフテスト回路を設けたLSI、論理回路のテストのためのスキャンパスを設けたLSI、CMOSの暗電流に着目したテスト手法、等々がある。採用する手法、技術と必要なシリコン面積等のオーバーヘッドと、テスト容易化で得られるテストコスト削減効果のバランスが重要である。
 
 - [P&R/PnR](https://en.wikipedia.org/wiki/Place_and_route)：
-**Place and Route**の略。**APR**(Automatic Place & Route)とも呼ぶ。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンドもしくは論理設計、P&R以降のレイアウト作業をバックエンドもしくは物理設計と呼ぶ場合が多い。商用ルールでは[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)(Synopsys)や、[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)(Cadence)がある。
+**Place and Route**の略。**APR**(Automatic Place & Route)とも呼ぶ。日本語だと**配置配線**工程のこと。ゲートレベルのネットリストから、対応するスタンダードセルをチップ上のどこに置くかを決定する配置作業。これに続いてセル同士を結ぶ配線層で結ぶ配線作業を担うツールおよび作業工程のこと。論理合成までをフロントエンドもしくは論理設計、P&R以降のレイアウト作業をバックエンドもしくは物理設計と呼ぶ場合が多い。商用ツールでは[IC compiler](https://www.synopsys.com/ja-jp/implementation-and-signoff/physical-implementation/ic-compiler.html)(Synopsys)や、[Innovus](https://www.cadence.com/ja_JP/home/tools/digital-design-and-signoff/soc-implementation-and-floorplanning/innovus-implementation-system.html)(Cadence)がある。
 
 - [CTS](https://ivlsi.com/clock-tree-synthesis-cts-vlsi-physical-design/)：
 **Clock Tree Synthesis** の略。同期設計においてはフリップフロップへ供給される同期クロックの位相が完全に一致していることが望ましいが、同期クロック信号は、一番負荷が重く、配線長も長いことから、チップ内に分散されたフリップフロップに供給している同期クロック信号の位相を合わせる為には、特別な手当をする必要がある。具体的には、クロックバッファーの挿入やクロック配線の引き回し等により、消費電力とタイミング（最大動作周波数）の最適化を図る設計工程を指す。動作処理性能が最優先されるCPUやメモリ設計では、ツールに任せずに、人手でクロック配線とバッファーの配置を設計することもある。
