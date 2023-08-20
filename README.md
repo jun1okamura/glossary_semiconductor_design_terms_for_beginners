@@ -259,6 +259,9 @@ UC berkeleyが開発した新しいハードウェア設計言語。モジュー
 - [CSP](https://en.wikipedia.org/wiki/Chip-scale_package)：
 **Chip Scale Package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer状態で設けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
 
+- [C4](https://en.wikipedia.org/wiki/Flip_chip)：
+**Controlled Collapsed Chip Connection**の略
+
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
 
