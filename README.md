@@ -142,7 +142,8 @@ EDAツールで使われるファイルフォーマットを説明する。
 **Power Distribution Network**の略。電源ネットワークの事であり、電源ネットワークによって決まる電源インピーダンスのことを指す。チップ内部の電源ネットワークに加えて、パッケージやチップ近傍のPCBの電源配線や平滑容量の配置等も考慮する場合がある。電源電圧の局所的なドロップは回路の動作不良を導くので、必要に応じてPDNを補強することが求めれれる。また、チップの入出力信号の品質をSignal Integrity(SI)と呼び、電源インピーダンスと電源ドロップの品質をPower Integrity(PI)と呼ぶ。SI/PIは相互にとても関係が深い。
 
 #### [SKILL](https://en.wikipedia.org/wiki/Cadence_SKILL)
-スクリプト言語。CADENCE のEDA設計ツールにバンドルされている。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。テキストエディタのEmacsとスクリプト言語であるEmacs-Lispの関係と同じ。SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
+スクリプト言語。CADENCE のEDA設計ツールにバンドルされている。基本は[LISP](https://ja.wikipedia.org/wiki/LISP)だが、設計データーベースのオブジェクトへアクセスができるのが特徴。
+> SKILL言語に精通してCADENCEツールをカスタマイズできるエンジニアを「Skiller(スキラー)」と称するという噂がある。
 
 #### [SSO/SSN](https://en.wikipedia.org/wiki/Ground_bounce)
 **Simultaneous Switching Output/Simultaneous Switching Noise**の略。複数の出力が同時にスイッチング動作をすることで、電源にスパイク電流が流れること及びそれによるノイズの発生を指す。幅の広いパラレル信号（データバス等）で特に問題となる。
@@ -152,6 +153,7 @@ EDAツールで使われるファイルフォーマットを説明する。
 
 #### [TO](https://en.wikipedia.org/wiki/Tape-out) 
 **Tape Out**の略。半導体開発における**TO**は、設計・検証が完了してGDSIIフォーマットのレイアウトデータをマスク変換(MEBESフォーマット)する組織（マスクハウスや前工程ファブ）に送付すること。TO前の最終検証を**Sign-Off**手続きと呼ぶ。
+> IBM では、最初の TO を DD1、二度目の TO を DD2 といったように Data Disk の呼称を使っていた。
 
 ### [Hardware Description Language](https://en.wikipedia.org/wiki/Hardware_description_language)  (**EDA Methodology/Tool**)
 ハードウェア記述言語(HDL)は、電子回路の記述形式であり、回路解析やシミュレーションをしたり、HDL記述からネットリストに変換や合成をし、配置配線してチップを作成するためのレイアウトデーターに変換する為に考案された。プログラミング言語の様に、式、文、制御構造からなるテキスト記述であるが、HDLには時間の概念が含まれていることに大きな違いがある。以下、レジスタを言語上で定義するのがRTL、処理系が割り当てるのがHLSと区別した。
@@ -260,7 +262,7 @@ UC berkeleyが開発した新しいハードウェア設計言語。モジュー
 **Chip Scale Package** チップサイズと同等まで縮小したパッケージ。特にチップ内の端子とパッケージの端子との接続を、ボンディングではなく **RDL(再配線層)** を、Wafer状態で設けて半田ボールと直に接続するパッケージを **WCSP** と呼ぶ。
 
 - [C4](https://en.wikipedia.org/wiki/Flip_chip)：
-**Controlled Collapsed Chip Connection**の略
+**Controlled Collapsed Chip Connection**の略 ICチップの表面のRDL層にボール状のハンダを並べて実装して、PCB上にてフリップチップ（ひっくり返し）実装する方法のこと。
 
 ### [PDK](https://en.wikipedia.org/wiki/Process_design_kit#)　(**Design Knowledge**)
 **Process Design Kit** の略。半導体プロセスに依存した設計に必要な設定情報一般の呼称。設計ツール毎に必要な、Technology file 群（Spice model や DRC/LVS の runset、Layer ファイル等）と、回路設計に必要な、回路Symbolや、基本Library(IO や Standard Cell, Pcell, SRAM 等）に大きく分けられます。実態を理解せずに概念的にPDKという単語を使う人もいるので注意。
